@@ -1,16 +1,17 @@
 <?php $lang = Yii::$app->language;?>
 <?php use yii\helpers\Url;?>
 <div class="vibor container well well-lg">
-<h5><?= Yii::t('app', 'O`zbekiston Respublikasi fuqarolari uchun interaktiv xizmatlar'); ?></h5>
+<h3><b><?= Yii::t('app', 'O`zbekiston Respublikasi fuqarolari uchun interaktiv xizmatlar'); ?></b></h3>
 <div class="k-uslugi">
 
 <div class="row">
   <div class="col-sm-3">
     <a href="<?= Url::to(['/anketa-new/index'])?>">
-      <button type="button" class="btn btn-labeled btn-lg btn-info">
-        <span class="btn-label"><i class="fa fa-2x fa-file-text-o"></i></span><?= Yii::t('app', 'Sertifikat</br>olish'); ?>
+      <button type="button" class="btn btn-labeled btn-lg">
+        <div class="btn-label"><i class="fa fa-4x fa-file-text-o"></i></div></br>
+          <b><?= Yii::t('app', 'Sertifikat</br>olish'); ?></b>
         <div class="overlay">
-          <div class="text"><?= Yii::t('app', 'O`zbekiston Respublikasi<br/>fuqarolarining<br/>O`zbekiston Respublikasiga<br/>qaytish guvohnomasi'); ?></div>
+          <div class="text"><?= Yii::t('app', 'O`zbekiston<br/>Respublikasi<br/>fuqarolarining<br/>O`zbekiston<br/>Respublikasiga<br/>qaytish guvohnomasi'); ?></div>
         </div>
       </button>
     </a>
@@ -18,10 +19,10 @@
 
   <div class="col-sm-3">
     <a href="<?= Url::to(['/vkus/index'])?>">
-      <button type="button" class="btn btn-labeled btn-lg btn-info">
-        <span class="btn-label"><i class="fa fa-2x fa-vcard-o"></i></span><?= Yii::t('app', 'Vaqtincha</br>konsullik</br>hisobi'); ?>
+      <button type="button" class="btn btn-labeled btn-lg">
+        <div class="btn-label"><i class="fa fa-4x fa-vcard-o"></i></div></br><b><?= Yii::t('app', 'Vaqtincha konsullik</br>hisobi'); ?></b>
         <div class="overlay">
-          <div class="text"><?= Yii::t('app', 'O`zbekiston Respublikasi<br/>fuqarolarining xorijdagi konsullik<br/>muassasalarida vaqtincha konsullik<br/>hisobiga olish tartibi'); ?></div>
+          <div class="text"><?= Yii::t('app', 'O`zbekiston<br/>Respublikasi<br/>fuqarolarining xorijdagi<br/>konsullik<br/>muassasalarida vaqtincha<br/>konsullik hisobiga<br/>olish tartibi'); ?></div>
         </div>
       </button>
     </a>
@@ -29,10 +30,13 @@
 
   <div class="col-sm-3">
     <a href="<?= Url::to(['/kus/index'])?>">
-      <button type="button" class="btn btn-labeled btn-lg btn-info">
-        <span class="btn-label"><i class="fa fa-2x fa-id-card-o"></i></span><?= Yii::t('app', 'Doimiy</br>konsullik</br>hisobi'); ?>
+      <button type="button" class="btn btn-labeled btn-lg">
+       <div class="btn-label">
+          <i class="fa fa-4x fa-id-card-o"></i>
+        </div></br>
+        <b><?= Yii::t('app', 'Doimiy konsullik</br>hisobi'); ?></b>
         <div class="overlay">
-          <div class="text"><?= Yii::t('app', 'O`zbekiston Respublikasi<br/>fuqarolarining xorijdagi konsullik<br/>muassasalarida doimiy konsullik<br/>hisobiga olish tartibi'); ?></div>
+          <div class="text"><?= Yii::t('app', 'O`zbekiston<br/>Respublikasi<br/>fuqarolarining xorijdagi<br/>konsullik muassasalarida<br/>doimiy konsullik<br/>hisobiga olish<br/>tartibi'); ?></div>
         </div>
       </button>
     </a>
@@ -40,10 +44,13 @@
 
   <div class="col-sm-3">
     <a href="?action=istreb">
-      <button type="button" class="btn btn-labeled btn-lg btn-info">
-        <span class="btn-label"><i class="fa fa-2x fa-newspaper-o"></i></span><?= Yii::t('app', 'Hujjatlarni</br>olish'); ?>
+      <button type="button" class="btn btn-labeled btn-lg">
+        <div class="btn-label">
+          <i class="fa fa-4x fa-newspaper-o"></i>
+        </div></br>
+        <b><?= Yii::t('app', 'Hujjatlarni</br>olish'); ?></b>
         <div class="overlay">
-          <div class="text"><?= Yii::t('app', 'O`zbekiston Respublikasidan<br/>hujjatlarni so`rab<br/>olish tartibi'); ?></div>
+          <div class="text"><?= Yii::t('app', 'O`zbekiston<br/>Respublikasidan<br/>hujjatlarni so`rab<br/>olish tartibi'); ?></div>
         </div>
       </button>
     </a>
@@ -53,10 +60,10 @@
 <div class="row">
 <div class="col-sm-3">
     <a href="?action=pasp">
-      <button type="button" class="btn btn-labeled btn-lg btn-info">
-        <span class="btn-label"><i class="fa fa-2x fa-address-book-o fa-2x"></i></span><?= Yii::t('app', 'Pasportni</br>rasmiylashtirish'); ?>
+      <button type="button" class="btn btn-labeled btn-lg">
+        <div class="btn-label"><i class="fa fa-4x fa-address-book-o fa-2x"></i></div></br><b><?= Yii::t('app', 'Pasportni</br>rasmiylashtirish'); ?></b>
         <div class="overlay">
-          <div class="text"><?= Yii::t('app', 'O`zbekiston Respublikasi<br/>fuqarosi biometrik<br/>pasportini rasmiylashtirish<br/>tartibi'); ?></div>
+          <div class="text"><?= Yii::t('app', 'O`zbekiston<br/>Respublikasi<br/>fuqarosi biometrik<br/>pasportini<br/>rasmiylashtirish<br/>tartibi'); ?></div>
         </div>
       </button>
     </a>
@@ -64,10 +71,10 @@
 
   <div class="col-sm-3">
     <a href="?action=smrt">
-      <button type="button" class="btn btn-labeled btn-lg btn-info">
-        <span class="btn-label"><img src="/images/dead.png" class="dead"></span><?= Yii::t('app', 'O`lim haqidagi</br>guvohnoma'); ?>
+      <button type="button" class="btn btn-labeled btn-lg">
+        <div class="btn-label"><img src="/images/dead.png" class="dead"></div></br><b><?= Yii::t('app', 'O`lim haqidagi</br>guvohnoma'); ?></b>
         <div class="overlay">
-          <div class="text"><?= Yii::t('app', 'O`zbekiston Respublikasi<br/>fuqarosining o`limi<br/>to`g`risidagi guvohnomani<br/>rasmiylashtirish tartibi'); ?></div>
+          <div class="text"><?= Yii::t('app', 'O`zbekiston<br/>Respublikasi<br/>fuqarosining o`limi<br/>to`g`risidagi<br/>guvohnomani<br/>rasmiylashtirish tartibi'); ?></div>
         </div>
       </button>
     </a>
@@ -75,8 +82,8 @@
 
   <div class="col-sm-3">
     <a href="?action=rz">
-      <button type="button" class="btn btn-labeled btn-lg btn-info">
-        <span class="btn-label"><i class="fa fa-2x fa-map-signs"></i></span><?= Yii::t('app', 'Xorijga</br>vaqtincha</br>chiqish'); ?>
+      <button type="button" class="btn btn-labeled btn-lg">
+        <div class="btn-label"><i class="fa fa-4x fa-map-signs"></i></div></br><b><?= Yii::t('app', 'Xorijga vaqtincha</br>chiqish'); ?></b>
         <div class="overlay">
           <div class="text"><?= Yii::t('app', 'Xorijga chiqsh uchun<br/>ruxsat yozuvini<br/>rasmiylashtirish (RE’Yo)<br/>tartibi'); ?></div>
        </div>
@@ -85,11 +92,11 @@
   </div>
 
   <div class="col-sm-3">
-    <a href="?action=pmj">
-      <button type="button" class="btn btn-labeled btn-lg btn-info">
-        <span class="btn-label"><i class="fa fa-2x fa-map-marker"></i></span><?= Yii::t('app', 'Xorijga</br>doimiy</br>yashash'); ?>
+    <a href="<?= Url::to(['/pmj/create'])?>">
+      <button type="button" class="btn btn-labeled btn-lg">
+       <div class="btn-label"><i class="fa fa-4x fa-map-marker"></i></div></br><b><?= Yii::t('app', 'Xorijda doimiy</br>yashash'); ?></b>
         <div class="overlay">
-          <div class="text"><?= Yii::t('app', 'Xorijga doimiy<br/>yashashga chiqish yozuvini<br/>rasmiylashtirish (DYa) tartibi'); ?></div>
+          <div class="text"><?= Yii::t('app', 'Xorijga doimiy<br/>yashashga chiqish<br/>yozuvini rasmiylashtirish<br/>(DYa) tartibi'); ?></div>
         </div>
       </button>
     </a>
@@ -99,10 +106,10 @@
 <div class="row">
     <div class="col-sm-3 col-md-offset-1-and-half">
     <a href="?action=vixod">
-      <button type="button" class="btn btn-labeled btn-lg btn-info">
-        <span class="btn-label"><i class="fa fa-2x fa-share-square-o"></i></span><?= Yii::t('app', 'Fuqarolikdan</br>chiqish'); ?>
+      <button type="button" class="btn btn-labeled btn-lg">
+         <div class="btn-label"><i class="fa fa-4x fa-share-square-o"></i></div></br><b><?= Yii::t('app', 'Fuqarolikdan</br>chiqish'); ?></b>
         <div class="overlay">
-          <div class="text"><?= Yii::t('app', 'O`zbekiston Respublikasi<br/>fuqaroligidan chiqishni<br/>rasmiylashtirish tartibi'); ?></div>
+          <div class="text"><?= Yii::t('app', 'O`zbekiston<br/>Respublikasi<br/>fuqaroligidan chiqishni<br/>rasmiylashtirish tartibi'); ?></div>
         </div>
       </button>
     </a>
@@ -110,10 +117,10 @@
 
   <div class="col-sm-3">
     <a href="?action=ngraj">
-      <button type="button" class="btn btn-labeled btn-lg btn-info">
-        <span class="btn-label"><i class="fa fa-2x fa-user-secret"></i></span><?= Yii::t('app', 'Fuqarolikni</br>tekshirish'); ?>
+      <button type="button" class="btn btn-labeled btn-lg">
+         <div class="btn-label"><i class="fa fa-4x fa-user-secret"></i></div></br><b><?= Yii::t('app', 'Fuqarolikni</br>tekshirish'); ?></b>
         <div class="overlay">
-          <div class="text"><?= Yii::t('app', 'O`zbekiston Respublikasi<br/>fuqaroligiga mansub-mansub<br/>emaslikni aniqlash tartibi'); ?></div>
+          <div class="text"><?= Yii::t('app', 'O`zbekiston Respublikasi<br/>fuqaroligiga<br/>mansub-mansub<br/>emaslikni aniqlash<br/>tartibi'); ?></div>
         </div>
       </button>
     </a>
@@ -121,8 +128,8 @@
 
   <div class="col-sm-3">
     <a href="?action=apost">
-      <button type="button" class="btn btn-labeled btn-lg btn-info">
-        <span class="btn-label"><i class="fa fa-2x fa-file-photo-o"></i></span><?= Yii::t('app', 'Apostil</br>qo`yish'); ?>
+      <button type="button" class="btn btn-labeled btn-lg">
+       <div class="btn-label"><i class="fa fa-4x fa-file-photo-o"></i></div></br><b><?= Yii::t('app', 'Apostil</br>qo`yish'); ?></b>
         <div class="overlay">
           <div class="text"><?= Yii::t('app', 'Apostil qo`yish va<br/>hujjatlarni legallashtirish'); ?></div>
         </div>

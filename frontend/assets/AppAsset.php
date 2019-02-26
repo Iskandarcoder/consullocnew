@@ -36,7 +36,7 @@ class AppAsset extends AssetBundle
         'js/functiyalar.js',
         'js/main.js',
         'js/jquery.input.js',
-        'js/consul.js',
+        
     ];
     public $depends = [
         'yii\web\YiiAsset',
