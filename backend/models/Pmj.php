@@ -36,14 +36,11 @@ class Pmj extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
-<<<<<<< HEAD
-=======
         public $file;
         public $file1;
         public $file2;
         public $file3;
 
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
     public static function tableName()
     {
         return 'pmj';
@@ -55,23 +52,12 @@ class Pmj extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-<<<<<<< HEAD
-            [['surname', 'name', 'mname', 'nationality_id', 'birth_date', 'birth_place', 'living_place', 'tel', 'citizenship_id', 'second_cityzenship_id', 'seria_pasp', 'numb_pasp', 'pasp_date', 'pasp_place', 'reason', 'security', 'law_court', 'criminal', 'army', 'status_id'], 'required'],
-            [['nationality_id', 'tel', 'citizenship_id', 'second_cityzenship_id', 'numb_pasp', 'status_id'], 'integer'],
-=======
             [['surname', 'name', 'mname', 'nationality_id', 'birth_date', 'birth_place', 'living_place', 'tel', 'citizenship_id', 'seria_pasp', 'numb_pasp', 'pasp_date', 'pasp_place', 'reason', 'security', 'law_court', 'criminal', 'army','division_id'], 'required'],
             [['nationality_id', 'tel', 'citizenship_id', 'second_cityzenship_id', 'numb_pasp', 'status_id','division_id'], 'integer'],
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
             [['birth_date', 'pasp_date'], 'safe'],
             [['surname', 'name', 'mname', 'pre_surname', 'pre_name', 'pre_mname'], 'string', 'max' => 20],
             [['birth_place', 'living_place', 'pasp_place'], 'string', 'max' => 100],
             [['seria_pasp'], 'string', 'max' => 4],
-<<<<<<< HEAD
-            [['reason', 'security', 'law_court', 'criminal', 'army', 'photo'], 'string', 'max' => 500],
-        ];
-    }
-
-=======
             [['mail'], 'string', 'max' => 30],
             [['comment'], 'string', 'max' => 500],
             [['reason', 'security', 'law_court', 'criminal', 'army', 'photo', 'photo1', 'photo2', 'photo3'], 'string', 'max' => 500],
@@ -80,41 +66,12 @@ class Pmj extends \yii\db\ActiveRecord
     }
 
 
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
     /**
      * {@inheritdoc}
      */
     public function attributeLabels()
     {
         return [
-<<<<<<< HEAD
-            'surname' => Yii::t('app', 'Surname'),
-            'name' => Yii::t('app', 'Name'),
-            'mname' => Yii::t('app', 'MName'),
-            'pre_surname' => Yii::t('app', 'Pre Surname'),
-            'pre_name' => Yii::t('app', 'Pre Name'),
-            'pre_mname' => Yii::t('app', 'Pre Mname'),
-            'nationality_id' => Yii::t('app', 'Nationality ID'),
-            'birth_date' => Yii::t('app', 'Birth Date'),
-            'birth_place' => Yii::t('app', 'Birth Place'),
-            'living_place' => Yii::t('app', 'Living Place'),
-            'tel' => Yii::t('app', 'Tel'),
-            'citizenship_id' => Yii::t('app', 'Citizenship ID'),
-            'second_cityzenship_id' => Yii::t('app', 'Second Cityzenship ID'),
-            'seria_pasp' => Yii::t('app', 'Seria Pasp'),
-            'numb_pasp' => Yii::t('app', 'Numb Pasp'),
-            'pasp_date' => Yii::t('app', 'Pasp Date'),
-            'pasp_place' => Yii::t('app', 'Pasp Place'),
-            'reason' => Yii::t('app', 'Reason'),
-            'security' => Yii::t('app', 'Security'),
-            'law_court' => Yii::t('app', 'Law Court'),
-            'criminal' => Yii::t('app', 'Criminal'),
-            'army' => Yii::t('app', 'Army'),
-            'id' => Yii::t('app', 'ID'),
-            'status_id' => Yii::t('app', 'Status ID'),
-        ];
-    }
-=======
             'surname' => Yii::t('app', 'Familiya'),
             'name' => Yii::t('app', 'Ismi'),
             'mname' => Yii::t('app', 'Otasining ismi'),
@@ -148,7 +105,7 @@ class Pmj extends \yii\db\ActiveRecord
         ];
     }
 
-    public function setRandomString($length = 32)
+     public function setRandomString($length = 32)
     {
         $characters = 'ABCDEFGHJKLMNPQRSTUVWXYZ123456789';
         $charactersLength = strlen($characters);
@@ -193,5 +150,4 @@ class Pmj extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Status::className(), ['id' => 'status_id']);
     }
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
 }
