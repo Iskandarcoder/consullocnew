@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "4988f1697539991dee4c107be613272b",
-=======
-    "content-hash": "e8f39100c6bced7cc5d0ac423a35375f",
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
+    "content-hash": "5517370a1042449f8712cd0b4c1ec7ca",
     "packages": [
         {
             "name": "2amigos/yii2-date-picker-widget",
@@ -139,11 +135,7 @@
             "version": "3.3.1",
             "source": {
                 "type": "git",
-<<<<<<< HEAD
-                "url": "https://github.com/jquery/jquery-dist.git",
-=======
                 "url": "git@github.com:jquery/jquery-dist.git",
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
                 "reference": "9e8ec3d10fad04748176144f108d7355662ae75e"
             },
             "dist": {
@@ -851,21 +843,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mpdf/mpdf.git",
-<<<<<<< HEAD
-                "reference": "6e07b3fdb40312ca87361734affb8406ef95d323"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mpdf/mpdf/zipball/6e07b3fdb40312ca87361734affb8406ef95d323",
-                "reference": "6e07b3fdb40312ca87361734affb8406ef95d323",
-=======
                 "reference": "e18d5c9a490fd4128ff93edfef395636ce41c49d"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/mpdf/mpdf/zipball/e18d5c9a490fd4128ff93edfef395636ce41c49d",
                 "reference": "e18d5c9a490fd4128ff93edfef395636ce41c49d",
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
                 "shasum": ""
             },
             "require": {
@@ -921,11 +904,7 @@
                 "php",
                 "utf-8"
             ],
-<<<<<<< HEAD
-            "time": "2019-02-06T13:34:30+00:00"
-=======
             "time": "2019-02-26T10:26:17+00:00"
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
         },
         {
             "name": "myclabs/deep-copy",
@@ -2105,18 +2084,6 @@
         },
         {
             "name": "codeception/phpunit-wrapper",
-<<<<<<< HEAD
-            "version": "6.0.14",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Codeception/phpunit-wrapper.git",
-                "reference": "3b64beb0af3e63145af982e64718ab80d2417739"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/3b64beb0af3e63145af982e64718ab80d2417739",
-                "reference": "3b64beb0af3e63145af982e64718ab80d2417739",
-=======
             "version": "6.0.16",
             "source": {
                 "type": "git",
@@ -2127,7 +2094,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/299e3aece31489ed962e6c39fe2fb6f3bbd2eb16",
                 "reference": "299e3aece31489ed962e6c39fe2fb6f3bbd2eb16",
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
                 "shasum": ""
             },
             "require": {
@@ -2141,11 +2107,7 @@
             },
             "require-dev": {
                 "codeception/specify": "*",
-<<<<<<< HEAD
-                "vlucas/phpdotenv": "^2.4"
-=======
                 "vlucas/phpdotenv": "^3.0"
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
             },
             "type": "library",
             "autoload": {
@@ -2164,11 +2126,7 @@
                 }
             ],
             "description": "PHPUnit classes used by Codeception",
-<<<<<<< HEAD
-            "time": "2019-01-13T10:35:17+00:00"
-=======
             "time": "2019-02-26T20:47:56+00:00"
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
         },
         {
             "name": "codeception/stub",
@@ -4206,8 +4164,8 @@
         "kartik-v/yii2-widget-select2": 20,
         "kartik-v/yii2-widget-datepicker": 20,
         "kartik-v/yii2-mpdf": 20,
-        "kartik-v/yii2-widget-fileinput": 20,
-        "mpdf/mpdf": 20
+        "mpdf/mpdf": 20,
+        "kartik-v/yii2-widget-fileinput": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

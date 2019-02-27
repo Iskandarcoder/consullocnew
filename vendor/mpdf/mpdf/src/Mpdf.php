@@ -39,11 +39,7 @@ class Mpdf implements \Psr\Log\LoggerAwareInterface
 	use Strict;
 	use FpdiTrait;
 
-<<<<<<< HEAD
-	const VERSION = '7.1.10';
-=======
 	const VERSION = '8.0.0-dev';
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
 
 	const SCALE = 72 / 25.4;
 

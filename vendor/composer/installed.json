@@ -198,11 +198,7 @@
         "version_normalized": "3.3.1.0",
         "source": {
             "type": "git",
-<<<<<<< HEAD
-            "url": "https://github.com/jquery/jquery-dist.git",
-=======
             "url": "git@github.com:jquery/jquery-dist.git",
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
             "reference": "9e8ec3d10fad04748176144f108d7355662ae75e"
         },
         "dist": {
@@ -454,19 +450,6 @@
     },
     {
         "name": "codeception/phpunit-wrapper",
-<<<<<<< HEAD
-        "version": "6.0.14",
-        "version_normalized": "6.0.14.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Codeception/phpunit-wrapper.git",
-            "reference": "3b64beb0af3e63145af982e64718ab80d2417739"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/3b64beb0af3e63145af982e64718ab80d2417739",
-            "reference": "3b64beb0af3e63145af982e64718ab80d2417739",
-=======
         "version": "6.0.16",
         "version_normalized": "6.0.16.0",
         "source": {
@@ -478,7 +461,6 @@
             "type": "zip",
             "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/299e3aece31489ed962e6c39fe2fb6f3bbd2eb16",
             "reference": "299e3aece31489ed962e6c39fe2fb6f3bbd2eb16",
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
             "shasum": ""
         },
         "require": {
@@ -492,48 +474,6 @@
         },
         "require-dev": {
             "codeception/specify": "*",
-<<<<<<< HEAD
-            "vlucas/phpdotenv": "^2.4"
-        },
-        "time": "2019-01-13T10:35:17+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Codeception\\PHPUnit\\": "src\\"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Davert",
-                "email": "davert.php@resend.cc"
-            }
-        ],
-        "description": "PHPUnit classes used by Codeception"
-    },
-    {
-        "name": "codeception/stub",
-        "version": "2.0.4",
-        "version_normalized": "2.0.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Codeception/Stub.git",
-            "reference": "f50bc271f392a2836ff80690ce0c058efe1ae03e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Codeception/Stub/zipball/f50bc271f392a2836ff80690ce0c058efe1ae03e",
-            "reference": "f50bc271f392a2836ff80690ce0c058efe1ae03e",
-            "shasum": ""
-        },
-        "require": {
-            "phpunit/phpunit": ">=4.8 <8.0"
-        },
-=======
             "vlucas/phpdotenv": "^3.0"
         },
         "time": "2019-02-26T20:47:56+00:00",
@@ -574,7 +514,6 @@
         "require": {
             "phpunit/phpunit": ">=4.8 <8.0"
         },
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
         "time": "2018-07-26T11:55:37+00:00",
         "type": "library",
         "installation-source": "dist",
@@ -1204,7 +1143,7 @@
                 "dev-master": "1.0.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "kartik\\file\\": "src"
@@ -1382,7 +1321,7 @@
                 "bower-asset-library": "vendor/bower"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "mdm\\admin\\": ""
@@ -1413,21 +1352,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/mpdf/mpdf.git",
-<<<<<<< HEAD
-            "reference": "6e07b3fdb40312ca87361734affb8406ef95d323"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/mpdf/mpdf/zipball/6e07b3fdb40312ca87361734affb8406ef95d323",
-            "reference": "6e07b3fdb40312ca87361734affb8406ef95d323",
-=======
             "reference": "e18d5c9a490fd4128ff93edfef395636ce41c49d"
         },
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/mpdf/mpdf/zipball/e18d5c9a490fd4128ff93edfef395636ce41c49d",
             "reference": "e18d5c9a490fd4128ff93edfef395636ce41c49d",
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
             "shasum": ""
         },
         "require": {
@@ -1451,18 +1381,14 @@
             "ext-xml": "Needed mainly for SVG manipulation",
             "ext-zlib": "Needed for compression of embedded resources, such as fonts"
         },
-<<<<<<< HEAD
-        "time": "2019-02-06T13:34:30+00:00",
-=======
         "time": "2019-02-26T10:26:17+00:00",
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
         "type": "library",
         "extra": {
             "branch-alias": {
                 "dev-development": "7.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "Mpdf\\": "src/"

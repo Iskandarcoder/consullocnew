@@ -26,13 +26,9 @@
         "kartik-v/yii2-widget-timepicker": "*",
         "2amigos/yii2-date-picker-widget": "~1.0",
         "kartik-v/yii2-mpdf": "dev-master",
-<<<<<<< HEAD
-        "kartik-v/yii2-widget-fileinput": "@dev",
-=======
-        "kartik-v/yii2-widget-fileinput": "dev-master",
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
         "kartik-v/yii2-date-range": "*",
-        "mpdf/mpdf": "@dev"
+        "mpdf/mpdf": "@dev",
+        "kartik-v/yii2-widget-fileinput": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
