@@ -6,11 +6,6 @@ use Yii;
 use backend\models\Pmj;
 use frontend\models\PmjSearch;
 //use yii\web\Controller;
-<<<<<<< HEAD
-use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
-use frontend\components\BaseController;
-=======
 use frontend\components\BaseController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -19,7 +14,6 @@ use backend\models\Teenager;
 use backend\models\Employment;
 use backend\models\Relative;
 use backend\models\Model;
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
 
 /**
  * PmjController implements the CRUD actions for Pmj model.
@@ -69,8 +63,6 @@ class PmjController extends BaseController
         ]);
     }
 
-<<<<<<< HEAD
-=======
     public function actionPdf($id)
     {
         $model = $this->findModel($id);
@@ -129,7 +121,6 @@ class PmjController extends BaseController
         return $this->redirect(['pdf', 'id' => $id]);
     }
 
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
     /**
      * Creates a new Pmj model.
      * If creation is successful, the browser will be redirected to the 'view' page.
@@ -139,15 +130,6 @@ class PmjController extends BaseController
     {
         $model = new Pmj();
 
-<<<<<<< HEAD
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
-
-        return $this->render('create', [
-            'model' => $model,
-        ]);
-=======
         $model->setRandomString();
         $modelTeenager = [new Teenager];
         $modelEmployment = [new Employment];
@@ -296,7 +278,6 @@ class PmjController extends BaseController
             'modelRelative' => (empty($modelRelative)) ? [new Relative] : $modelRelative,
             ]);
         }
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
     }
 
     /**
@@ -310,9 +291,6 @@ class PmjController extends BaseController
     {
         $model = $this->findModel($id);
 
-<<<<<<< HEAD
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-=======
         if ($model->load(Yii::$app->request->post())) {
 
              $model->file = UploadedFile::getInstance($model,'file');
@@ -324,7 +302,6 @@ class PmjController extends BaseController
             $model->photo = $imageName;
             }
             $model->save();
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -333,10 +310,7 @@ class PmjController extends BaseController
         ]);
     }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
     /**
      * Deletes an existing Pmj model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
@@ -367,7 +341,4 @@ class PmjController extends BaseController
         throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
     }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
