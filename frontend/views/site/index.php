@@ -39,7 +39,7 @@
   </div>
 
   <div class="col-sm-3">
-    <a href="?action=istreb">
+    <a href="<?= Url::to(['/docs/create'])?>">
       <button type="button" class="btn btn-labeled btn-lg btn-info">
         <span class="btn-label"><i class="fa fa-2x fa-newspaper-o"></i></span><?= Yii::t('app', 'Hujjatlarni</br>olish'); ?>
         <div class="overlay">
