@@ -24,6 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
+<<<<<<< HEAD
             'sp_id',
             'sp_name_cryl',
             'sp_name_ru',
@@ -31,6 +32,17 @@ $this->params['breadcrumbs'][] = $this->title;
             'sp_name_en',
             // 'sp_name_uz',
             // 'sp_name_qrl',
+=======
+            'id',
+            'sp_id',
+            'KODST_ZU',
+            'sp_name00',
+            'sp_name01',
+            // 'sp_name02',
+            // 'sp_name03',
+            // 'sp_name04',
+            // 'sp_name05',
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
             // 'sp_country',
             // 'sp_region',
             // 'sp_district',

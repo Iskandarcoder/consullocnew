@@ -34,3 +34,7 @@ phpunit.phar
 # vagrant runtime
 /.vagrant
 main-local
+<<<<<<< HEAD
+=======
+vendor
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b

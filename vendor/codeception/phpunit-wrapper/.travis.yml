@@ -1,7 +1,11 @@
 language: php
 
 env:
+<<<<<<< HEAD
   CODECEPTION_VERSION: 'dev-phpunit-xml-reports-2'
+=======
+  CODECEPTION_VERSION: '2.6.x-dev'
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
 
 php:
   - 5.6
@@ -15,3 +19,13 @@ before_script:
 script:
   - php robo.phar test cli
   - php robo.phar test "unit -g core"
+<<<<<<< HEAD
+=======
+  - php robo.phar test "tests/unit/Codeception/Constraints/"
+# run tests with 2.5 branch
+  - CODECEPTION_VERSION=2.5.x-dev php robo.phar prepare
+  - composer update
+  - php robo.phar test cli
+  - php robo.phar test "unit -g core"
+  - php robo.phar test "tests/unit/Codeception/Constraints/"
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b

@@ -13,6 +13,7 @@ $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id
 $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
 ?>
 <div class="pmj-update">
+<<<<<<< HEAD
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -20,4 +21,9 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
         'model' => $model,
     ]) ?>
 
+=======
+    <?= $this->render('_form', [
+        'model' => $model,
+    ]) ?>
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
 </div>

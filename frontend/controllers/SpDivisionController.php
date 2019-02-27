@@ -66,7 +66,11 @@ class SpDivisionController extends Controller
         $model = new SpDivision();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+<<<<<<< HEAD
             return $this->redirect(['view', 'id' => $model->sp_id]);
+=======
+            return $this->redirect(['view', 'id' => $model->id]);
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -85,7 +89,11 @@ class SpDivisionController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+<<<<<<< HEAD
             return $this->redirect(['view', 'id' => $model->sp_id]);
+=======
+            return $this->redirect(['view', 'id' => $model->id]);
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
         } else {
             return $this->render('update', [
                 'model' => $model,

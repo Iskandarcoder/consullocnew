@@ -198,7 +198,11 @@
         "version_normalized": "3.3.1.0",
         "source": {
             "type": "git",
+<<<<<<< HEAD
             "url": "https://github.com/jquery/jquery-dist.git",
+=======
+            "url": "git@github.com:jquery/jquery-dist.git",
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
             "reference": "9e8ec3d10fad04748176144f108d7355662ae75e"
         },
         "dist": {
@@ -450,6 +454,7 @@
     },
     {
         "name": "codeception/phpunit-wrapper",
+<<<<<<< HEAD
         "version": "6.0.14",
         "version_normalized": "6.0.14.0",
         "source": {
@@ -461,6 +466,19 @@
             "type": "zip",
             "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/3b64beb0af3e63145af982e64718ab80d2417739",
             "reference": "3b64beb0af3e63145af982e64718ab80d2417739",
+=======
+        "version": "6.0.16",
+        "version_normalized": "6.0.16.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Codeception/phpunit-wrapper.git",
+            "reference": "299e3aece31489ed962e6c39fe2fb6f3bbd2eb16"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/299e3aece31489ed962e6c39fe2fb6f3bbd2eb16",
+            "reference": "299e3aece31489ed962e6c39fe2fb6f3bbd2eb16",
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
             "shasum": ""
         },
         "require": {
@@ -474,6 +492,7 @@
         },
         "require-dev": {
             "codeception/specify": "*",
+<<<<<<< HEAD
             "vlucas/phpdotenv": "^2.4"
         },
         "time": "2019-01-13T10:35:17+00:00",
@@ -514,6 +533,48 @@
         "require": {
             "phpunit/phpunit": ">=4.8 <8.0"
         },
+=======
+            "vlucas/phpdotenv": "^3.0"
+        },
+        "time": "2019-02-26T20:47:56+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Codeception\\PHPUnit\\": "src\\"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Davert",
+                "email": "davert.php@resend.cc"
+            }
+        ],
+        "description": "PHPUnit classes used by Codeception"
+    },
+    {
+        "name": "codeception/stub",
+        "version": "2.0.4",
+        "version_normalized": "2.0.4.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Codeception/Stub.git",
+            "reference": "f50bc271f392a2836ff80690ce0c058efe1ae03e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Codeception/Stub/zipball/f50bc271f392a2836ff80690ce0c058efe1ae03e",
+            "reference": "f50bc271f392a2836ff80690ce0c058efe1ae03e",
+            "shasum": ""
+        },
+        "require": {
+            "phpunit/phpunit": ">=4.8 <8.0"
+        },
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
         "time": "2018-07-26T11:55:37+00:00",
         "type": "library",
         "installation-source": "dist",
@@ -1143,7 +1204,7 @@
                 "dev-master": "1.0.x-dev"
             }
         },
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "psr-4": {
                 "kartik\\file\\": "src"
@@ -1352,12 +1413,21 @@
         "source": {
             "type": "git",
             "url": "https://github.com/mpdf/mpdf.git",
+<<<<<<< HEAD
             "reference": "6e07b3fdb40312ca87361734affb8406ef95d323"
         },
         "dist": {
             "type": "zip",
             "url": "https://api.github.com/repos/mpdf/mpdf/zipball/6e07b3fdb40312ca87361734affb8406ef95d323",
             "reference": "6e07b3fdb40312ca87361734affb8406ef95d323",
+=======
+            "reference": "e18d5c9a490fd4128ff93edfef395636ce41c49d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mpdf/mpdf/zipball/e18d5c9a490fd4128ff93edfef395636ce41c49d",
+            "reference": "e18d5c9a490fd4128ff93edfef395636ce41c49d",
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
             "shasum": ""
         },
         "require": {
@@ -1367,10 +1437,11 @@
             "paragonie/random_compat": "^1.4|^2.0|9.99.99",
             "php": "^5.6 || ~7.0.0 || ~7.1.0 || ~7.2.0 || ~7.3.0",
             "psr/log": "^1.0",
-            "setasign/fpdi": "1.6.*"
+            "setasign/fpdi": "^2.1"
         },
         "require-dev": {
             "mockery/mockery": "^0.9.5",
+            "mpdf/qrcode": "^1.0.0",
             "phpunit/phpunit": "^5.0",
             "squizlabs/php_codesniffer": "^2.7.0",
             "tracy/tracy": "^2.4"
@@ -1380,14 +1451,18 @@
             "ext-xml": "Needed mainly for SVG manipulation",
             "ext-zlib": "Needed for compression of embedded resources, such as fonts"
         },
+<<<<<<< HEAD
         "time": "2019-02-06T13:34:30+00:00",
+=======
+        "time": "2019-02-26T10:26:17+00:00",
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
         "type": "library",
         "extra": {
             "branch-alias": {
                 "dev-development": "7.x-dev"
             }
         },
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "psr-4": {
                 "Mpdf\\": "src/"
@@ -2853,35 +2928,42 @@
     },
     {
         "name": "setasign/fpdi",
-        "version": "1.6.2",
-        "version_normalized": "1.6.2.0",
+        "version": "v2.2.0",
+        "version_normalized": "2.2.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/Setasign/FPDI.git",
-            "reference": "a6ad58897a6d97cc2d2cd2adaeda343b25a368ea"
+            "reference": "3c266002f8044f61b17329f7cd702d44d73f0f7f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Setasign/FPDI/zipball/a6ad58897a6d97cc2d2cd2adaeda343b25a368ea",
-            "reference": "a6ad58897a6d97cc2d2cd2adaeda343b25a368ea",
+            "url": "https://api.github.com/repos/Setasign/FPDI/zipball/3c266002f8044f61b17329f7cd702d44d73f0f7f",
+            "reference": "3c266002f8044f61b17329f7cd702d44d73f0f7f",
             "shasum": ""
         },
-        "suggest": {
-            "setasign/fpdf": "FPDI will extend this class but as it is also possible to use \"tecnickcom/tcpdf\" as an alternative there's no fixed dependency configured.",
-            "setasign/fpdi-fpdf": "Use this package to automatically evaluate dependencies to FPDF.",
-            "setasign/fpdi-tcpdf": "Use this package to automatically evaluate dependencies to TCPDF."
+        "require": {
+            "ext-zlib": "*",
+            "php": "^5.6 || ^7.0"
         },
-        "time": "2017-05-11T14:25:49+00:00",
+        "require-dev": {
+            "phpunit/phpunit": "~5.7",
+            "setasign/fpdf": "~1.8",
+            "setasign/tfpdf": "1.25",
+            "tecnickcom/tcpdf": "~6.2"
+        },
+        "suggest": {
+            "setasign/fpdf": "FPDI will extend this class but as it is also possible to use TCPDF or tFPDF as an alternative. There's no fixed dependency configured.",
+            "setasign/fpdi-fpdf": "Use this package to automatically evaluate dependencies to FPDF.",
+            "setasign/fpdi-tcpdf": "Use this package to automatically evaluate dependencies to TCPDF.",
+            "setasign/fpdi-tfpdf": "Use this package to automatically evaluate dependencies to tFPDF."
+        },
+        "time": "2019-01-30T14:11:19+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
-            "classmap": [
-                "filters/",
-                "fpdi.php",
-                "fpdf_tpl.php",
-                "fpdi_pdf_parser.php",
-                "pdf_context.php"
-            ]
+            "psr-4": {
+                "setasign\\Fpdi\\": "src/"
+            }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -2891,6 +2973,11 @@
             {
                 "name": "Jan Slabon",
                 "email": "jan.slabon@setasign.com",
+                "homepage": "https://www.setasign.com"
+            },
+            {
+                "name": "Maximilian Kresse",
+                "email": "maximilian.kresse@setasign.com",
                 "homepage": "https://www.setasign.com"
             }
         ],

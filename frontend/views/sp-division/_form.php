@@ -14,6 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'sp_id')->textInput() ?>
 
+<<<<<<< HEAD
     <?= $form->field($model, 'sp_name_cryl')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'sp_name_ru')->textInput(['maxlength' => true]) ?>
@@ -25,6 +26,21 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'sp_name_uz')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'sp_name_qrl')->textInput(['maxlength' => true]) ?>
+=======
+    <?= $form->field($model, 'KODST_ZU')->textInput() ?>
+
+    <?= $form->field($model, 'sp_name00')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'sp_name01')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'sp_name02')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'sp_name03')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'sp_name04')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'sp_name05')->textInput(['maxlength' => true]) ?>
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
 
     <?= $form->field($model, 'sp_country')->textInput() ?>
 

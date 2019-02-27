@@ -16,6 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
+<<<<<<< HEAD
         <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
@@ -24,6 +25,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+=======
+      
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
     </p>
 
     <?= DetailView::widget([
@@ -50,8 +54,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'law_court',
             'criminal',
             'army',
+<<<<<<< HEAD
             'id',
             'status_id',
+=======
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
         ],
     ]) ?>
 

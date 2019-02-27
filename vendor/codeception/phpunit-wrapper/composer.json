@@ -25,7 +25,15 @@
         }
     },
     "require-dev": {
+<<<<<<< HEAD
         "vlucas/phpdotenv": "^2.4",
         "codeception/specify": "*"
+=======
+        "vlucas/phpdotenv": "^3.0",
+        "codeception/specify": "*"
+    },
+    "config": {
+        "discard-changes": true
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
     }
 }

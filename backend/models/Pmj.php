@@ -36,6 +36,14 @@ class Pmj extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+<<<<<<< HEAD
+=======
+        public $file;
+        public $file1;
+        public $file2;
+        public $file3;
+
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
     public static function tableName()
     {
         return 'pmj';
@@ -47,22 +55,39 @@ class Pmj extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+<<<<<<< HEAD
             [['surname', 'name', 'mname', 'nationality_id', 'birth_date', 'birth_place', 'living_place', 'tel', 'citizenship_id', 'second_cityzenship_id', 'seria_pasp', 'numb_pasp', 'pasp_date', 'pasp_place', 'reason', 'security', 'law_court', 'criminal', 'army', 'status_id'], 'required'],
             [['nationality_id', 'tel', 'citizenship_id', 'second_cityzenship_id', 'numb_pasp', 'status_id'], 'integer'],
+=======
+            [['surname', 'name', 'mname', 'nationality_id', 'birth_date', 'birth_place', 'living_place', 'tel', 'citizenship_id', 'seria_pasp', 'numb_pasp', 'pasp_date', 'pasp_place', 'reason', 'security', 'law_court', 'criminal', 'army','division_id'], 'required'],
+            [['nationality_id', 'tel', 'citizenship_id', 'second_cityzenship_id', 'numb_pasp', 'status_id','division_id'], 'integer'],
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
             [['birth_date', 'pasp_date'], 'safe'],
             [['surname', 'name', 'mname', 'pre_surname', 'pre_name', 'pre_mname'], 'string', 'max' => 20],
             [['birth_place', 'living_place', 'pasp_place'], 'string', 'max' => 100],
             [['seria_pasp'], 'string', 'max' => 4],
+<<<<<<< HEAD
             [['reason', 'security', 'law_court', 'criminal', 'army', 'photo'], 'string', 'max' => 500],
         ];
     }
 
+=======
+            [['mail'], 'string', 'max' => 30],
+            [['comment'], 'string', 'max' => 500],
+            [['reason', 'security', 'law_court', 'criminal', 'army', 'photo', 'photo1', 'photo2', 'photo3'], 'string', 'max' => 500],
+            [['file','file1','file2','file3'],'file'],
+        ];
+    }
+
+
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
     /**
      * {@inheritdoc}
      */
     public function attributeLabels()
     {
         return [
+<<<<<<< HEAD
             'surname' => Yii::t('app', 'Surname'),
             'name' => Yii::t('app', 'Name'),
             'mname' => Yii::t('app', 'MName'),
@@ -89,4 +114,84 @@ class Pmj extends \yii\db\ActiveRecord
             'status_id' => Yii::t('app', 'Status ID'),
         ];
     }
+=======
+            'surname' => Yii::t('app', 'Familiya'),
+            'name' => Yii::t('app', 'Ismi'),
+            'mname' => Yii::t('app', 'Otasining ismi'),
+            'pre_surname' => Yii::t('app', 'Oldingi familiyasi'),
+            'pre_name' => Yii::t('app', 'Oldingi ismi'),
+            'pre_mname' => Yii::t('app', 'Otasining oldingi ismi'),
+            'nationality_id' => Yii::t('app', 'Millati'),
+            'birth_date' => Yii::t('app', 'Tug\'ilgan sanasi'),
+            'birth_place' => Yii::t('app', 'Tug\'ilgan joyi'),
+            'living_place' => Yii::t('app', 'Doimiy yashash joyi (O\'zbekiston Respublikasidagi propiskasi)'),
+            'tel' => Yii::t('app', 'Telefon'),
+            'citizenship_id' => Yii::t('app', 'Fuqaroligi'),
+            'second_cityzenship_id' => Yii::t('app', 'Agar bir vaqtda boshqa davlat fuqaroligiga ega bo\'lsa'),
+            'seria_pasp' => Yii::t('app', 'Pasport seriyasi'),
+            'numb_pasp' => Yii::t('app', 'Pasport nomeri'),
+            'pasp_date' => Yii::t('app', 'Pasport berilgan sana'),
+            'pasp_place' => Yii::t('app', 'Pasport olgan joyi'),
+            'reason' => Yii::t('app', 'Ketishdan maqsad'),
+            'security' => Yii::t('app', 'Ish (O\'qish, xizmat) davrida rasmiy ravishda davlat siriga kiradigan ma\'lumotlarga kirish huquqi berilganmi? Chet elga ketishning oldini olish uchun shartnoma majburiyatlari bormi?'),
+            'law_court' => Yii::t('app', 'Sud tomonidan bajarilmagan majburiyatlar mavjudmi? Sudda fuqarolik da\'volari bormi?'),
+            'criminal' => Yii::t('app', 'Jinoiy ish ochilganmi?'),
+            'army' => Yii::t('app', 'Harbiy xizmatga majburmi?'),            
+            'file' => Yii::t('app', 'Rasm'),
+            'file1' => Yii::t('app','Pasport nusxasi'),
+            'file2' => Yii::t('app','Tug`ilganlik haqida guvohnoma nusxasi'),
+            'file3' => Yii::t('app','Xarbiy guvohnoma nusxasi'),  
+            'division_id' => Yii::t('app', 'Diplomatik vakolatxonalar'), 
+            'status_id' => Yii::t('app', 'Holati'),      
+            'mail' => Yii::t('app', 'E-mail'),  
+            'comment' => Yii::t('app', 'Sharh'),       
+        ];
+    }
+
+    public function setRandomString($length = 32)
+    {
+        $characters = 'ABCDEFGHJKLMNPQRSTUVWXYZ123456789';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        $this->id = $randomString;
+    }
+
+    public function getTeenager()
+    {
+        return $this->hasMany(Teenager::className(), ['pmj_id' => 'id']);
+    }
+
+    public function getEmployment()
+    {
+        return $this->hasMany(Employment::className(), ['pmj_id' => 'id']);
+    }
+
+    public function getRelative()
+    {
+        return $this->hasMany(Relative::className(), ['pmj_id' => 'id']);
+    }
+
+     public function getSpNation()
+    {
+        return $this->hasOne(SpNation::className(), ['sp_id' => 'nationality_id']);
+    }
+
+     public function getSpCountry()
+    {
+        return $this->hasOne(SpCountry::className(), ['sp_id' => 'citizenship_id']);
+    }
+
+     public function getSpCountry2()
+    {
+        return $this->hasOne(SpCountry::className(), ['sp_id' => 'second_cityzenship_id']);
+    }
+
+     public function getStatus()
+    {
+        return $this->hasOne(Status::className(), ['id' => 'status_id']);
+    }
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
 }

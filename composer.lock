@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "4988f1697539991dee4c107be613272b",
+=======
+    "content-hash": "e8f39100c6bced7cc5d0ac423a35375f",
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
     "packages": [
         {
             "name": "2amigos/yii2-date-picker-widget",
@@ -135,7 +139,11 @@
             "version": "3.3.1",
             "source": {
                 "type": "git",
+<<<<<<< HEAD
                 "url": "https://github.com/jquery/jquery-dist.git",
+=======
+                "url": "git@github.com:jquery/jquery-dist.git",
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
                 "reference": "9e8ec3d10fad04748176144f108d7355662ae75e"
             },
             "dist": {
@@ -843,12 +851,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mpdf/mpdf.git",
+<<<<<<< HEAD
                 "reference": "6e07b3fdb40312ca87361734affb8406ef95d323"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/mpdf/mpdf/zipball/6e07b3fdb40312ca87361734affb8406ef95d323",
                 "reference": "6e07b3fdb40312ca87361734affb8406ef95d323",
+=======
+                "reference": "e18d5c9a490fd4128ff93edfef395636ce41c49d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mpdf/mpdf/zipball/e18d5c9a490fd4128ff93edfef395636ce41c49d",
+                "reference": "e18d5c9a490fd4128ff93edfef395636ce41c49d",
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
                 "shasum": ""
             },
             "require": {
@@ -858,10 +875,11 @@
                 "paragonie/random_compat": "^1.4|^2.0|9.99.99",
                 "php": "^5.6 || ~7.0.0 || ~7.1.0 || ~7.2.0 || ~7.3.0",
                 "psr/log": "^1.0",
-                "setasign/fpdi": "1.6.*"
+                "setasign/fpdi": "^2.1"
             },
             "require-dev": {
                 "mockery/mockery": "^0.9.5",
+                "mpdf/qrcode": "^1.0.0",
                 "phpunit/phpunit": "^5.0",
                 "squizlabs/php_codesniffer": "^2.7.0",
                 "tracy/tracy": "^2.4"
@@ -903,7 +921,11 @@
                 "php",
                 "utf-8"
             ],
+<<<<<<< HEAD
             "time": "2019-02-06T13:34:30+00:00"
+=======
+            "time": "2019-02-26T10:26:17+00:00"
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
         },
         {
             "name": "myclabs/deep-copy",
@@ -1048,32 +1070,39 @@
         },
         {
             "name": "setasign/fpdi",
-            "version": "1.6.2",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Setasign/FPDI.git",
-                "reference": "a6ad58897a6d97cc2d2cd2adaeda343b25a368ea"
+                "reference": "3c266002f8044f61b17329f7cd702d44d73f0f7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Setasign/FPDI/zipball/a6ad58897a6d97cc2d2cd2adaeda343b25a368ea",
-                "reference": "a6ad58897a6d97cc2d2cd2adaeda343b25a368ea",
+                "url": "https://api.github.com/repos/Setasign/FPDI/zipball/3c266002f8044f61b17329f7cd702d44d73f0f7f",
+                "reference": "3c266002f8044f61b17329f7cd702d44d73f0f7f",
                 "shasum": ""
             },
+            "require": {
+                "ext-zlib": "*",
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~5.7",
+                "setasign/fpdf": "~1.8",
+                "setasign/tfpdf": "1.25",
+                "tecnickcom/tcpdf": "~6.2"
+            },
             "suggest": {
-                "setasign/fpdf": "FPDI will extend this class but as it is also possible to use \"tecnickcom/tcpdf\" as an alternative there's no fixed dependency configured.",
+                "setasign/fpdf": "FPDI will extend this class but as it is also possible to use TCPDF or tFPDF as an alternative. There's no fixed dependency configured.",
                 "setasign/fpdi-fpdf": "Use this package to automatically evaluate dependencies to FPDF.",
-                "setasign/fpdi-tcpdf": "Use this package to automatically evaluate dependencies to TCPDF."
+                "setasign/fpdi-tcpdf": "Use this package to automatically evaluate dependencies to TCPDF.",
+                "setasign/fpdi-tfpdf": "Use this package to automatically evaluate dependencies to tFPDF."
             },
             "type": "library",
             "autoload": {
-                "classmap": [
-                    "filters/",
-                    "fpdi.php",
-                    "fpdf_tpl.php",
-                    "fpdi_pdf_parser.php",
-                    "pdf_context.php"
-                ]
+                "psr-4": {
+                    "setasign\\Fpdi\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1084,6 +1113,11 @@
                     "name": "Jan Slabon",
                     "email": "jan.slabon@setasign.com",
                     "homepage": "https://www.setasign.com"
+                },
+                {
+                    "name": "Maximilian Kresse",
+                    "email": "maximilian.kresse@setasign.com",
+                    "homepage": "https://www.setasign.com"
                 }
             ],
             "description": "FPDI is a collection of PHP classes facilitating developers to read pages from existing PDF documents and use them as templates in FPDF. Because it is also possible to use FPDI with TCPDF, there are no fixed dependencies defined. Please see suggestions for packages which evaluates the dependencies automatically.",
@@ -1093,7 +1127,7 @@
                 "fpdi",
                 "pdf"
             ],
-            "time": "2017-05-11T14:25:49+00:00"
+            "time": "2019-01-30T14:11:19+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2071,6 +2105,7 @@
         },
         {
             "name": "codeception/phpunit-wrapper",
+<<<<<<< HEAD
             "version": "6.0.14",
             "source": {
                 "type": "git",
@@ -2081,6 +2116,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/3b64beb0af3e63145af982e64718ab80d2417739",
                 "reference": "3b64beb0af3e63145af982e64718ab80d2417739",
+=======
+            "version": "6.0.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Codeception/phpunit-wrapper.git",
+                "reference": "299e3aece31489ed962e6c39fe2fb6f3bbd2eb16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/299e3aece31489ed962e6c39fe2fb6f3bbd2eb16",
+                "reference": "299e3aece31489ed962e6c39fe2fb6f3bbd2eb16",
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
                 "shasum": ""
             },
             "require": {
@@ -2094,7 +2141,11 @@
             },
             "require-dev": {
                 "codeception/specify": "*",
+<<<<<<< HEAD
                 "vlucas/phpdotenv": "^2.4"
+=======
+                "vlucas/phpdotenv": "^3.0"
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
             },
             "type": "library",
             "autoload": {
@@ -2113,7 +2164,11 @@
                 }
             ],
             "description": "PHPUnit classes used by Codeception",
+<<<<<<< HEAD
             "time": "2019-01-13T10:35:17+00:00"
+=======
+            "time": "2019-02-26T20:47:56+00:00"
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
         },
         {
             "name": "codeception/stub",
