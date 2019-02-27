@@ -1,8 +1,7 @@
 
-.vibor h5{
+.vibor h3{
     text-align: center;
-    color: #52adc7;
-    font: 24px plumbbold;
+    color: #596fa6;    
     margin: 20px!important;
 }
 
@@ -21,18 +20,18 @@
 .btn-label {
     position: relative;
     display: inline-block;
-    padding: 20px 12px;
-  
+    padding: 20px 12px;  
     border-radius: 3px 0 0 3px;
-    float: left;
-
+    font: #596fa6;  
 }
+
 .btn-labeled {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0 0 10px 0;
+    background: white;
+    border: 4px solid #596fa6;
 }
 .btn { 
-    margin-bottom:5px; 
+    margin-bottom:20px; 
     width: 100%;
     padding-left: 0!important;
     text-align: center;
@@ -48,8 +47,9 @@
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color:#349bb9;
+  background-color:#596fa6;
   border-radius: 6px;
+  border:3px solid white;
 }
 
 .btn:hover .overlay {
@@ -58,12 +58,15 @@
 
 .text {
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
   display: inline-block;
   line-height: 18px;
+  padding: 10px;  
+}
 
-
+.dead {
+  width: 57px;
 }
 /*.k-uslugi .btn-info{
     background-color: #596fa6!important;

@@ -33,7 +33,7 @@ body {
 }
 
 .nav-tabs > li {
-    width: 25%;
+    width: 14%;
 }
 
 .nav-tabs > li:after {
@@ -166,6 +166,34 @@ body {
 }
 
 .nav-tabs > li:nth-of-type(4).active span {
+    color: #fff;
+    background: #596fa6;
+}
+
+.nav-tabs > li:nth-of-type(5) span {
+    color: #596fa6;
+    border: 2px solid #596fa6;
+}
+
+.nav-tabs > li:nth-of-type(5).active span {
+    color: #fff;
+    background: #596fa6;
+}
+.nav-tabs > li:nth-of-type(6) span {
+    color: #596fa6;
+    border: 2px solid #596fa6;
+}
+
+.nav-tabs > li:nth-of-type(6).active span {
+    color: #fff;
+    background: #596fa6;
+}
+.nav-tabs > li:nth-of-type(7) span {
+    color: #596fa6;
+    border: 2px solid #596fa6;
+}
+
+.nav-tabs > li:nth-of-type(7).active span {
     color: #fff;
     background: #596fa6;
 }
