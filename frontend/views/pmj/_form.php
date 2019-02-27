@@ -16,11 +16,21 @@ use kartik\select2\Select2;
 /* @var $model backend\models\Pmj */
 /* @var $form yii\widgets\ActiveForm */
 ?>
-
+<style type="text/css">
+  .fileinput-cancel-button {
+    display: none;
+  }
+  .fileinput-upload-button {
+    display: none;
+  }
+  .fileinput-remove-button {
+    display: none;
+  }
+</style>
 <div class="container well well-lg" style="background-color: white;border-radius: 8px!important; color: #18b19c;">
   <h3><b><?= Yii::t('app', 'Forma №30'); ?></b></h3></br>
   <div class="board">
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs li4">
       <div class="liner"></div>
       <li rel-index="0"  class="active">
         <a  id="s1" href="#step-1" class="btn media-links" aria-controls="step-1" role="tab" data-toggle="tab">
@@ -180,7 +190,7 @@ use kartik\select2\Select2;
         <div class="row">
           <div class="form-group col-sm-12">
             <?= $form->field($model, 'division_id')->dropDownList(
-              ArrayHelper::map(SpDivision::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
+              ArrayHelper::map(SpDivision::find()->where(['sp_idfirst' => 1])->all(), 'sp_id','sp_name_'.Yii::$app->language),
               ['prompt'=>Yii::t('app', 'Diplomatik vakolatxonani tanlang')]
             ) ?>
           </div>

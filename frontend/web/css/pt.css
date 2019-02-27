@@ -33,6 +33,10 @@ body {
 }
 
 .nav-tabs > li {
+    width: 25%;
+}
+
+.li4 > li {
     width: 14%;
 }
 

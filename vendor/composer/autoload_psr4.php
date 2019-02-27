@@ -22,6 +22,7 @@ return array(
     'webvimark\\extensions\\BootstrapSwitch\\' => array($vendorDir . '/webvimark/bootstrap-switch'),
     'webvimark\\components\\' => array($vendorDir . '/webvimark/components'),
     'wbraganca\\dynamicform\\' => array($vendorDir . '/wbraganca/yii2-dynamicform'),
+    'setasign\\Fpdi\\' => array($vendorDir . '/setasign/fpdi/src'),
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
     'mdm\\admin\\' => array($vendorDir . '/mdmsoft/yii2-admin'),
     'kartik\\time\\' => array($vendorDir . '/kartik-v/yii2-widget-timepicker/src'),
