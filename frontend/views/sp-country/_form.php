@@ -14,6 +14,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'sp_id')->textInput() ?>
 
+<<<<<<< HEAD
+=======
     <?= $form->field($model, 'sp_name_cryl')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'sp_name_ru')->textInput(['maxlength' => true]) ?>
@@ -26,6 +28,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'sp_name_qrl')->textInput(['maxlength' => true]) ?>
 
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
     <?= $form->field($model, 'sp_idn')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'sp_active')->textInput() ?>

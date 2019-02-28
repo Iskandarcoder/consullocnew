@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8f39100c6bced7cc5d0ac423a35375f",
+    "content-hash": "5517370a1042449f8712cd0b4c1ec7ca",
     "packages": [
         {
             "name": "2amigos/yii2-date-picker-widget",
@@ -4164,8 +4164,8 @@
         "kartik-v/yii2-widget-select2": 20,
         "kartik-v/yii2-widget-datepicker": 20,
         "kartik-v/yii2-mpdf": 20,
-        "kartik-v/yii2-widget-fileinput": 20,
-        "mpdf/mpdf": 20
+        "mpdf/mpdf": 20,
+        "kartik-v/yii2-widget-fileinput": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

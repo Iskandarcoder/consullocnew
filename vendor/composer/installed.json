@@ -1032,7 +1032,7 @@
                 "dev-master": "1.0.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "kartik\\mpdf\\": "src"
@@ -1086,7 +1086,7 @@
                 "dev-master": "1.4.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "kartik\\date\\": "src"
@@ -1143,7 +1143,7 @@
                 "dev-master": "1.0.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "kartik\\file\\": "src"
@@ -1199,7 +1199,7 @@
                 "dev-master": "2.1.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "kartik\\select2\\": "src"
@@ -1321,7 +1321,7 @@
                 "bower-asset-library": "vendor/bower"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "mdm\\admin\\": ""
@@ -1388,7 +1388,7 @@
                 "dev-development": "7.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "Mpdf\\": "src/"

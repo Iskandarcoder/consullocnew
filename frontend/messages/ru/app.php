@@ -127,6 +127,9 @@ return [
 	'Apostil</br>qo`yish' => 'Проставление<br/>Апостиля',
 	'Apostil qo`yish va<br/>hujjatlarni legallashtirish' => 'Проставление Апостиля<br/>и легализация<br/>документов',
 	'lang' => 'Русский',
+<<<<<<< HEAD
+
+=======
 	'Oldingi familiyasi' => 'Прежняя фамилия',
     'Oldingi ismi' => 'Прежняя имя',
     'Otasining oldingi ismi' => 'Прежняя отчество',
@@ -245,11 +248,67 @@ return [
 	'Apostil</br>qo`yish' => 'Проставление<br/>Апостиля',
 	'Apostil qo`yish va<br/>hujjatlarni legallashtirish' => 'Проставление Апостиля<br/>и легализация<br/>документов',
 	'lang' => 'Русский',
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
 	'O`zbekistonnig xorijdagi vakolatxonalari' => 'Загранучреждения Республики Узбекистан',     
 	'Ko`p beriladigan savollar'=> 'Ответы на часто задаваемые вопросы',
 	'Umumiy savollar' => 'Общие вопросы',
 	'FHDYo bo`yicha savollar'=> 'Вопросы по ЗАГС',
 	'Pasport almashtirish va rasmiylashtirish tartibi bo`yicha savollar'=> 'Вопросы о порядке изменения и регистрации паспортов',
+<<<<<<< HEAD
+
+
+	// HUJJATLARNI OLISH
+	'Familiyasi' => 'Фамилия',
+	'Sharifi' => 'Отчество',
+	'Avvalgi familiyasi (o\'zgargan bo\'lsa)' => 'Фамилии, которые носило это лицо (если были сменены)',
+	'Avvalgi ismi (o\'zgargan bo\'lsa)' => 'Имя, которые носило это лицо (если были сменены)',
+	'Avvalgi sharifi (o\'zgargan bo\'lsa)' => 'Отчества, которые носило это лицо (если были сменены)',
+	'Tug\'ilgan joyi (viloyat,tuman,shahar,qishloq)' => 'Место рождения (укажите область район, город, деревню, поселок)',
+	'Millati' => 'Национальность',
+	'Fuqaroligi' => 'Гражданство',
+	'Avvalgi fuqaroligi (o\'zgargan bo\'lsa)' => 'Гражданство, если было сменено',
+	'Pasport nusxasi' => 'Копия паспорта',
+	'Millatni tanlang...' => 'Выберите национальность...',
+	'Talab qilinayotgan hujjat turi' => 'Тип документа',
+	'Ro`yxatga olingan joyi' => 'Место регистрации актовой записи',
+	'Ro`yxatga olingan sanasi' => 'Дата регистрации актовой записи',
+	'Otasining F.I.SH.' => 'Ф.И.О. отца',
+	'Onasining F.I.SH.' => 'Ф.И.О. матери',
+	'Ta\'lim muassasasining nomi' => 'Название учебного заведения',
+	'Ta\'lim muassasasining manzili' => 'Адрес учебного заведения',
+	'Ta\'lim muassasasiga kirgan sanasi' => 'Дата поступления',  
+	'Ta\'lim muassasasini bitirgan sanasi' => 'Дата окончания',
+	'Nafaqa belgilanganligi sababi' => 'За что назначили пенсию',
+	'Nafaqa belgilangan sana' => 'Когда назначили пенсию',
+	'Nafaqa belgilagan tashkilot' => 'Какая организация назначила пенсию',
+	'Oxirgi to\'langan nafaqa sanasi' => 'Когда выплатила последний раз',
+	'Oxirgi nafaqa to\'lagan  tashkilot' => 'Какая организация выплатила последний раз',
+	'Hujjat nima maqsadda talab qilinmoqda' => 'Для какой цели истребуется документ',
+	'Yashash joyining aniq manzili' => 'Точный адрес и место жительство',
+	'Telefon raqami' => 'Номер телефона',  
+	'Faks raqami' => 'Номер факса',
+	'Ismingiz' => 'Ваше имя',
+	'Familiyangiz' => 'Ваше фамилия',
+	'Sharifingiz' => 'Ваше отчество',
+	'Fuqaroligingiz' => 'Ваше гражданство',
+	'Tug\'ilgan joyingiz' => 'Место Вашего рождения',
+	'Tug\'ilgan sanangiz' => 'Дата Вашего рождения',
+	'Hujjat talab qilinayotgan shaxsga qarindoshlik aloqangiz' => 'Родственные отношения к лицу, на имя которого истребуется документ',
+	'Yashash joyingizni aniq manzili' => 'Адрес места жительства',
+	'Telefon raqamingiz' => 'Номер телефона',
+	'Faks raqamingiz' => 'Номер факса',
+	'Boshqa shaxs' => 'Если истребуется не свой лично документ',
+	'Hujjat' => 'Документ',
+	'Hujjatlarni olish' => 'Истребование документов',
+	'Fuqarolikni tanlang...' => 'Выберите гражданство', 
+	'Hujjatni tanlang...' => 'Выберите документ...', 
+	'Agar talab qilinayotgan hujjat shaxsan sizga tegishli bo`lmasa,<br>belgini bosing va quyidagi savollarga javob bering' => 'Если истребуется не свой лично документ, поставьте галочку и заполните форму',	
+	'Elchixona' => 'Посольство', 
+	'Elchixonani tanlang...' => 'Выберите посольство...', 
+
+
+=======
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
 
 ];
 ?>
