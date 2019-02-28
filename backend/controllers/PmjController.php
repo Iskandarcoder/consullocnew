@@ -43,17 +43,16 @@ class PmjController extends BaseController
     public function actionIndex()
     {
         $searchModel = new PmjSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        // if(Yii::$app->user->identity->role_id != '1'){
+        if(Yii::$app->user->identity->role_id != '1'){
 
-        // $params = Yii::$app->request->queryParams;
-        // $division = Yii::$app->user->identity->dvision_id;
+        $params = Yii::$app->request->queryParams;
+        $division = Yii::$app->user->identity->dvision_id;
 
-        // $params['PmjSearch']['division_id'] = $division;
+        $params['PmjSearch']['division_id'] = $division;
 
-        // $dataProvider = $searchModel->search($params);
-        // }
+        $dataProvider = $searchModel->search($params);
+        }
 
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 

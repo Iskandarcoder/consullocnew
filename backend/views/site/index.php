@@ -14,7 +14,7 @@ use yii\helpers\Url;
             
             <!-- BEGIN PAGE HEADER-->
             <h3 class="page-title" style="text-align: center;font-weight: bold;">
-            O`zbekiston Respublikasi konsullari uchun interaktiv xizmatlar
+            <?= Yii::t('app', 'O`zbekiston Respublikasi konsullari uchun interaktiv xizmatlar'); ?>
             </h3>
             <hr>
             <!-- END PAGE HEADER-->
@@ -123,10 +123,10 @@ use yii\helpers\Url;
                         <div class="portlet-title">
                             <div class="caption">
                                 <i class="icon-equalizer font-purple-plum hide"></i>
-                                <span class="caption-subject font-blue-steel bold uppercase">Fuqarolikdan chiqish </span>
+                                <span class="caption-subject font-blue-steel bold uppercase"><?= Yii::t('app', 'Xorijga doimiy yashashga chiqish yozuvini rasmiylashtirish (DYa) tartibi'); ?> </span>
                             </div>
                             <div class="tools">
-                                <a href="#" class="icon-calendar font-green-sharp"> 2018</a>
+                                <a href="#" class="icon-calendar font-green-sharp"> 2019</a>
                                 <a href="" class="collapse">
                                 </a>
                             </div>
@@ -136,7 +136,7 @@ use yii\helpers\Url;
                                 <div class="col-md-4">
                                     <div class="sparkline-chart">
                                         <div class="number" style="font-size: 20px;">789</div>
-                                        <a class="title" href="javascript:;" style="font-size: 15px;">
+                                        <a class="title" href="<?= Url::to(['pmj/index']) ?>" style="font-size: 15px;">
                                         Arizalar <i class="icon-arrow-right"></i>
                                         </a>
                                     </div>
@@ -146,7 +146,7 @@ use yii\helpers\Url;
                                 <div class="col-md-4">
                                     <div class="sparkline-chart">
                                         <div class="number" style="font-size: 20px;">89</div>
-                                        <a class="title" href="javascript:;" style="font-size: 15px;">
+                                        <a class="title" href="<?= Url::to(['pmj/process']) ?>" style="font-size: 15px;">
                                         Jarayonda <i class="icon-arrow-right"></i>
                                         </a>
                                     </div>
@@ -156,7 +156,7 @@ use yii\helpers\Url;
                                 <div class="col-md-4">
                                     <div class="sparkline-chart">
                                         <div class="number" style="font-size: 20px;">400</div>
-                                        <a class="title" href="javascript:;" style="font-size: 15px;">
+                                        <a class="title" href="<?= Url::to(['pmj/registered']) ?>" style="font-size: 15px;">
                                         Fuqarolikdan chiqarilgan <i class="icon-arrow-right"></i>
                                         </a>
                                     </div>

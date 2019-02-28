@@ -52,6 +52,7 @@ class KusController extends Basecontroller
 
 
 
+
     /**
      * Lists all Kus models.
      * @return mixed

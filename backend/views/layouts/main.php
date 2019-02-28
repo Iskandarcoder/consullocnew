@@ -66,8 +66,8 @@ AppAsset::register($this);
                     </a>
                 </li>
                 <li class="classic-menu-dropdown">
-                    <a href="<?= Url::to(['chiqish/index'])?>">
-                    Fuqarolikdan chiqish <span class="selected">
+                    <a href="<?= Url::to(['pmj/index']) ?>">
+                    <?= Yii::t('app', 'Xorijda doimiy yashash'); ?> <span class="selected">
                     </span>
                     </a>
                 </li>
@@ -142,6 +142,7 @@ AppAsset::register($this);
     </div>
     <!-- END HEADER INNER -->
 </div>
+<br><br><br>
 <!-- END HEADER -->
         <?= $content ?>
     
