@@ -65,7 +65,6 @@ class AppAsset extends AssetBundle
         'js/admin/pages/scripts/index.js',
         'js/admin/pages/scripts/tasks.js',
         'js/jquery.input.js',
-        //'js/consul.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

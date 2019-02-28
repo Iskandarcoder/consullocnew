@@ -19,7 +19,7 @@ class PmjSearch extends Pmj
     {
         return [
             [['id', 'nationality_id', 'tel', 'citizenship_id', 'second_cityzenship_id', 'numb_pasp', 'status_id', 'division_id'], 'integer'],
-            [['surname', 'name', 'mname', 'pre_surname', 'pre_name', 'pre_mname', 'photo', 'photo1', 'photo2', 'photo3', 'birth_date', 'birth_place', 'living_place', 'seria_pasp', 'pasp_date', 'pasp_place', 'reason', 'security', 'law_court', 'criminal', 'army'], 'safe'],
+            [['surname', 'name', 'mname', 'pre_surname', 'pre_name', 'pre_mname', 'photo', 'photo1', 'photo2', 'photo3', 'birth_date', 'birth_place', 'living_place', 'seria_pasp', 'pasp_date', 'pasp_place', 'reason', 'security', 'law_court', 'criminal', 'army', 'guide'], 'safe'],
         ];
     }
 
@@ -73,6 +73,7 @@ class PmjSearch extends Pmj
 
         $query->andFilterWhere(['like', 'surname', $this->surname])
             ->andFilterWhere(['like', 'name', $this->name])
+            ->andFilterWhere(['like', 'guide', $this->guide])
             ->andFilterWhere(['like', 'mname', $this->mname])
             ->andFilterWhere(['like', 'pre_surname', $this->pre_surname])
             ->andFilterWhere(['like', 'pre_name', $this->pre_name])
