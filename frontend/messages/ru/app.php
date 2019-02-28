@@ -127,9 +127,7 @@ return [
 	'Apostil</br>qo`yish' => 'Проставление<br/>Апостиля',
 	'Apostil qo`yish va<br/>hujjatlarni legallashtirish' => 'Проставление Апостиля<br/>и легализация<br/>документов',
 	'lang' => 'Русский',
-<<<<<<< HEAD
 
-=======
 	'Oldingi familiyasi' => 'Прежняя фамилия',
     'Oldingi ismi' => 'Прежняя имя',
     'Otasining oldingi ismi' => 'Прежняя отчество',
@@ -248,13 +246,12 @@ return [
 	'Apostil</br>qo`yish' => 'Проставление<br/>Апостиля',
 	'Apostil qo`yish va<br/>hujjatlarni legallashtirish' => 'Проставление Апостиля<br/>и легализация<br/>документов',
 	'lang' => 'Русский',
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
+
 	'O`zbekistonnig xorijdagi vakolatxonalari' => 'Загранучреждения Республики Узбекистан',     
 	'Ko`p beriladigan savollar'=> 'Ответы на часто задаваемые вопросы',
 	'Umumiy savollar' => 'Общие вопросы',
 	'FHDYo bo`yicha savollar'=> 'Вопросы по ЗАГС',
 	'Pasport almashtirish va rasmiylashtirish tartibi bo`yicha savollar'=> 'Вопросы о порядке изменения и регистрации паспортов',
-<<<<<<< HEAD
 
 
 	// HUJJATLARNI OLISH
@@ -307,8 +304,6 @@ return [
 	'Elchixonani tanlang...' => 'Выберите посольство...', 
 
 
-=======
->>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
 
 ];
 ?>

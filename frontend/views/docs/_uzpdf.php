@@ -34,7 +34,7 @@
 		<tr>
 			<td style="border: 1px solid black; padding:5px; text-align: center;">4</td>
 			<td style="border: 1px solid black; padding:5px;">Millati</td>
-			<td style="border: 1px solid black; padding:5px;"><?=$model->nation->sp_name_ru;?></td>
+			<td style="border: 1px solid black; padding:5px;"><?=$model->nation->sp_name_uz;?></td>
 		</tr>
 		<tr>
 			<td style="border: 1px solid black; padding:5px; text-align: center;">5</td>

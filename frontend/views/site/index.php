@@ -43,16 +43,19 @@
   </div>
 
   <div class="col-sm-3">
-    <a href="<?= Url::to(['/docs/create'])?>">
-      <button type="button" class="btn btn-labeled btn-lg btn-info">
-        <span class="btn-label"><i class="fa fa-2x fa-newspaper-o"></i></span><?= Yii::t('app', 'Hujjatlarni</br>olish'); ?>
-        <div class="overlay">
-          <div class="text"><?= Yii::t('app', 'O`zbekiston<br/>Respublikasidan<br/>hujjatlarni so`rab<br/>olish tartibi'); ?></div>
-        </div>
-      </button>
-    </a>
-  </div>  
-</div>
+    <a href="<?= Url::to(['/docs/index'])?>">
+      <button type="button" class="btn btn-labeled btn-lg">
+              <div class="btn-label">
+                <i class="fa fa-4x fa-newspaper-o"></i>
+              </div></br>
+              <b><?= Yii::t('app', 'Hujjatlarni</br>olish'); ?></b>
+              <div class="overlay">
+                <div class="text"><?= Yii::t('app', 'O`zbekiston<br/>Respublikasidan<br/>hujjatlarni so`rab<br/>olish tartibi'); ?></div>
+              </div>
+            </button>
+          </a>
+        </div>  
+      </div>
 
 <div class="row">
 <div class="col-sm-3">
