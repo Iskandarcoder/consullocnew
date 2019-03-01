@@ -15,6 +15,21 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
+<<<<<<< HEAD
+    <?= $form->field($model, 'sp_id') ?>
+
+    <?= $form->field($model, 'sp_name_cryl') ?>
+
+    <?= $form->field($model, 'sp_name_ru') ?>
+
+    <?= $form->field($model, 'sp_name_qrc') ?>
+
+    <?= $form->field($model, 'sp_name_en') ?>
+
+    <?php // echo $form->field($model, 'sp_name_uz') ?>
+
+    <?php // echo $form->field($model, 'sp_name_qrl') ?>
+=======
     <?= $form->field($model, 'id') ?>
 
     <?= $form->field($model, 'sp_id') ?>
@@ -32,6 +47,7 @@ use yii\widgets\ActiveForm;
     <?php // echo $form->field($model, 'sp_name04') ?>
 
     <?php // echo $form->field($model, 'sp_name05') ?>
+>>>>>>> aa4b3562e521a8ba62c133b5d1d8a9ab9a50952b
 
     <?php // echo $form->field($model, 'sp_country') ?>
 

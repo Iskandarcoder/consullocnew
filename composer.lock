@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "d38147130d14d3f22778404f5e153832",
+=======
+    "content-hash": "5517370a1042449f8712cd0b4c1ec7ca",
+>>>>>>> e3ecd6ed2c2ecc041ae95620e1f59abf48e61c05
     "packages": [
         {
             "name": "2amigos/yii2-date-picker-widget",
@@ -4470,10 +4474,15 @@
     "stability-flags": {
         "mdmsoft/yii2-admin": 20,
         "kartik-v/yii2-mpdf": 20,
+<<<<<<< HEAD
         "kartik-v/yii2-widget-fileinput": 20,
         "mpdf/mpdf": 20,
         "kartik-v/yii2-widget-datepicker": 20,
         "kartik-v/yii2-widget-select2": 20
+=======
+        "mpdf/mpdf": 20,
+        "kartik-v/yii2-widget-fileinput": 20
+>>>>>>> e3ecd6ed2c2ecc041ae95620e1f59abf48e61c05
     },
     "prefer-stable": false,
     "prefer-lowest": false,

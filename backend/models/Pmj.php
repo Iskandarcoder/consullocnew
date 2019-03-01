@@ -53,12 +53,13 @@ class Pmj extends \yii\db\ActiveRecord
     {
         return [
             [['surname', 'name', 'mname', 'nationality_id', 'birth_date', 'birth_place', 'living_place', 'tel', 'citizenship_id', 'seria_pasp', 'numb_pasp', 'pasp_date', 'pasp_place', 'reason', 'security', 'law_court', 'criminal', 'army','division_id'], 'required'],
-            [['nationality_id', 'tel', 'citizenship_id', 'second_cityzenship_id', 'numb_pasp', 'status_id','division_id'], 'integer'],
+            [['nationality_id', 'citizenship_id', 'second_cityzenship_id', 'numb_pasp', 'status_id','division_id'], 'integer'],
             [['birth_date', 'pasp_date'], 'safe'],
-            [['surname', 'name', 'mname', 'pre_surname', 'pre_name', 'pre_mname'], 'string', 'max' => 20],
+            [['tel', 'surname', 'name', 'mname', 'pre_surname', 'pre_name', 'pre_mname'], 'string', 'max' => 20],
             [['birth_place', 'living_place', 'pasp_place'], 'string', 'max' => 100],
             [['seria_pasp'], 'string', 'max' => 4],
             [['mail'], 'string', 'max' => 30],
+            [['guide'], 'string', 'max' => 35],
             [['comment'], 'string', 'max' => 500],
             [['reason', 'security', 'law_court', 'criminal', 'army', 'photo', 'photo1', 'photo2', 'photo3'], 'string', 'max' => 500],
             [['file','file1','file2','file3'],'file'],
@@ -101,19 +102,20 @@ class Pmj extends \yii\db\ActiveRecord
             'division_id' => Yii::t('app', 'Diplomatik vakolatxonalar'), 
             'status_id' => Yii::t('app', 'Holati'),      
             'mail' => Yii::t('app', 'E-mail'),  
-            'comment' => Yii::t('app', 'Sharh'),       
+            'comment' => Yii::t('app', 'Sharh'),  
+            'guide' =>  Yii::t('app', 'Guide'),    
         ];
     }
 
-    public function setRandomString($length = 32)
+     public function setRandomString($length = 32)
     {
-        $characters = 'ABCDEFGHJKLMNPQRSTUVWXYZ123456789';
+        $characters = '123456789ABCDEFGHJKLMNPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
         $randomString = '';
         for ($i = 0; $i < $length; $i++) {
             $randomString .= $characters[rand(0, $charactersLength - 1)];
         }
-        $this->id = $randomString;
+        $this->guide = $randomString;
     }
 
     public function getTeenager()
