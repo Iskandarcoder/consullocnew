@@ -60,6 +60,12 @@ AppAsset::register($this);
                     </a>
                 </li>
                 <li class="classic-menu-dropdown">
+                    <a href="<?= Url::to(['docs/index'])?>">
+                    Hujjatlarni olish<span class="selected">
+                    </span>
+                    </a>
+                </li>
+                <li class="classic-menu-dropdown">
                     <a href="<?= Url::to(['sert/index'])?>">
                     Tasdiq Sert <span class="selected">
                     </span>
@@ -79,7 +85,7 @@ AppAsset::register($this);
                 </li>
                 <li class="classic-menu-dropdown">
                     <a href="<?= Url::to(['lish-sv/index'])?>">
-                    Qamoqdagi fuqarolar <span class="selected">
+                    QF <span class="selected">
                     </span>
                     </a>
                 </li>

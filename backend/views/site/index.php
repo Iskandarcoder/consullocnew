@@ -28,7 +28,7 @@ use yii\helpers\Url;
                         <div class="portlet-title">
                             <div class="caption">
                                 <i class="icon-equalizer font-purple-plum hide"></i>
-                                <span class="caption-subject font-purple-intense bold uppercase">Doimiy konsullik ro'yhatiga olish</span>
+                                <span class="caption-subject font-purple-intense bold uppercase">Doimiy konsullik ro'yxatiga olish</span>
                             </div>
                             <div class="tools">
                                 <a href="#" class="icon-calendar font-green-sharp"> 2018</a>
