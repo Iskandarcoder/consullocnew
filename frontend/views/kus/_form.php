@@ -125,7 +125,7 @@ if(Yii::$app->language =='ru'){
 
 
 
-
+//Doimiy konsullik ro'yhatiga olish uchun forma
 ?>
 <style type="text/css">
   .fileinput-cancel-button {
