@@ -3,10 +3,10 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\file\FileInput;
 use kartik\date\DatePicker;
-use backend\models\SpNation;
+use backend\models\SpNationyii;
 use yii\helpers\ArrayHelper;
-use backend\models\SpCountry;
-use backend\models\SpDivision;
+use backend\models\SpCountryyii;
+use backend\models\SpDivisionyii;
 use backend\models\Status;
 use kartik\select2\Select2;
 /* @var $this yii\web\View */
@@ -113,7 +113,7 @@ $lang = Yii::$app->language;
                                     <div class="row">
                                         <div class="form-group col-sm-6">
                                             <?= $form->field($model, 'nationality_id')->dropDownList(
-                                              ArrayHelper::map(SpNation::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
+                                              ArrayHelper::map(SpNationyii::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
                                               ['prompt'=>Yii::t('app', 'Millatni tanlang')]
                                             ) ?>
                                         </div>
@@ -153,13 +153,13 @@ $lang = Yii::$app->language;
                                     <div class="row">
                                         <div class="form-group col-sm-6"> 
                                             <?= $form->field($model, 'citizenship_id')->dropDownList(
-                                              ArrayHelper::map(SpCountry::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
+                                              ArrayHelper::map(SpCountryyii::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
                                               ['prompt'=>Yii::t('app', 'Fuqarolikni tanlang')]
                                             ) ?>
                                         </div>
                                         <div class="form-group col-sm-6">
                                             <?= $form->field($model, 'second_cityzenship_id')->dropDownList(
-                                              ArrayHelper::map(SpCountry::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
+                                              ArrayHelper::map(SpCountryyii::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
                                               ['prompt'=>Yii::t('app', 'Fuqarolikni tanlang')]
                                             ) ?>
                                         </div>
@@ -180,7 +180,7 @@ $lang = Yii::$app->language;
                                     <div class="row">
                                         <div class="form-group col-sm-12">
                                             <?= $form->field($model, 'division_id')->dropDownList(
-                                            ArrayHelper::map(SpDivision::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
+                                            ArrayHelper::map(SpDivisionyii::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
                                             ['prompt'=>Yii::t('app', 'Diplomatik vakolatxonani tanlang')]
                                             ) ?>
                                         </div>
@@ -404,7 +404,7 @@ $lang = Yii::$app->language;
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <?= $form->field($model, 'status_id')->dropDownList(
-                                                ArrayHelper::map(Status::find()->all(), 'id','name'),
+                                                ArrayHelper::map(Status::find()->all(), 'id','name_'.Yii::$app->language),
                                                 ['prompt'=>Yii::t('app', 'Fuqarolikni tanlang')]
                                             ) ?>
                                         </div>
@@ -423,7 +423,7 @@ $lang = Yii::$app->language;
             </div>              
             <div class="row">               
                 <div class="col-sm-12">                  
-                    <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success col-sm-12' : 'btn btn-primary col-sm-12'] ) ?>
+                    <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Qo`shish') : Yii::t('app', 'Yangilash'), ['class' => $model->isNewRecord ? 'btn btn-success col-sm-12' : 'btn btn-primary col-sm-12'] ) ?>
                 </div>
             </div>
         <?php ActiveForm::end(); ?>

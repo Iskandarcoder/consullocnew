@@ -7,14 +7,14 @@ use Yii;
 /**
  * This is the model class for table "type_relative".
  *
- * @property integer $id
+ * @property int $id
  * @property string $uz_type_relative
  * @property string $ru_type_relative
  */
 class TypeRelative extends \yii\db\ActiveRecord
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public static function tableName()
     {
@@ -22,7 +22,7 @@ class TypeRelative extends \yii\db\ActiveRecord
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function rules()
     {
@@ -33,14 +33,14 @@ class TypeRelative extends \yii\db\ActiveRecord
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'uz_type_relative' => Yii::t('app', 'Uz Type Relative'),
-            'ru_type_relative' => Yii::t('app', 'Ru Type Relative'),
+            'id' => 'ID',
+            'uz_type_relative' => 'Uz Type Relative',
+            'ru_type_relative' => 'Ru Type Relative',
         ];
     }
 }

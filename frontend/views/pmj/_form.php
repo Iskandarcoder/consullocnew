@@ -4,12 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\file\FileInput;
 use kartik\date\DatePicker;
-use backend\models\SpNation;
+use backend\models\SpNationyii;
 use yii\helpers\ArrayHelper;
-use backend\models\SpCountry;
-use backend\models\SpDivision;
+use backend\models\SpCountryyii;
+use backend\models\SpDivisionyii;
 use wbraganca\dynamicform\DynamicFormWidget;
 use kartik\select2\Select2;
+use yii\captcha\Captcha;
 
 
 /* @var $this yii\web\View */
@@ -28,7 +29,7 @@ use kartik\select2\Select2;
   }
 </style>
 <div class="container well well-lg" style="background-color: white;border-radius: 8px!important; color: #18b19c;">
-  <h3><b><?= Yii::t('app', 'Forma №30'); ?></b></h3></br>
+  <h3><b><?= Yii::t('app', 'Xorijga doimiy yashashga chiqish yozuvini rasmiylashtirish (DYa)'); ?></b></h3></br>
   <div class="board">
     <ul class="nav nav-tabs li4">
       <div class="liner"></div>
@@ -119,7 +120,7 @@ use kartik\select2\Select2;
         <div class="row">
           <div class="form-group col-sm-6">
             <?= $form->field($model, 'nationality_id')->dropDownList(
-              ArrayHelper::map(SpNation::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
+              ArrayHelper::map(SpNationyii::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
               ['prompt'=>Yii::t('app', 'Millatni tanlang')]
             ) ?>
           </div>
@@ -165,13 +166,13 @@ use kartik\select2\Select2;
         <div class="row">
           <div class="form-group col-sm-6"> 
             <?= $form->field($model, 'citizenship_id')->dropDownList(
-              ArrayHelper::map(SpCountry::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
+              ArrayHelper::map(SpCountryyii::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
               ['prompt'=>Yii::t('app', 'Fuqarolikni tanlang')]
             ) ?>
           </div>
           <div class="form-group col-sm-6">
             <?= $form->field($model, 'second_cityzenship_id')->dropDownList(
-              ArrayHelper::map(SpCountry::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
+              ArrayHelper::map(SpCountryyii::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
               ['prompt'=>Yii::t('app', 'Fuqarolikni tanlang')]
             ) ?>
           </div>
@@ -190,7 +191,7 @@ use kartik\select2\Select2;
         <div class="row">
           <div class="form-group col-sm-12">
             <?= $form->field($model, 'division_id')->dropDownList(
-              ArrayHelper::map(SpDivision::find()->where(['sp_idfirst' => 1])->all(), 'sp_id','sp_name_'.Yii::$app->language),
+              ArrayHelper::map(SpDivisionyii::find()->where(['sp_idfirst' => 1])->all(), 'sp_id','sp_name_'.Yii::$app->language),
               ['prompt'=>Yii::t('app', 'Diplomatik vakolatxonani tanlang')]
             ) ?>
           </div>
@@ -438,6 +439,13 @@ use kartik\select2\Select2;
               'options' => ['accept' => 'image/*','maxSize'=>'500000'],
               ]);
             ?>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-sm-6">
+                     <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
+                  'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
+                ]) ?>
           </div>
         </div>
       </div><!-- 7-step tugadi -->

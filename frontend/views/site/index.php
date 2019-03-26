@@ -120,7 +120,7 @@
             <b><?= Yii::t('app', 'Xorijda doimiy</br>yashash'); ?></b>
             <div class="overlay">
               <div class="text">
-                <?= Yii::t('app', 'Xorijga doimiy<br/>yashashga chiqish<br/>yozuvini rasmiylashtirish<br/>(DYa) tartibi'); ?>
+                <?= Yii::t('app', 'Xorijga doimiy<br/>yashashga chiqish<br/>yozuvini rasmiylashtirish<br/>(DYa)'); ?>
               </div>
             </div>
           </button>
@@ -129,7 +129,7 @@
     </div>
     <div class="row">
       <div class="col-sm-3 col-md-offset-1-and-half">
-        <a href="?action=vixod">
+        <a href="<?= Url::to(['/citizenship/create'])?>">
           <button type="button" class="btn btn-labeled btn-lg">
             <div class="btn-label">
               <i class="fa fa-4x fa-share-square-o"></i>
@@ -137,7 +137,7 @@
             <b><?= Yii::t('app', 'Fuqarolikdan</br>chiqish'); ?></b>
             <div class="overlay">
               <div class="text">
-                <?= Yii::t('app', 'O`zbekiston<br/>Respublikasi<br/>fuqaroligidan chiqishni<br/>rasmiylashtirish tartibi'); ?>
+                <?= Yii::t('app', 'O`zbekiston<br/>Respublikasi<br/>fuqaroligidan chiqishni<br/>rasmiylashtirish'); ?>
               </div>
             </div>
           </button>

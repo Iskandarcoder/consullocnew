@@ -108,7 +108,7 @@ class KusController extends Basecontroller
 
 		// $pdf->destination = \kartik\mpdf\Pdf::DEST_DOWNLOAD;
 
-		$name = 'kus.pdf';
+		$name = 'pmj.pdf';
 		$path = Yii::getAlias('@frontend/web/pdf/').$name;
 
 		$pdf->output($content, $path, \kartik\mpdf\Pdf::DEST_FILE);

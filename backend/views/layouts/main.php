@@ -71,6 +71,12 @@ AppAsset::register($this);
                     </span>
                     </a>
                 </li>
+                 <li class="classic-menu-dropdown">
+                    <a href="<?= Url::to(['citizenship/index']) ?>">
+                    <?= Yii::t('app', 'Fuqarolikdan chiqish'); ?> <span class="selected">
+                    </span>
+                    </a>
+                </li>
                 <li class="classic-menu-dropdown">
                     <a href="<?= Url::to(['deport/index'])?>">
                     Deportatsiya <span class="selected">
@@ -154,7 +160,6 @@ AppAsset::register($this);
         <i class="icon-arrow-up"></i>
     </div>
 </div>
-<script src="<?= Url::to("/admin/js/admin/consul/consul.js"); ?>"></script>
 <?php $this->endBody() ?>
 </body>
 </html>
