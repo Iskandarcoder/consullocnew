@@ -11,11 +11,12 @@ $this->title = 'Citizenships';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="well well-lg" style="background-color: white;border-radius: 8px!important; color: #18b19c;">
-    <h3><b><?= Yii::t('app', 'O`zbekiston Respublikasi fuqaroligidan chiqish uchun to`ldirilgan anketalar jarayoni'); ?></b></h3></br>
+    <h3><b><?= Yii::t('app', 'Fuqarolikdan chiqmoqchi bo`lganlarga rad javobi berilganlar ro`yhati'); ?></b></h3></br>
     <div class="citizenship-index">
-       
-        <?php // echo $this->render('_search', ['model' => $searchModel]); ?> 
 
+       
+        <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+     
         <?= GridView::widget([
             'dataProvider' => $dataProvider,
             'filterModel' => $searchModel,
@@ -28,15 +29,16 @@ $this->params['breadcrumbs'][] = $this->title;
                 'surname',
                 'name',
                 'mname',
+                 [
+                        'attribute' => 'nationality_id',
+                        'value' => 'spNation.sp_name_ru',
+                    ],
                 //'pre_surname',
                 //'pre_name',
                 //'pre_mname',
                 //'social_status',
                 //'birth_date',
-                [
-                        'attribute' => 'nationality_id',
-                        'value' => 'spNation.sp_name_ru',
-                    ],
+                //'nationality_id',
                 //'study_id',
                 //'profession',
                 //'marital_id',
@@ -60,10 +62,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 //'file2:ntext',
                 //'file3:ntext',
                 //'file4:ntext',
-                 [
-                        'attribute' => 'status_id',
-                        'value' => 'status.name_ru',
-                    ],
+                //'status_id',
                 //'comment',
                 //'division_id',
 
@@ -72,4 +71,3 @@ $this->params['breadcrumbs'][] = $this->title;
         ]); ?>
     </div>
 </div>
-

@@ -10,6 +10,7 @@ use backend\models\Pmj;
 /**
  * PmjSearch represents the model behind the search form about `backend\models\Pmj`.
  */
+
 class PmjSearch extends Pmj
 {
     /**
@@ -41,15 +42,24 @@ class PmjSearch extends Pmj
      */
     public function search($params)
     {
-        $query = Pmj::find();
+        $this->load($params);
+        $process = $params['status'];
+        if ($process == 1) {
+            $query = Pmj::find()->where(['!=','status_id','6'])->andwhere(['!=','status_id','0'])->andwhere(['!=','status_id','4']);
+        }else{
+            $query = Pmj::find();
+        }
+
+
+
 
         // add conditions that should always apply here
+        
+            $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+            ]);
+        
 
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-        ]);
-
-        $this->load($params);
 
         if (!$this->validate()) {
             // uncomment the following line if you do not want to return any records when validation fails

@@ -6,7 +6,7 @@ use backend\models\Citizenship;
 
 $division = Yii::$app->user->identity->dvision_id;
 //Yangi tushgan arizalar soni
-    $new = Pmj::find()
+    $new_pmj = Pmj::find()
     ->Where(['status_id'=>'0'])
     ->andWhere(['division_id' => $division])
     ->all();
@@ -42,6 +42,18 @@ $division = Yii::$app->user->identity->dvision_id;
     ->andWhere(['division_id' => $division])
     ->all();
 //end proces  
+
+//Inkor qilinganlar
+    $deny = Pmj::find()
+    ->Where(['status_id'=>'4'])   
+    ->andWhere(['division_id' => $division])
+    ->all();
+
+    $cityzenship_deny = Citizenship::find()
+    ->Where(['status_id'=>'4'])   
+    ->andWhere(['division_id' => $division])
+    ->all();
+//end
 
 ?>
 <!-- BEGIN CONTAINER -->
@@ -174,9 +186,9 @@ $division = Yii::$app->user->identity->dvision_id;
                         </div>
                         <div class="portlet-body">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="sparkline-chart">
-                                        <div class="number" style="font-size: 20px;"><?php echo count($new);?></div>
+                                        <div class="number" style="font-size: 20px;"><?php echo count($new_pmj);?></div>
                                         <a class="title" href="<?= Url::to(['pmj/index']) ?>" style="font-size: 15px;">
                                         Arizalar <i class="icon-arrow-right"></i>
                                         </a>
@@ -184,17 +196,25 @@ $division = Yii::$app->user->identity->dvision_id;
                                 </div>
                                 <div class="margin-bottom-10 visible-sm">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="sparkline-chart">
                                         <div class="number" style="font-size: 20px;"><?php echo count($proces);?></div>
-                                        <a class="title" href="<?= Url::to(['pmj/process']) ?>" style="font-size: 15px;">
+                                        <a class="title" href="<?= Url::to(['pmj/process', 'status' => '1']) ?>" style="font-size: 15px;">
                                         Jarayonda <i class="icon-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="margin-bottom-10 visible-sm">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
+                                    <div class="sparkline-chart">
+                                        <div class="number" style="font-size: 20px;"><?php echo count($deny);?></div>
+                                        <a class="title" href="<?= Url::to(['pmj/deny']) ?>" style="font-size: 15px;">
+                                        Rad qilinganlar <i class="icon-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                 <div class="col-md-3">
                                     <div class="sparkline-chart">
                                         <div class="number" style="font-size: 20px;"><?php echo count($end);?></div>
                                         <a class="title" href="<?= Url::to(['pmj/registered']) ?>" style="font-size: 15px;">
@@ -364,7 +384,7 @@ $division = Yii::$app->user->identity->dvision_id;
                         </div>
                         <div class="portlet-body">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="sparkline-chart">
                                         <div class="number" style="font-size: 20px;"><?php echo count($cityzenship_new);?></div>
                                         <a class="title" href="<?= Url::to(['citizenship/index']) ?>" style="font-size: 15px;">
@@ -374,17 +394,25 @@ $division = Yii::$app->user->identity->dvision_id;
                                 </div>
                                 <div class="margin-bottom-10 visible-sm">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="sparkline-chart">
                                         <div class="number" style="font-size: 20px;"><?php echo count($cityzenship_proces);?></div>
-                                        <a class="title" href="<?= Url::to(['citizenship/process']) ?>" style="font-size: 15px;">
+                                        <a class="title" href="<?= Url::to(['citizenship/process', 'statuss' => '1']) ?>" style="font-size: 15px;">
                                         Jarayonda <i class="icon-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="margin-bottom-10 visible-sm">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
+                                    <div class="sparkline-chart">
+                                        <div class="number" style="font-size: 20px;"><?php echo count($cityzenship_deny);?></div>
+                                        <a class="title" href="<?= Url::to(['citizenship/deny']) ?>" style="font-size: 15px;">
+                                        Rad qilinganlar <i class="icon-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
                                     <div class="sparkline-chart">
                                         <div class="number" style="font-size: 20px;"><?php echo count($cityzenship_end);?></div>
                                         <a class="title" href="<?= Url::to(['citizenship/registered']) ?>" style="font-size: 15px;">
