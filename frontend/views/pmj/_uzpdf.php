@@ -45,7 +45,7 @@
 		<td style=" padding: 5px;">
 			<p style="text-align: left;">
 				<?php
-					$image = $generator->render_image('code128', $model->id, [
+					$image = $generator->render_image('code128', $model->guide, [
 								'f' => 'png',
 								// 'w' => 500,
 								'h' => 40,
@@ -65,144 +65,181 @@
 				?>
 				<div style="text-align: left;">
 					<?php echo '<img style="margin-top: -10px;" src="data:image/png;base64,'.base64_encode($image).'" />'; ?>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?= $model->id; ?>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?= $model->guide; ?>
 				</div><br>
 			</p>
 		</td>
-		<td style="text-align: right; font-size: 18px;">
-			<p><b>Форма №30</b></p>
+		<td style="text-align: right; font-size: 18px; width: 200px;">
+			<p><b>Форма-30</b></p>
 		</td>
 	</tr>
+</table>
+<table  width="800" border="0" cellpadding="0" cellspacing="0" class="anketa-pdf" style="font-size: 15px;">
 	<tr>
-		<td colspan="2" style=" padding: 5px;">Посольство (Генконсульство)<br>Республики Узбекистан во Франции</td>
+		<td style=" padding: 5px;" class="text-center">
+			<p style="font-size: 20px"><?= $model->spDivision->name_uz; ?></p>
+		</td>
 		<td style="text-align: right;padding:5px; position: relative;">
 			<img style="width:125; height:170px; overflow:hidden" src="/uploads/<?= $model->photo;?>">			
 		</td>
 	</tr>
 </table>
-<table width="800" border="0" cellpadding="0" cellspacing="0" class="anketa-pdf" style="font-size: 15px;">
+<table width="800" border="0" cellpadding="0" cellspacing="0" class="anketa-pdf" style="font-size: 15px;">	
 	<tr>
-		<td colspan="2" class="text-center" style=" padding: 15px; font-size: 18px;">
-			<p><b>Заявление-анкета<br>(о выезде за границу)</b></br></br></p>
-		</td>
-	</tr> 
-	<tr>
-		<td style=" padding: 5px;">
-			<p><b>1.Фамилия, имя, отчество</b><br>(если ранее имели другие фамилию, имя, отчество, укажите их)</p>
-		</td>
-		<td style="border-bottom: 1px solid black; padding:15px; width: 400px;">
-			<?= $model->surname; ?> <?= $model->name; ?> <?= $model->mname; ?>
+		<td colspan="3" style="padding:15px;" class="text-center">
+			<p style="font-size: 20px;"><b>Сўровнома - ариза<br>(чет элга чиқиш учун)</b></p>
+
 		</td>
 	</tr>
 	<tr>
-		<td colspan="2" style="border-bottom: 1px solid black; padding:15px;">
-			<?= $model->pre_surname; ?> <?= $model->pre_name; ?> <?= $model->pre_mname; ?>
+		<td class="text-center" style="border: 1px solid black; width: 50px;">
+			<p><b>№</b></p>
+		</td>
+		<td colspan="2" style="border: 1px solid black; padding:15px;"></td>
+	</tr>
+	<tr>
+		<td class="text-center" style="border: 1px solid black;">
+			<p><b>1</b></p>
+		</td>
+		<td style=" padding: 5px; border: 1px solid black;">
+			<p><b>Фамилия, исми, шарифи</b><br>(фамилия, исм, шарифи ўзгарган бўлса кўрсатилсин)</p>
+		</td>
+		<td style="border: 1px solid black; padding:15px; width: 400px;">
+			<?= $model->surname; ?> <?= $model->name; ?> <?= $model->mname; ?><br><?= $model->pre_surname; ?> <?= $model->pre_name; ?> <?= $model->pre_mname; ?>
 		</td>
 	</tr>
 	<tr>
-		<td style=" padding: 5px;">
-			<p><b>2.Национальность</b></p>
+		<td class="text-center" style="border: 1px solid black;">
+			<p><b>2</b></p>
 		</td>
-		<td style="border-bottom: 1px solid black; padding:15px;">
+		<td style=" padding: 5px;border: 1px solid black;">
+			<p><b>Миллати</b></p>
+		</td>
+		<td style="border: 1px solid black; padding:15px;">
 			<?= $model->spNation->sp_name_uz; ?>
 		</td>			
 	</tr>
 	<tr>
-		<td style=" padding: 5px;">
-			<p><b>3.Число, месяц, год рождения</b></p>
+		<td class="text-center" style="border: 1px solid black;">
+			<p><b>3</b></p>
 		</td>
-		<td style="border-bottom: 1px solid black; padding:15px;">
+		<td style=" padding: 5px;border: 1px solid black;">
+			<p><b>Туғилган сана, ой ва йили</b></p>
+		</td>
+		<td style="border: 1px solid black; padding:15px;">
 			<?= $model->birth_date; ?>
 		</td>		
 	</tr>
 	<tr>
-		<td style=" padding: 5px;">
-			<p><b>4.Место рождения</b><br>(республика, край, область, населенный пункт)</p>
+		<td class="text-center" style="border: 1px solid black;">
+			<p><b>4</b></p>
 		</td>
-		<td style="border-bottom: 1px solid black; padding:15px;">
+		<td style=" padding: 5px;border: 1px solid black;">
+			<p><b>Туғилган жойи</b><br>(республика, вилоят, туман, аҳоли пункти)</p>
+		</td>
+		<td style="border: 1px solid black; padding:15px;">
 			<?= $model->birth_place; ?>
 		</td>
 	</tr>	
 	<tr>
-		<td style=" padding: 5px;">
-			<p><b>5.Место постоянного жительства (прописки)</b></p>
+		<td class="text-center" style="border: 1px solid black;">
+			<p><b>5</b></p>
 		</td>
-		<td style="border-bottom: 1px solid black; padding:15px;">
+		<td style=" padding: 5px;border: 1px solid black;">
+			<p><b>Доимий яшаш жойи (прописка)</b></p>
+		</td>
+		<td style="border: 1px solid black; padding:15px;">
 			<?= $model->living_place; ?>
 		</td>
 	</tr>
 	<tr>
-		<td style=" padding: 5px;">
-			<p><b>6.Гражданство</b><br>(если одновременно имеете гражданство<br>другого государства, укажите об этом)</p>
+		<td class="text-center" style="border: 1px solid black;">
+			<p><b>6</b></p>
 		</td>
-		<td style="border-bottom: 1px solid black; padding:15px;">
+		<td style=" padding: 5px;border: 1px solid black;">
+			<p><b>Фуқаролиги</b><br>(агар бошқа давлат фуқаролиги бўлса, улар кўрсатилсин)</p>
+		</td>
+		<td style="border: 1px solid black; padding:15px;">
 			<?= $model->spCountry->sp_name_uz;?> <?= $model->spCountry2->sp_name_uz; ?>
 		</td>
 	</tr>
 	<tr>
-		<td style=" padding: 5px;">
-			<p><b>7.Паспорт серии, №, когда и кем выдан</b></p>
+		<td class="text-center" style="border: 1px solid black;">
+			<p><b>7</b></p>
 		</td>
-		<td style="border-bottom: 1px solid black; padding:15px;">
-			<?= $model->seria_pasp; ?> <?= $model->numb_pasp; ?>
+		<td style=" padding: 5px;border: 1px solid black;">
+			<p><b>Паспорт серияси, №, қачон ва ким томонидан берилган</b></p>
 		</td>
-	</tr>
+		<td style="border: 1px solid black; padding:15px;">
+			<?= $model->seria_pasp; ?> <?= $model->numb_pasp; ?><br><?= $model->pasp_date; ?> <?= $model->pasp_place; ?>
+		</td>
+	</tr>	
 	<tr>
-		<td colspan="2" style="border-bottom: 1px solid black; padding:15px;">
-			<?= $model->pasp_date; ?> <?= $model->pasp_place; ?>
+		<td class="text-center" style="border: 1px solid black;">
+			<p><b>8</b></p>
 		</td>
-	</tr>
-	<tr>
-		<td style=" padding: 5px;">
-			<p><b>8.Цель выезда</b><br>(на временное, постоянное жительство, туризм, по	служебным делам, страна выезда)</p>
+		<td style=" padding: 5px;border: 1px solid black;">
+			<p><b>Хорижга чиқишдан мақсад</b><br>(вақтинчалик, доимий яшаш учун, туризм, хизмат сафари, кетиш давлати)</p>
 		</td>
-		<td style="border-bottom: 1px solid black; padding:15px;">
+		<td style="border: 1px solid black; padding:15px;">
 			<?= $model->reason; ?>
 		</td>
 	</tr>
 	<tr>
-		<td style=" padding: 5px;">
-			<p><b>9.Был ли у Вас за период работы (учебы, службы) оформлен официальный допуск к сведениям, составляющим государственную тайну? Имеете ли вы договорные, контрактные обязательства, препятствующие выезду за границу?</b></p>
+		<td class="text-center" style="border: 1px solid black;">
+			<p><b>9</b></p>
 		</td>
-		<td style="border-bottom: 1px solid black; padding:15px;">
+		<td style=" padding: 5px;border: 1px solid black;">
+			<p><b>Ўзбекистон ҳудудида ишлаш (таҳсил олиш, хизмат) даврида Давлат сирларига эга бўлган маълумотларга расмий рухсат олинганми? Ўзбекистон ҳудудини тарк этишга тўсиқ бола оладиган шартнома, контракт асосидаги ёки бошқа мажбуриятлари борми?</b></p>
+		</td>
+		<td style="border: 1px solid black; padding:15px;">
 			<?= $model->security; ?>
 		</td>		
 	</tr>
 	<tr>
-		<td style=" padding: 5px;">
-			<p><b>10.Имеете ли Вы неисполненные обязательства, наложенные судом? Не предъявлен
-			ли Вам гражданский иск в суде? </b></p>
+		<td class="text-center" style="border: 1px solid black;">
+			<p><b>10</b></p>
 		</td>
-		<td style="border-bottom: 1px solid black; padding:15px;">
+		<td style=" padding: 5px;border: 1px solid black;">
+			<p><b>Суд томонидан тайинланган, аммо бажарилмаган мажбуриятларингиз борми? Судда сизга нисбатан фуқаролик даъвоси мавжудми?</b></p>
+		</td>
+		<td style="border: 1px solid black; padding:15px;">
 			<?= $model->law_court; ?>
 		</td>
 	</tr>
 	<tr>
-		<td style=" padding: 5px;">
-			<p><b>11.Не возбуждено ли против Вас уголовное дело?</b></p>
+		<td class="text-center" style="border: 1px solid black;">
+			<p><b>11</b></p>
 		</td>
-		<td style="border-bottom: 1px solid black; padding:15px;">
+		<td style=" padding: 5px;border: 1px solid black;">
+			<p><b>Сизга нисбатан жиноий иш қўзғатилганми?</b></p>
+		</td>
+		<td style="border: 1px solid black; padding:15px;">
 			<?= $model->criminal; ?>
 		</td>
 	</tr>
 	<tr>
-		<td style=" padding: 5px;">
-			<p><b>12.Подлежите ли Вы призыву на действительную срочную военную службу?
-			(для граждан мужского пола в возрасте от 17 до 27 лет)</b></p>
+		<td class="text-center" style="border: 1px solid black;">
+			<p><b>12</b></p>
 		</td>
-		<td style="border-bottom: 1px solid black; padding:15px;">
+		<td style=" padding: 5px;border: 1px solid black;">
+			<p><b>Ҳарбий хизматга яроқлимисиз? 
+			(17 ёшдан 27 ёшгача бўлган эркак жинсига мансуб фуқаролар учун)
+			</b></p>
+		</td>
+		<td style="border: 1px solid black; padding:15px;">
 			<?= $model->army; ?>
 		</td>
 	</tr>		
 </table><br>
-<p style="font-size: 14px;"><b>13. Одновременно прошу разрешить выезд за границу вместе со мной несовершеннолетним детям в возрасте до 18 лет.</b></p>
+<p style="font-size: 14px;"><b>13.Шу билан бирга, 18 ёшгача бўлган балоғат ёшига етмаган фарзандларимни мен билан бирга хорижга чиқишларига рухсат беришингизни сўрайман.</b></p>
 <table width="800" border="0" cellpadding="0" cellspacing="0" class="anketa-pdf" style="font-size: 15px;" style=" border-collapse: collapse;">	
 	<tr>
 		<th class="text-center" style="border: 1px solid black; padding:15px;">
-			<p>Фамилия, имя, отчество</p>
+			<p>Фамилия, исми, шарифи</p>
 		</th>
 		<th class="text-center" style="border: 1px solid black; padding:15px;">
-			<p>Дата и место рождения</p>
+			<p>Туғилган вақти ва жойи</p>
 		</th>		
 	</tr>
 	<?php
@@ -219,20 +256,20 @@
 		</tr>
 	<?php endforeach;?>
 </table><br><br><br><br>
-<p style="font-size: 14px;"><b>14. Выписка из трудовой книжки о моей трудовой деятельности за последние 5 лет (включая учебу в учебных заведениях и военную службу)</b></p>
+<p style="font-size: 14px;"><b>14. 5 йил давомидаги меҳнат фаолиятим ҳақидаги меҳнат дафтарчамдан кўчирма (жумладан таълим муассасаларида таҳсил олиш ва ҳарбий хизмат даврлари):</b></p>
 <table width="800" border="0" cellpadding="0" cellspacing="0" class="anketa-pdf" style="font-size: 15px;" style=" border-collapse: collapse;">	
 	<tr>
 		<th class="text-center" style="border: 1px solid black; padding:15px;">
-			<p>Дата пос-тупления</p>
+			<p>Қабул қилинган сана</p>
 		</th>
 		<th class="text-center" style="border: 1px solid black; padding:15px;">
-			<p>Дата ухода</p>
+			<p>Кетиш санаси</p>
 		</th>
 		<th class="text-center" style="border: 1px solid black; padding:15px;">
-			<p>Должность и точное наименование работы с указанием министерства (ведомства)</p>
+			<p>Лавозими ҳамда иш жойининг, вазирлик ва муссасанинг аниқ номи</p>
 		</th>
 		<th class="text-center" style="border: 1px solid black; padding:15px;">
-			<p>Местонахождение (адрес) предприятия учреждения, организации</p>
+			<p>Корҳона, идора, ташкилотнинг манзили (адрес)</p>
 		</th>		
 	</tr>
 	<?php
@@ -256,27 +293,27 @@
 	<?php endforeach;?>
 </table>
 <br><br>	
-<p>Сведения, указанные в анкете, сверены с паспортом, военным билетом и трудовой книжкой.<br><br>
+<p>Анкетада кўрсатилган маълумотлар паспорт, ҳарбий билет ва мехнат дафтарчаси билан солиштириб текширилди.<br><br>
  "_______"_______________20___ г.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_______________________________________<br>                   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;М.П.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(фамилия должностного лица,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;предприятия, учреждения, организации)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;М.П.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Корҳона, муассаса, ташкилотнинг<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ваколатли ҳодими)
 </p><br><br>
-<p style=" font-size: 14px;"><b>15. Сведения о моих близких родственниках: супруг (супруга), отец, мать, дети, бывш. супруга (супруг)-при наличии детей от совместного брака (заполняется при оформлении паспорта для выезда на постоянное жительство):</b></p>
+<p style=" font-size: 14px;"><b>15. Яқин қариндошларим ҳақидаги маълумотлар: турмуш ўртоғим, отам, онам, фарзандларим, собиқ турмуш ўртоғим - умумий никоҳдан фарзандлар бўлса (хорижда доимий яшашга тарк этиш учун паспорт расмийлаштириш холида тўлдирилади):</b></p>
 <table width="800" border="0" cellpadding="0" cellspacing="0" class="anketa-pdf" style="font-size: 15px;" style=" border-collapse: collapse;">
 	<tr>
 		<th class="text-center" style="border: 1px solid black; padding:15px;">
-			<p>Фамилия, имя, отчество</p>
+			<p>Фамилия, исми, шарифи</p>
 		</th>
 		<th class="text-center" style="border: 1px solid black; padding:15px;">
-			<p>Степень родства, гражданство</p>
+			<p>Қариндошлик алоқадорлиги, фуқаролиги</p>
 		</th>
 		<th class="text-center" style="border: 1px solid black; padding:15px;">
-			<p>Год и место рождения</p>
+			<p>Туғилган вақти ва жойи</p>
 		</th>
 		<th class="text-center" style="border: 1px solid black; padding:15px;">
-			<p>Место работы, должность</p>
+			<p>Иш жойи, лавозими</p>
 		</th>		
 		<th class="text-center" style="border: 1px solid black; padding:15px;">
-			<p>Адрес места жительства</p>
+			<p>Яшаш жойининг манзили</p>
 		</th>		
 	</tr>
 	<?php
@@ -302,6 +339,6 @@
 		</tr>
 	<?php endforeach;?>
 </table><br>	
-<p style=" font-size: 14px;"><b>16. Мне известно, что заведомо ложные сведения в заявлении могут повлечь отказ в выдаче разрешения на выезд за границу.<br><br>" ____  " ________________ 20___ г.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;____________________________<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;подпись заявителя<br><br>
-	Дата приема документов &nbsp;&nbsp;"______"&nbsp;&nbsp;___________________ 20____ г.&nbsp;&nbsp;&nbsp;____________________________<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;подпись сотрудника<br><br>Дата выдачи разрешения &nbsp;"______"&nbsp;&nbsp;___________________ 20____ г.
+<p style=" font-size: 14px;"><b>16. Анкета тўлдириш вактида соҳта маълумотлар бериш хорижга чикишга рухсат олишда рад жавобига сабаб бўлишидан ҳабардорман.<br><br>" ____  " ________________ 20___ г.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;____________________________<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;аризачининг имзоси<br><br>
+	Хужжатлар қабул қилинган сана &nbsp;&nbsp;"______"&nbsp;&nbsp;___________________ 20____ г.&nbsp;&nbsp;&nbsp;____________________________<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ҳодим имзоси<br><br>Рухсат берилган сана  &nbsp;"______"&nbsp;&nbsp;___________________ 20____ г.
 </b></p>

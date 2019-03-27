@@ -36,6 +36,8 @@ class Pmj extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+        public $verifyCode;
+
         public $file;
         public $file1;
         public $file2;
@@ -58,7 +60,7 @@ class Pmj extends \yii\db\ActiveRecord
             [['tel', 'surname', 'name', 'mname', 'pre_surname', 'pre_name', 'pre_mname'], 'string', 'max' => 20],
             [['birth_place', 'living_place', 'pasp_place'], 'string', 'max' => 100],
             [['seria_pasp'], 'string', 'max' => 4],
-            [['mail'], 'string', 'max' => 30],
+            [['mail'], 'string', 'max' => 30],            
             [['guide'], 'string', 'max' => 35],
             [['comment'], 'string', 'max' => 500],
             [['reason', 'security', 'law_court', 'criminal', 'army', 'photo', 'photo1', 'photo2', 'photo3'], 'string', 'max' => 500],
@@ -103,7 +105,8 @@ class Pmj extends \yii\db\ActiveRecord
             'status_id' => Yii::t('app', 'Holati'),      
             'mail' => Yii::t('app', 'E-mail'),  
             'comment' => Yii::t('app', 'Sharh'),  
-            'guide' =>  Yii::t('app', 'Guide'),    
+            'guide' =>  Yii::t('app', 'Guide'), 
+            'verifyCode' => Yii::t('app', 'Kodni tekshiring'),   
         ];
     }
 
@@ -151,5 +154,10 @@ class Pmj extends \yii\db\ActiveRecord
      public function getStatus()
     {
         return $this->hasOne(Status::className(), ['id' => 'status_id']);
+    }
+
+     public function getSpDivision()
+    {
+        return $this->hasOne(SpDivision::className(), ['sp_id' => 'division_id']);
     }
 }

@@ -5,56 +5,76 @@ namespace backend\models;
 use Yii;
 
 /**
- * This is the model class for table "in_relative".
+ * This is the model class for table "inrelative".
  *
- * @property integer $id
- * @property string $kus_id
- * @property string $vkus_id
- * @property string $sert_id
- * @property integer $type_relative
+ * @property int $id
+ * @property int $citizenship_id
  * @property string $fio
- * @property string $address
+ * @property string $relative
+ * @property string $birth_date
+ * @property string $birth_place
+ * @property int $nationality_id
+ * @property int $citizenship
+ * @property string $work
+ * @property string $living_place
  */
-class InRelative extends \yii\db\ActiveRecord
+class Inrelative extends \yii\db\ActiveRecord
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'in_relative';
+        return 'inrelative';
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function rules()
     {
         return [
-            [['type_relative'], 'integer'],
-            [['address'], 'string'],
-            [['kus_id', 'vkus_id', 'sert_id', 'fio'], 'string', 'max' => 255],
+            [['citizenship_id'], 'required'],
+            [['citizenship_id', 'nationality_id', 'citizenship'], 'integer'],
+            [['birth_date'], 'safe'],
+            [['fio'], 'string', 'max' => 60],
+            [['relative'], 'string', 'max' => 20],
+            [['birth_place'], 'string', 'max' => 100],
+            [['work', 'living_place'], 'string', 'max' => 200],
         ];
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'kus_id' => Yii::t('app', 'Kus ID'),
-            'vkus_id' => Yii::t('app', 'Vkus ID'),
-            'sert_id' => Yii::t('app', 'Sert ID'),
-            'type_relative' => Yii::t('app', 'Type Relative'),
-            'fio' => Yii::t('app', 'Fio'),
-            'address' => Yii::t('app', 'Address'),
+            'id' => 'ID',
+            'citizenship_id' => 'Citizenship ID',
+            'fio' => Yii::t('app', 'Familiya, ism, sharifi'),
+            'relative' => Yii::t('app', 'Qarindoshlik darajasi'),
+            'birth_date' => Yii::t('app', 'Tug\'ilgan sanasi'),
+            'birth_place' => Yii::t('app', 'Tug\'ilgan joyi'),
+            'nationality_id' => Yii::t('app', 'Millati'),
+            'citizenship' => Yii::t('app', 'Fuqaroligi'),
+            'work' => Yii::t('app', 'Ish joyi, mutaxassisligi'),
+            'living_place' => Yii::t('app', 'Yashash joyi manzili'),
         ];
     }
 
-    public function getTyperelative()
+    public function getTypeRelative()
     {
-        return $this->hasOne(TypeRelative::className(), ['id' => 'type_relative']);
+        return $this->hasOne(TypeRelative::className(), ['id' => 'relative']);
+    }
+
+     public function getSpNation()
+    {
+        return $this->hasOne(SpNationyii::className(), ['sp_id' => 'nationality_id']);
+    }
+
+     public function getSpCountry()
+    {
+        return $this->hasOne(SpCountry::className(), ['sp_id' => 'citizenship']);
     }
 }

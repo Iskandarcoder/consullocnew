@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\helpers\Url;
+<<<<<<< HEAD
 use backend\models\Docs;
 
 
@@ -29,6 +30,49 @@ $division = Yii::$app->user->identity->dvision_id;
     ->Where(['status_id'=>'6'])   
     ->andWhere(['division_id' => $division])
     ->all();
+=======
+use backend\models\Pmj;
+use backend\models\Citizenship;
+
+$division = Yii::$app->user->identity->dvision_id;
+//Yangi tushgan arizalar soni
+    $new = Pmj::find()
+    ->Where(['status_id'=>'0'])
+    ->andWhere(['division_id' => $division])
+    ->all();
+
+     $cityzenship_new = Citizenship::find()
+    ->Where(['status_id'=>'0'])
+    ->andWhere(['division_id' => $division])
+    ->all();
+//end new
+
+//Jarayondagi arizalar soni
+    $proces = Pmj::find()
+    ->Where(['>', 'status_id','0'])
+    ->andWhere(['<', 'status_id','6'])
+    ->andWhere(['division_id' => $division])
+    ->all();
+
+     $cityzenship_proces = Citizenship::find()
+    ->Where(['>', 'status_id','0'])
+    ->andWhere(['<', 'status_id','6'])
+    ->andWhere(['division_id' => $division])
+    ->all();
+//end proces 
+
+//Tugatilgan arizalar soni
+    $end = Pmj::find()
+    ->Where(['status_id'=>'6'])   
+    ->andWhere(['division_id' => $division])
+    ->all();
+
+     $cityzenship_end = Citizenship::find()
+    ->Where(['status_id'=>'6'])   
+    ->andWhere(['division_id' => $division])
+    ->all();
+//end proces  
+>>>>>>> c8ef30693ba9474b2dde9fa5fd180b8f86abc957
 
 ?>
 
@@ -45,11 +89,10 @@ $division = Yii::$app->user->identity->dvision_id;
     <!-- END SIDEBAR -->
     <!-- BEGIN CONTENT -->
     <div class="page-content-wrapper">
-        <div class="page-content">
-            
+        <div class="page-content">            
             
             <!-- BEGIN PAGE HEADER-->
-            <h3 class="page-title" style="text-align: center;font-weight: bold;">
+            <h3 class="page-titlse" style="text-align: center;font-weight: bold;">
             <?= Yii::t('app', 'O`zbekiston Respublikasi konsullari uchun interaktiv xizmatlar'); ?>
             </h3>
             <hr>
@@ -172,7 +215,7 @@ $division = Yii::$app->user->identity->dvision_id;
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="sparkline-chart">
-                                        <div class="number" style="font-size: 20px;">789</div>
+                                        <div class="number" style="font-size: 20px;"><?php echo count($new);?></div>
                                         <a class="title" href="<?= Url::to(['pmj/index']) ?>" style="font-size: 15px;">
                                         Arizalar <i class="icon-arrow-right"></i>
                                         </a>
@@ -182,7 +225,7 @@ $division = Yii::$app->user->identity->dvision_id;
                                 </div>
                                 <div class="col-md-4">
                                     <div class="sparkline-chart">
-                                        <div class="number" style="font-size: 20px;">89</div>
+                                        <div class="number" style="font-size: 20px;"><?php echo count($proces);?></div>
                                         <a class="title" href="<?= Url::to(['pmj/process']) ?>" style="font-size: 15px;">
                                         Jarayonda <i class="icon-arrow-right"></i>
                                         </a>
@@ -192,9 +235,9 @@ $division = Yii::$app->user->identity->dvision_id;
                                 </div>
                                 <div class="col-md-4">
                                     <div class="sparkline-chart">
-                                        <div class="number" style="font-size: 20px;">400</div>
+                                        <div class="number" style="font-size: 20px;"><?php echo count($end);?></div>
                                         <a class="title" href="<?= Url::to(['pmj/registered']) ?>" style="font-size: 15px;">
-                                        Fuqarolikdan chiqarilgan <i class="icon-arrow-right"></i>
+                                        Ro'yhatga olinganlar <i class="icon-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -346,64 +389,57 @@ $division = Yii::$app->user->identity->dvision_id;
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-3">
+                <div class="col-md-6 col-sm-6">
                     <div class="portlet light ">
                         <div class="portlet-title">
                             <div class="caption">
                                 <i class="icon-equalizer font-purple-plum hide"></i>
-                                <span class="caption-subject font-green-haze bold uppercase">Jabrlangan fuqarolar</span>
+                                <span class="caption-subject font-blue-steel bold uppercase"><?= Yii::t('app', 'Fuqarolikdan chiqish'); ?> </span>
                             </div>
                             <div class="tools">
-                                <a href="#" class="icon-calendar font-green-sharp"> 2018</a>
+                                <a href="#" class="icon-calendar font-green-sharp"> 2019</a>
                                 <a href="" class="collapse">
                                 </a>
                             </div>
                         </div>
                         <div class="portlet-body">
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-4">
                                     <div class="sparkline-chart">
-                                        <div class="number" style="font-size: 20px;">789</div>
-                                        <a class="title" href="javascript:;" style="font-size: 15px;">
-                                        Jabrlangan fuqarolar <i class="icon-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-3">
-                    <div class="portlet light ">
-                        <div class="portlet-title">
-                            <div class="caption">
-                                <i class="icon-equalizer font-purple-plum hide"></i>
-                                <span class="caption-subject font-green-haze bold uppercase">Vafot etgan fuqarolar</span>
-                            </div>
-                            <div class="tools">
-                                <a href="#" class="icon-calendar font-green-sharp"> 2018</a>
-                                <a href="" class="collapse">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="portlet-body">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="sparkline-chart">
-                                        <div class="number" style="font-size: 20px;">89</div>
-                                        <a class="title" href="javascript:;" style="font-size: 15px;">
-                                        Vafot etgan fuqarolar <i class="icon-arrow-right"></i>
+                                        <div class="number" style="font-size: 20px;"><?php echo count($cityzenship_new);?></div>
+                                        <a class="title" href="<?= Url::to(['citizenship/index']) ?>" style="font-size: 15px;">
+                                        Arizalar <i class="icon-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="margin-bottom-10 visible-sm">
                                 </div>
-                                
+                                <div class="col-md-4">
+                                    <div class="sparkline-chart">
+                                        <div class="number" style="font-size: 20px;"><?php echo count($cityzenship_proces);?></div>
+                                        <a class="title" href="<?= Url::to(['citizenship/process']) ?>" style="font-size: 15px;">
+                                        Jarayonda <i class="icon-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="margin-bottom-10 visible-sm">
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="sparkline-chart">
+                                        <div class="number" style="font-size: 20px;"><?php echo count($cityzenship_end);?></div>
+                                        <a class="title" href="<?= Url::to(['citizenship/registered']) ?>" style="font-size: 15px;">
+                                        Ro'yhatga olinganlar <i class="icon-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                 </div>
+=======
+                </div>                
+>>>>>>> c8ef30693ba9474b2dde9fa5fd180b8f86abc957
             </div>
 
         </div>

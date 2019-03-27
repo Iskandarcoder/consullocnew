@@ -11,13 +11,11 @@ $this->title = Yii::t('app', 'Pmjs');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="well well-lg" style="background-color: white;border-radius: 8px!important; color: #18b19c;">
-    <h3><b><?= Yii::t('app', 'Doimiy yashashga chiqish'); ?></b></h3></br>
+    <h3><b><?= Yii::t('app', 'Doimiy yashashga chiqish uchun to`ldirilgan anketalar'); ?></b></h3></br>
     <div class="pmj-index">       
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-        <p>
-            <?= Html::a(Yii::t('app', 'qo`shish'), ['create'], ['class' => 'btn btn-success']) ?>
-        </p>
+      
         <?= GridView::widget([
             'dataProvider' => $dataProvider,
             'filterModel' => $searchModel,
@@ -53,11 +51,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 // 'security',
                 // 'law_court',
                 // 'criminal',
-                // 'army',                 
-                [
-                    'attribute' => 'status_id',
-                    'value' => 'status.name',
-                ],
+                // 'army',                
+                
 
                 ['class' => 'yii\grid\ActionColumn'],
             ],

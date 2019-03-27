@@ -14,6 +14,7 @@ use backend\models\Teenager;
 use backend\models\Employment;
 use backend\models\Relative;
 use backend\models\Model;
+use common\models\CaptchaCode;
 
 /**
  * PmjController implements the CRUD actions for Pmj model.
@@ -39,6 +40,24 @@ class PmjController extends BaseController
      * Lists all Pmj models.
      * @return mixed
      */
+
+    public function actions()
+    {
+        return [
+            'captcha' => [
+                'class' => 'yii\captcha\CaptchaAction',
+                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+            ],
+        ];
+    }
+
+    public function actionBarcode($id)
+    {
+        return $this->render('barcode', [
+            'guide' => $guide,
+        ]);
+    }
+
     public function actionIndex()
     {
         $searchModel = new PmjSearch();

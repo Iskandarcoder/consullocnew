@@ -50,6 +50,7 @@ class PmjController extends BaseController
         $division = Yii::$app->user->identity->dvision_id;
 
         $params['PmjSearch']['division_id'] = $division;
+        $params['PmjSearch']['status_id'] = 0;
 
         $dataProvider = $searchModel->search($params);
         }
@@ -211,13 +212,16 @@ class PmjController extends BaseController
     {
         $searchModel = new PmjSearch();
 
-        $params = Yii::$app->request->queryParams;
-        $process = 'Jarayonda';
+        if(Yii::$app->user->identity->role_id != '1'){
 
-        $params['PmjSearch']['status_id'] = $process;
+            $params = Yii::$app->request->queryParams;
+            $division = Yii::$app->user->identity->dvision_id;
 
-        $dataProvider = $searchModel->search($params);
+            $params['PmjSearch']['division_id'] = $division; 
+            $params['PmjSearch']['status_id'] = 1&2;           
 
+            $dataProvider = $searchModel->search($params);
+        }
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('process', [
@@ -226,17 +230,19 @@ class PmjController extends BaseController
         ]);
     }
 
+    
+
      public function actionRegistered()
     {
         $searchModel = new PmjSearch();
 
-        $params = Yii::$app->request->queryParams;
-        $registered = 'Ro`yhatga olinganlar';
-
-        $params['PmjSearch']['status_id'] = $registered;
-
-        $dataProvider = $searchModel->search($params);
-
+        if(Yii::$app->user->identity->role_id != '1'){
+            $params = Yii::$app->request->queryParams;
+            $division = Yii::$app->user->identity->dvision_id;
+            $params['PmjSearch']['division_id'] = $division;
+            $params['PmjSearch']['status_id'] = 6;
+            $dataProvider = $searchModel->search($params);
+        }
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('registered', [

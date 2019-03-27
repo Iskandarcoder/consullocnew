@@ -119,15 +119,20 @@ return [
 	'Xorijga</br>vaqtincha</br>chiqish' => 'Временный<br/>выезд из-за<br/>границы',
 	'Xorijga chiqsh uchun<br/>ruxsat yozuvini<br/>rasmiylashtirish (RE’Yo)<br/>tartibi' => 'Порядок оформления<br/>разрешительной записи<br/>для выезда<br/>за границу (РЗ)',
 	'Xorijga</br>doimiy</br>yashash' => 'Постоянное<br/>место жительства<br/>за рубежом',
-	'Xorijga doimiy<br/>yashashga chiqish yozuvini<br/>rasmiylashtirish (DYa) tartibi' => 'Порядок оформления<br/>постановления на<br/>постаянное<br/>жительство (ПМЖ)',
+	'Xorijga doimiy<br/>yashashga chiqish yozuvini<br/>rasmiylashtirish (DYa)' => 'Оформления<br/>постановления на<br/>постаянное<br/>жительство (ПМЖ)',
+    'Xorijga doimiy yashashga chiqish yozuvini rasmiylashtirish (DYa)' => 'Оформления постановления на постаянное жительство (ПМЖ)',    
 	'Fuqarolikdan</br>chiqish' => 'Выход из<br/>гражданства',
-	'O`zbekiston Respublikasi<br/>fuqaroligidan chiqishni<br/>rasmiylashtirish tartibi' => 'Порядок оформления<br/>выхода из гражданства<br/>Республики Узбекистан',
+	'O`zbekiston Respublikasi<br/>fuqaroligidan chiqishni<br/>rasmiylashtirish' => 'Оформления<br/>выхода из гражданства<br/>Республики Узбекистан',
+    'O`zbekiston Respublikasi fuqaroligidan chiqishni rasmiylashtirish' => 'Оформления выхода из гражданства Республики Узбекистан',    
 	'Fuqarolikni</br>tekshirish' => 'Принадлежность<br/>к гражданству',
 	'O`zbekiston Respublikasi<br/>fuqaroligiga mansub-mansub<br/>emaslikni aniqlash tartibi' => 'Порядок определения<br/>принадлежность -<br/>непринадлежность<br/>к гражданству РУ',
 	'Apostil</br>qo`yish' => 'Проставление<br/>Апостиля',
 	'Apostil qo`yish va<br/>hujjatlarni legallashtirish' => 'Проставление Апостиля<br/>и легализация<br/>документов',
 	'lang' => 'Русский',
+<<<<<<< HEAD
+=======
 
+>>>>>>> ec186c78575d8dd3de5b3bbaeb0f15eab374ad67
 	'Oldingi familiyasi' => 'Прежняя фамилия',
     'Oldingi ismi' => 'Прежняя имя',
     'Otasining oldingi ismi' => 'Прежняя отчество',
@@ -246,14 +251,20 @@ return [
 	'Apostil</br>qo`yish' => 'Проставление<br/>Апостиля',
 	'Apostil qo`yish va<br/>hujjatlarni legallashtirish' => 'Проставление Апостиля<br/>и легализация<br/>документов',
 	'lang' => 'Русский',
+<<<<<<< HEAD
+=======
 
+>>>>>>> ec186c78575d8dd3de5b3bbaeb0f15eab374ad67
 	'O`zbekistonnig xorijdagi vakolatxonalari' => 'Загранучреждения Республики Узбекистан',     
 	'Ko`p beriladigan savollar'=> 'Ответы на часто задаваемые вопросы',
 	'Umumiy savollar' => 'Общие вопросы',
 	'FHDYo bo`yicha savollar'=> 'Вопросы по ЗАГС',
 	'Pasport almashtirish va rasmiylashtirish tartibi bo`yicha savollar'=> 'Вопросы о порядке изменения и регистрации паспортов',
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> ec186c78575d8dd3de5b3bbaeb0f15eab374ad67
 	// HUJJATLARNI OLISH
 	'Familiyasi' => 'Фамилия',
 	'Sharifi' => 'Отчество',
@@ -302,9 +313,46 @@ return [
 	'Agar talab qilinayotgan hujjat shaxsan sizga tegishli bo`lmasa,<br>belgini bosing va quyidagi savollarga javob bering' => 'Если истребуется не свой лично документ, поставьте галочку и заполните форму',	
 	'Elchixona' => 'Посольство', 
 	'Elchixonani tanlang...' => 'Выберите посольство...', 
+<<<<<<< HEAD
     'Yaratish' => 'Создать', 
     'Yangilash' => 'Обновить', 
+=======
+    'Ma`lumoti' =>'Образование',
+    'Kasbi' =>'Профессия',
+    'Ijtimoiy maqomi' =>'Социальное положение',
+    'Ma`lumotni tanlang' =>'Выберите образованию',
+    'Oilaviy holatini tanlang' =>'Выберите семейную положению',
+    'Sud yoki tergov jarayoniga jalb qilinganligi' =>'Состоял ли под судом и следствием',
+    'Harbiy xizmat o`taganmi' =>'Служил ли в армии',
+    'Harbiy xizmatga hozirdagi aloqadorligi' =>'Отношение к воинской обязанности в настоящее время',
+    'Faxriy unvon va Davlat mukofotlari bormi' =>'Какие имеет почетные звания и государственные награды Республики Узбекистан',
+    'Doimiy yashash uchun O`zbekiston hududini qachon tark etgan' =>'Когда выехал из Узбекистана на постоянное место жительства за границу',
+    'Qo`shimcha ma`lumotlar' =>'Допольнителная информация',
+    'O`zbekiston hududida oxirgi yashash joyi' =>'Последнее место жительства в Узбекистане',
+    'O`zbekistonga bo`lgan tashriflari' =>'Отметка о поездках в Узбекистан',
+    'Kasbi: qayerda va qaysi lavozimda ishlaydi' =>'Род занятий: в качестве кого и где работает',
+    'Qaysi davlat fuqaroligini olmoqchi' =>'Какое гражданство хочет принять',
+    'O`zbekiston Respublikasi fuqaroligidan chiqish sababi' =>'Причины выхода из гражданства Республики Узбекистан',
+    'Yashash joy manzili' =>'Адрес проживания',
+    'Qarindoshlik darajasi' =>'Степень родства',
+    'Qarindoshlik darajasini tanlang' =>'Выберите степень родства',
+    'Fuqaroligini tanlang' =>'Выберите гражданству',
+    'Ish joyi, mutaxassisligi' =>'Место работы, специаль-ность',
+    'Yashash joyi manzili' =>'Адрес места жительства',
+    'Izoh' =>'Примечания',
+    'O`zbekiston Respublikasida yashayotgan yaqin qarindoshlari' =>'Близкие родственники, проживающие в Республике Узбекистан',
+    'O`zbekiston Respublikasi hududidan tashqarida istiqomat qiluvchi yaqin qarindoshlari' =>'Близкие родственники, проживающие за пределами Республики Узбекистан',
+    'Balog`at yoshiga yetmagan shaxslar bilan birga fuqarolikdan chiqish' =>'Одновременно разрешить выход из гражданства Республики Узбекистан следующим, несовершеннолетним лицам',
+    'Ariza nusxasi' =>'Копия заявлении',
+    'Tarjimai hol nusxasi' =>'Копия биографии',
+    'O`zbekiston pasporti sahifalaridan nusxa' =>'Копия листов паспорта Республики Узбекистан',
+    'Fuqarolikdan chiqishiga turmush o`rtog`ining roziligi nusxasi' =>'Копия письменного согласия супруга/супруги на выход из гражданства',
 
+>>>>>>> c8ef30693ba9474b2dde9fa5fd180b8f86abc957
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ec186c78575d8dd3de5b3bbaeb0f15eab374ad67
 ];
 ?>

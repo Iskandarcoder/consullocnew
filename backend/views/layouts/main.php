@@ -53,8 +53,54 @@ AppAsset::register($this);
                     <?= Yii::t('app', 'Xorijda doimiy yashash'); ?> <span class="selected">
                     </span>
                     </a>
+<<<<<<< HEAD
                 </li>               
               
+=======
+                </li>
+                 <li class="classic-menu-dropdown">
+                    <a href="<?= Url::to(['citizenship/index']) ?>">
+                    <?= Yii::t('app', 'Fuqarolikdan chiqish'); ?> <span class="selected">
+                    </span>
+                    </a>
+                </li>
+                <li class="classic-menu-dropdown">
+                    <a href="<?= Url::to(['deport/index'])?>">
+                    Deportatsiya <span class="selected">
+                    </span>
+                    </a>
+                </li>
+                <li class="classic-menu-dropdown">
+                    <a href="<?= Url::to(['lish-sv/index'])?>">
+                    QF <span class="selected">
+                    </span>
+                    </a>
+                </li>
+                <li class="classic-menu-dropdown">
+                    <a href="<?= Url::to(['dead/index'])?>">
+                    Vafot etgangar <span class="selected">
+                    </span>
+                    </a>
+                </li>
+                <li class="classic-menu-dropdown">
+                    <a href="<?= Url::to(['pn-pravo/index'])?>">
+                    Jabrlanuvchi <span class="selected">
+                    </span>
+                    </a>
+                </li>
+                <li class="classic-menu-dropdown">
+                    <a href="<?= Url::to(['lost-doc/index'])?>">
+                    Hujjat yo'qotgan <span class="selected">
+                    </span>
+                    </a>
+                </li>
+                <li class="classic-menu-dropdown">
+                    <a href="<?= Url::to(['user/signup'])?>">
+                    User <span class="selected">
+                    </span>
+                    </a>
+                </li>
+>>>>>>> c8ef30693ba9474b2dde9fa5fd180b8f86abc957
                 <li>
                     <?= Html::a('O\'zbekcha', array_merge(
                                   \Yii::$app->request->get(),
@@ -102,7 +148,6 @@ AppAsset::register($this);
         <i class="icon-arrow-up"></i>
     </div>
 </div>
-<script src="<?= Url::to("/admin/js/admin/consul/consul.js"); ?>"></script>
 <?php $this->endBody() ?>
 </body>
 </html>

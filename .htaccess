@@ -9,6 +9,7 @@
     RewriteRule ^admin/assets/(.*)$ backend/web/assets/$1 [L]
     RewriteRule ^admin/css/(.*)$ backend/web/css/$1 [L]
     RewriteRule ^admin/js/(.*)$ backend/web/js/$1 [L]
+    RewriteRule ^admin/images/(.*)$ backend/web/images/$1 [L]    
     RewriteRule ^uploads/(.*)$ backend/web/uploads/$1 [L]
     RewriteCond %{REQUEST_URI} !^/backend/web/(assets|js|css|js)/
     RewriteCond %{REQUEST_URI} ^/(admin)
