@@ -71,13 +71,15 @@ class Docs extends \yii\db\ActiveRecord
     public function rules()
     {     //'type_place', 'type_date',
         return [
-            [['surname', 'name', 'mname', 'birth_date', 'birth_place', 'nation_id', 'citizenship_id', 'type_id',  'doc_target', 'living_place', 'tel', 'fax', 'scan_file', 'division_id', 'email'], 'required'],
+            [['surname', 'name', 'mname', 'birth_date', 'birth_place', 'nation_id', 'citizenship_id', 'type_id',  'doc_target', 'living_place', 'tel', 'fax', 'scan_file', 'division_id', 'email', ], 'required'],
             [['birth_date', 'type_date', 'study_start_date', 'study_end_date', 'pension_date', 'sec_birthdate'], 'safe'],
             [['nation_id', 'type_id', 'tel', 'fax', 'sec_tel', 'sec_fax', 'status_id', 'division_id' ], 'integer'],
             [['scan_file'], 'string'],
             [['file'], 'file'],
             [['surname', 'name', 'mname', 'pre_surname', 'pre_name', 'pre_mname', 'citizenship_id', 'pre_citizenship_id', 'sec_citizenship_id', 'fio_father', 'fio_mother', 'study_name', 'pension_reason', 'pension_org', 'last_cost', 'last_cost_org', 'doc_target', 'sec_name', 'sec_surname', 'sec_mname', 'relative', 'email'], 'string', 'max' => 50],
             [['birth_place', 'type_place', 'study_place', 'living_place', 'sec_birthplace', 'sec_livingplace'], 'string', 'max' => 100],
+            [['guide'], 'string', 'max' => 35],
+
             [['comment'], 'string', 'max' => 200],
         ];
     }
@@ -128,13 +130,25 @@ class Docs extends \yii\db\ActiveRecord
             'sec_tel' => Yii::t('app', 'Telefon raqamingiz'),
             'sec_fax' => Yii::t('app', 'Faks raqamingiz'),
             'file' => Yii::t('app', 'Pasport nusxasi'),
-            'status_id' => Yii::t('app', 'Status ID'),
             'pre_citizenship_id' => Yii::t('app', 'Avvalgi fuqaroligi (o\'zgargan bo\'lsa)'),
             'email' => Yii::t('app','E-mail'),
             'division_id' => Yii::t('app','Elchixona'),
+            'status_id' => Yii::t('app','Holati'),
+            'comment' => Yii::t('app','Izoh'),
         ];
     }
 
+
+     public function setRandomString($length = 32)
+    {
+        $characters = '123456789ABCDEFGHJKLMNPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        $this->guide = $randomString;
+    }
 
     //  public function getCountry()
     // {
@@ -148,7 +162,22 @@ class Docs extends \yii\db\ActiveRecord
 
     public function getNation()
     {
-        return $this->hasOne(SpNation::className(), ['sp_id' => 'nation_id']);
+        return $this->hasOne(SpNationyii::className(), ['sp_id' => 'nation_id']);
+    }
+
+         public function getDocsStatus()
+    {
+        return $this->hasOne(DocsStatus::className(), ['id' => 'division_id']);
+    }
+
+    public function getSpNation()
+    {
+        return $this->hasOne(SpNationyii::className(), ['sp_id' => 'nation_id']);
+    }
+
+    public function getSpDivision()
+    {
+        return $this->hasOne(SpDivisionyii::className(), ['sp_id' => 'nation_id']);
     }
 
 

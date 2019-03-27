@@ -302,7 +302,8 @@ return [
 	'Agar talab qilinayotgan hujjat shaxsan sizga tegishli bo`lmasa,<br>belgini bosing va quyidagi savollarga javob bering' => 'Если истребуется не свой лично документ, поставьте галочку и заполните форму',	
 	'Elchixona' => 'Посольство', 
 	'Elchixonani tanlang...' => 'Выберите посольство...', 
-
+    'Yaratish' => 'Создать', 
+    'Yangilash' => 'Обновить', 
 
 
 ];

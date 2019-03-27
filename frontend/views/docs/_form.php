@@ -6,10 +6,10 @@ use kartik\file\FileInput;
 use kartik\date\DatePicker;
 use kartik\select2\Select2;
 use yii\helpers\ArrayHelper;
-use backend\models\SpNation;
+use backend\models\SpNationyii;
 use backend\models\SpCountry;
 use backend\models\SpDoc_type;
-use backend\models\SpDivision;  
+use backend\models\SpDivisionyii;  
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Docs */
@@ -179,7 +179,7 @@ use backend\models\SpDivision;
                      <div class="row">
                          <div class="form-group col-sm-6">
                             <?= $form->field($model, 'nation_id')->widget(Select2::classname(), [
-                          'data' => ArrayHelper::map(SpNation::find()->all(), 'sp_id', 'sp_name_'.Yii::$app->language),
+                          'data' => ArrayHelper::map(SpNationyii::find()->all(), 'sp_id', 'sp_name_'.Yii::$app->language),
                           'language' => 'ru',
                           'options' => ['placeholder' => Yii::t('app', 'Millatni tanlang...')],
                           'pluginOptions' => [
@@ -190,6 +190,7 @@ use backend\models\SpDivision;
                       
                     ?>
                          </div>
+                         
                         <div class="form-group col-sm-6">
                             <?= $form->field($model, 'file')->widget(FileInput::classname(), [
                         'options' => ['accept' => 'image/*','maxSize'=>'500000'],
@@ -208,7 +209,7 @@ use backend\models\SpDivision;
                       <div class="row">
                          <div class="form-group col-sm-12">
                             <?= $form->field($model, 'division_id')->widget(Select2::classname(), [
-                         'data' => ArrayHelper::map(SpDivision::find()->all(), 'sp_id', 'sp_name_'.Yii::$app->language),
+                         'data' => ArrayHelper::map(SpDivisionyii::find()->all(), 'sp_id', 'sp_name_'.Yii::$app->language),
                          'language' => 'ru',
                         'options' => ['placeholder' => Yii::t('app', 'Elchixonani tanlang...')],
                          'pluginOptions' => [
@@ -443,7 +444,7 @@ use backend\models\SpDivision;
                     <div class="col-sm-offset-4 col-sm-4">
                         <button id="next" class="btn btn-primary btn-lg" type="button" ><?= Yii::t('app', 'Keyingi'); ?> <i class="fa fa-chevron-right"></i></button>
                         <div id="send">
-                            <?= Html::submitButton($model->isNewRecord ? '<i class="fa fa-download"></i>' . ' Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success btn-lg' : 'btn btn-primary'] ) ?>
+                            <?= Html::submitButton($model->isNewRecord ? '<i class="fa fa-download"></i>' .  Yii::t('app', 'Yaratish') : Yii::t('app', 'Yangilash'), ['class' => $model->isNewRecord ? 'btn btn-success btn-lg' : 'btn btn-primary'] ) ?>
                         </div>
                     </div>
                 </div>

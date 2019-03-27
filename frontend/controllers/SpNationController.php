@@ -3,7 +3,7 @@
 namespace frontend\controllers;
 
 use Yii;
-use backend\models\SpNation;
+use backend\models\SpNationyii;
 use frontend\models\SpNationSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -63,7 +63,7 @@ class SpNationController extends Controller
      */
     public function actionCreate()
     {
-        $model = new SpNation();
+        $model = new SpNationyii();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->sp_id]);
@@ -115,7 +115,7 @@ class SpNationController extends Controller
      */
     protected function findModel($id)
     {
-        if (($model = SpNation::findOne($id)) !== null) {
+        if (($model = SpNationyii::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

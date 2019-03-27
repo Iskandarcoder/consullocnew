@@ -3,7 +3,7 @@
 namespace frontend\controllers;
 
 use Yii;
-use backend\models\SpDivision;
+use backend\models\SpDivisionyii;
 use frontend\models\SpDivisionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -63,7 +63,7 @@ class SpDivisionController extends Controller
      */
     public function actionCreate()
     {
-        $model = new SpDivision();
+        $model = new SpDivisionyii();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
 <<<<<<< HEAD

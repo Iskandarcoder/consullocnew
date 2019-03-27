@@ -1,8 +1,44 @@
 <?php
 use yii\helpers\Html;
 use yii\helpers\Url;
+use backend\models\Docs;
+
+
+// yangi arizalar soni
+$division = Yii::$app->user->identity->dvision_id;
+    $new = Docs::find()
+    // ->Where(['status_id'=>'2'])
+    ->Where(['division_id' => $division])
+    ->all();
+
+//Jarayondagi arizalar soni
+    $process = Docs::find()
+    // ->Where(['>', 'status_id','1'])
+    ->Where(['status_id'=>'3'])    
+    ->andWhere(['division_id' => $division])
+    ->all();
+    
+//Rad etilgan arizalar soni
+    $rejected = Docs::find()
+    ->Where(['status_id'=>'4'])   
+    ->andWhere(['division_id' => $division])
+    ->all();
+
+//Ro`yxatga olingan arizalar soni
+    $registered = Docs::find()
+    ->Where(['status_id'=>'6'])   
+    ->andWhere(['division_id' => $division])
+    ->all();
+
 ?>
+
+
+
+
+
 <!-- BEGIN CONTAINER -->
+
+
 <div class="page-container">
     <!-- BEGIN SIDEBAR -->
     
@@ -117,7 +153,8 @@ use yii\helpers\Url;
                         </div>
                     </div>
                 </div>
-
+            </div>
+            <div class="row">
                 <div class="col-md-6 col-sm-6">
                     <div class="portlet light ">
                         <div class="portlet-title">
@@ -249,16 +286,17 @@ use yii\helpers\Url;
                         </div>
                     </div>
                 </div>
-
+            </div>
+            <div class="row">
                 <div class="col-md-6 col-sm-6">
                     <div class="portlet light ">
                         <div class="portlet-title">
                             <div class="caption">
                                 <i class="icon-equalizer font-purple-plum hide"></i>
-                                <span class="caption-subject font-green-haze bold uppercase">O`zbekiston Respublikasiga qaytish guvohnomasi</span>
+                                <span class="caption-subject font-green-haze bold uppercase"><?= Yii::t('app', 'O`zbekiston Respublikasidan hujjatlarni so`rab olish tartibi'); ?></span>
                             </div>
                             <div class="tools">
-                                <a href="#" class="icon-calendar font-green-sharp"> 2018</a>
+                                <a href="#" class="icon-calendar font-green-sharp"> 2019</a>
                                 <a href="" class="collapse">
                                 </a>
                             </div>
@@ -267,9 +305,9 @@ use yii\helpers\Url;
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="sparkline-chart">
-                                        <div class="number" style="font-size: 20px;">789</div>
-                                        <a class="title" href="javascript:;" style="font-size: 15px;">
-                                        Arizalar <i class="icon-arrow-right"></i>
+                                        <div class="number" style="font-size: 20px;"><?php echo count($new);?></div>
+                                        <a class="title" href="docs/index" style="font-size: 15px;">    
+                                        Barcha arizalar<i class="icon-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -277,8 +315,8 @@ use yii\helpers\Url;
                                 </div>
                                 <div class="col-md-3">
                                     <div class="sparkline-chart">
-                                        <div class="number" style="font-size: 20px;">89</div>
-                                        <a class="title" href="javascript:;" style="font-size: 15px;">
+                                        <div class="number" style="font-size: 20px;"><?php echo count($process);?></div>
+                                        <a class="title" href="docs/process" style="font-size: 15px;">
                                         Jarayonda <i class="icon-arrow-right"></i>
                                         </a>
                                     </div>
@@ -287,8 +325,8 @@ use yii\helpers\Url;
                                 </div>
                                 <div class="col-md-3">
                                     <div class="sparkline-chart">
-                                        <div class="number" style="font-size: 20px;  color: red;">89</div>
-                                        <a class="title" href="javascript:;" style="font-size: 15px;  color: red;">
+                                        <div class="number" style="font-size: 20px; "><?php echo count($rejected);?></div>
+                                        <a class="title" href="docs/rejected" style="font-size: 15px;">
                                         Rad etilganlar <i class="icon-arrow-right"></i>
                                         </a>
                                     </div>
@@ -297,9 +335,9 @@ use yii\helpers\Url;
                                 </div>
                                 <div class="col-md-3">
                                     <div class="sparkline-chart">
-                                        <div class="number" style="font-size: 20px;">400</div>
-                                        <a class="title" href="javascript:;" style="font-size: 15px;">
-                                        Guvohnoma berildi <i class="icon-arrow-right"></i>
+                                        <div class="number" style="font-size: 20px;"><?php echo count($registered);?></div>
+                                        <a class="title" href="docs/registered" style="font-size: 15px;">
+                                        Hujjat berildi <i class="icon-arrow-right"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -366,7 +404,9 @@ use yii\helpers\Url;
                         </div>
                     </div>
                 </div>
-
             </div>
+
+        </div>
     </div>
     <!-- END CONTENT -->
+</div>
