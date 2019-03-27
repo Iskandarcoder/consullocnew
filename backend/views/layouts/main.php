@@ -41,43 +41,22 @@ AppAsset::register($this);
 
         <div class="hor-menu hidden-sm hidden-xs">
             <ul class="nav navbar-nav">
-                <!-- DOC: Remove data-hover="dropdown" and data-close-others="true" attributes below to disable the horizontal opening on mouse hover -->
-                <li class="classic-menu-dropdown">
-                    <a href="<?= Url::to(['kus/index'])?>">
-                    DKR <span class="selected">
-                    </span>
-                    </a>
-                </li>
-                <li class="classic-menu-dropdown">
-                    <a href="<?= Url::to(['vkus/index'])?>">
-                    VKR <span class="selected">
-                    </span>
-                    </a>
-                </li>
-                <li class="classic-menu-dropdown">
-                    <a href="<?= Url::to(['anketa-new/index'])?>">
-                    ShT <span class="selected">
-                    </span>
-                    </a>
-                </li>
+                <!-- DOC: Remove data-hover="dropdown" and data-close-others="true" attributes below to disable the horizontal opening on mouse hover -->               
                 <li class="classic-menu-dropdown">
                     <a href="<?= Url::to(['docs/index'])?>">
-                    Hujjatlarni olish<span class="selected">
+                    <?= Yii::t('app', 'Hujjatlarni olish'); ?><span class="selected">
                     </span>
                     </a>
                 </li>
-                <li class="classic-menu-dropdown">
-                    <a href="<?= Url::to(['sert/index'])?>">
-                    Tasdiq Sert <span class="selected">
-                    </span>
-                    </a>
-                </li>
+               
                 <li class="classic-menu-dropdown">
                     <a href="<?= Url::to(['pmj/index']) ?>">
                     <?= Yii::t('app', 'Xorijda doimiy yashash'); ?> <span class="selected">
                     </span>
                     </a>
-                </li>
+                </li>               
+              
+
                  <li class="classic-menu-dropdown">
                     <a href="<?= Url::to(['citizenship/index']) ?>">
                     <?= Yii::t('app', 'Fuqarolikdan chiqish'); ?> <span class="selected">
@@ -162,7 +141,7 @@ AppAsset::register($this);
 <?php if(!Yii::$app->user->isGuest):?>
 <div class="page-footer">
     <div class="page-footer-inner">
-         <span style="color: black;">2018 &copy; URIKT Iskandar Ikromov</span>
+         <span style="color: black;">2019 &copy; URIKT Iskandar Ikromov</span>
     </div>
     <div class="scroll-to-top">
         <i class="icon-arrow-up"></i>

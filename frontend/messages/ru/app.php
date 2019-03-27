@@ -313,6 +313,10 @@ return [
 	'Agar talab qilinayotgan hujjat shaxsan sizga tegishli bo`lmasa,<br>belgini bosing va quyidagi savollarga javob bering' => 'Если истребуется не свой лично документ, поставьте галочку и заполните форму',	
 	'Elchixona' => 'Посольство', 
 	'Elchixonani tanlang...' => 'Выберите посольство...', 
+<<<<<<< HEAD
+    'Yaratish' => 'Создать', 
+    'Yangilash' => 'Обновить', 
+=======
     'Ma`lumoti' =>'Образование',
     'Kasbi' =>'Профессия',
     'Ijtimoiy maqomi' =>'Социальное положение',
@@ -344,6 +348,7 @@ return [
     'O`zbekiston pasporti sahifalaridan nusxa' =>'Копия листов паспорта Республики Узбекистан',
     'Fuqarolikdan chiqishiga turmush o`rtog`ining roziligi nusxasi' =>'Копия письменного согласия супруга/супруги на выход из гражданства',
 
+>>>>>>> c8ef30693ba9474b2dde9fa5fd180b8f86abc957
 
 <<<<<<< HEAD
 =======

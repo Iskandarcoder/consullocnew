@@ -5,7 +5,7 @@ namespace backend\models;
 use Yii;
 
 /**
- * This is the model class for table "sp_nation".
+ * This is the model class for table "sp_nationyii".
  *
  * @property integer $sp_id
  * @property string $sp_name_cryl

@@ -2,22 +2,25 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+// use backend\models\spNationyii;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Docs */
+$lang = Yii::$app->language;
 
-$this->title = $model->name;
+$this->title = Yii::t('app', 'Ko\'rish'); 
 $this->params['breadcrumbs'][] = ['label' => 'Docs', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="docs-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <div class="well well-lg" style="background-color: white;border-radius: 8px!important; color: #18b19c;">
+    <h3><b><?= $model->surname. ' ' .$model->name. ' ' .$model->mname?></b></h3></br>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
+        <?= Html::a(Yii::t('app', 'Yangilash'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('app', 'O\'chirish'), ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -29,18 +32,27 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
+            // 'id',
             'surname',
             'name',
             'mname',
-            'pre_surname',
-            'pre_name',
-            'pre_mname',
+            // 'pre_surname',
+            // 'pre_name',
+            // 'pre_mname',
             'birth_date',
             'birth_place',
-            'nation_id',
+            // 'nation_id',
+            [
+                    'label' => Yii::t('app', 'Millati'),
+                    'value' => $model->spNation->sp_name_uz,
+            ],
             'citizenship_id',
-            'type_id',
+            // 'pre_citizenship_id',
+            [
+                    'label' => Yii::t('app', 'Talab qilinayotgan hujjat turi'),
+                    'value' => $model->spDoc_type->sp_name_uz,
+            ],
+            // 'type_id',
             'type_place',
             'type_date',
             'fio_father',
@@ -68,11 +80,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'sec_livingplace',
             'sec_tel',
             'sec_fax',
-            'scan_file:ntext',
-            'status_id',
-            'pre_citizenship_id',
+            // 'scan_file:ntext',
+            [
+                    'label' => Yii::t('app', 'Holati'),
+                    'value' => $model->docsStatus->name,
+            ],
+            // 'status_id',
             'email:email',
-            'division_id',
+            // 'division_id',
             'comment',
         ],
     ]) ?>
