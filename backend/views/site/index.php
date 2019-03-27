@@ -1,7 +1,8 @@
 <?php
 use yii\helpers\Html;
 use yii\helpers\Url;
-<<<<<<< HEAD
+use backend\models\Pmj;
+use backend\models\Citizenship;
 use backend\models\Docs;
 
 
@@ -30,11 +31,8 @@ $division = Yii::$app->user->identity->dvision_id;
     ->Where(['status_id'=>'6'])   
     ->andWhere(['division_id' => $division])
     ->all();
-=======
-use backend\models\Pmj;
-use backend\models\Citizenship;
 
-$division = Yii::$app->user->identity->dvision_id;
+
 //Yangi tushgan arizalar soni
     $new = Pmj::find()
     ->Where(['status_id'=>'0'])
@@ -72,7 +70,6 @@ $division = Yii::$app->user->identity->dvision_id;
     ->andWhere(['division_id' => $division])
     ->all();
 //end proces  
->>>>>>> c8ef30693ba9474b2dde9fa5fd180b8f86abc957
 
 ?>
 
@@ -435,11 +432,7 @@ $division = Yii::$app->user->identity->dvision_id;
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
                 </div>
-=======
-                </div>                
->>>>>>> c8ef30693ba9474b2dde9fa5fd180b8f86abc957
             </div>
 
         </div>

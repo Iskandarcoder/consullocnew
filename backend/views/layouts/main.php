@@ -53,11 +53,9 @@ AppAsset::register($this);
                     <?= Yii::t('app', 'Xorijda doimiy yashash'); ?> <span class="selected">
                     </span>
                     </a>
-<<<<<<< HEAD
                 </li>               
               
-=======
-                </li>
+
                  <li class="classic-menu-dropdown">
                     <a href="<?= Url::to(['citizenship/index']) ?>">
                     <?= Yii::t('app', 'Fuqarolikdan chiqish'); ?> <span class="selected">
@@ -100,7 +98,6 @@ AppAsset::register($this);
                     </span>
                     </a>
                 </li>
->>>>>>> c8ef30693ba9474b2dde9fa5fd180b8f86abc957
                 <li>
                     <?= Html::a('O\'zbekcha', array_merge(
                                   \Yii::$app->request->get(),
