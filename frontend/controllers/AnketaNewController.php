@@ -9,13 +9,13 @@ use frontend\components\BaseController;
 //use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use backend\models\SpRegion;
-use backend\models\SpDistrict;
-use backend\models\SpPlace;
+use backend\models\SpRegionyii;
+use backend\models\SpDistrictyii;
+use backend\models\SpPlaceyii;
 use common\models\CaptchaCode;
 use yii\web\UploadedFile;
 use backend\models\Model;
-use backend\models\SpStreet;
+use backend\models\SpStreetyii;
 use backend\models\InRelative;
 
 
@@ -289,7 +289,7 @@ public function actionPdf($id)
         $result = "";
         // $country_id = Yii::$app->request->queryParams['sp_country_id'];
         $name = 'sp_name_'.Yii::$app->language;
-        $regions = SpRegion::find()
+        $regions = SpRegionyii::find()
                         ->select(['sp_id', $name])
                         ->where(['sp_country_id'=>$id])
                         ->all();
@@ -312,7 +312,7 @@ public function actionPdf($id)
         $result = "";
         // $region_id = Yii::$app->request->queryParams['sp_id'];
         $name = 'sp_name_'.Yii::$app->language;
-        $districts = SpDistrict::find()->where(['sp_region'=>$id])->select(['sp_id', $name])->all();
+        $districts = SpDistrictyii::find()->where(['sp_region'=>$id])->select(['sp_id', $name])->all();
         $result .= "<option>---</option>";
         if ($districts) {
             foreach ($districts as $district) {
@@ -327,7 +327,7 @@ public function actionPdf($id)
         $result = "";
         // $district_id = Yii::$app->request->queryParams['sp_district'];
         $name = 'sp_name_'.Yii::$app->language;
-        $placess = SpPlace::find()->where(['sp_id'=>$id])->select(['sp_id', $name])->all();
+        $placess = SpPlaceyii::find()->where(['sp_id'=>$id])->select(['sp_id', $name])->all();
         $result .= "<option>---</option>";
         if ($placess) {
             foreach ($placess as $places) {
@@ -342,7 +342,7 @@ public function actionPdf($id)
         $result = "";
         // $district_id = Yii::$app->request->queryParams['sp_district'];
         $name = 'sp_name_'.Yii::$app->language;
-        $placess = SpStreet::find()->where(['sp_district'=>$id])->select(['sp_id', $name])->all();
+        $placess = SpStreetyii::find()->where(['sp_district'=>$id])->select(['sp_id', $name])->all();
         $result .= "<option>---</option>";
         if ($placess) {
             foreach ($placess as $places) {

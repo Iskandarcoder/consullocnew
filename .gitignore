@@ -18,7 +18,7 @@ nbproject
 Thumbs.db
 
 # composer vendor dir
-#/vendor
+/vendor
 
 # composer itself is not needed
 composer.phar
@@ -33,5 +33,9 @@ phpunit.phar
 
 # vagrant runtime
 /.vagrant
+<<<<<<< HEAD
+main-local
+=======
 main-local
 vendor
+>>>>>>> e3ecd6ed2c2ecc041ae95620e1f59abf48e61c05

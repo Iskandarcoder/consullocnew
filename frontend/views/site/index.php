@@ -50,7 +50,7 @@
         </a>
       </div>
       <div class="col-sm-3">
-        <a href="?action=istreb">
+        <a href="<?= Url::to(['/docs/index'])?>">
           <button type="button" class="btn btn-labeled btn-lg">
             <div class="btn-label">
               <i class="fa fa-4x fa-newspaper-o"></i>
@@ -174,6 +174,7 @@
       </div>
     </div>
   </div>
+
   <input  id="ses_name" type="hidden"  value = "<?php  echo $_SESSION['login'];?>" />  
 </div>
 <?php

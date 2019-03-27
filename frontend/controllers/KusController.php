@@ -9,8 +9,8 @@ use frontend\models\KusSearch;
 use frontend\components\BaseController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use backend\models\SpRegion;
-use backend\models\SpDistrict;
+use backend\models\SpRegionyii;
+use backend\models\SpDistrictyii;
 use backend\models\SpPlace;
 use backend\models\SpStreet;
 use common\models\CaptchaCode;
@@ -337,7 +337,7 @@ class KusController extends Basecontroller
 		$result = "";
 		// $country_id = Yii::$app->request->queryParams['sp_country_id'];
 		$name = 'sp_name_'.Yii::$app->language;
-		$regions = SpRegion::find()
+		$regions = SpRegionyii::find()
 						->select(['sp_id', $name])
 						->where(['sp_country_id'=>$id])
 						->all();
@@ -360,7 +360,7 @@ class KusController extends Basecontroller
 		$result = "";
 		// $region_id = Yii::$app->request->queryParams['sp_id'];
 		$name = 'sp_name_'.Yii::$app->language;
-		$districts = SpDistrict::find()->where(['sp_region'=>$id])->select(['sp_id', $name])->all();
+		$districts = SpDistrictyii::find()->where(['sp_region'=>$id])->select(['sp_id', $name])->all();
 		$result .= "<option>---</option>";
 		if ($districts) {
 			foreach ($districts as $district) {

@@ -21,14 +21,17 @@
         "wbraganca/yii2-dynamicform": "*",
         "mdmsoft/yii2-admin": "2.x-dev",
         "webvimark/module-user-management": "^1.0",
-        "kartik-v/yii2-widget-select2": "dev-master",
-        "kartik-v/yii2-widget-datepicker": "@dev",
         "kartik-v/yii2-widget-timepicker": "*",
         "2amigos/yii2-date-picker-widget": "~1.0",
         "kartik-v/yii2-mpdf": "dev-master",
         "kartik-v/yii2-date-range": "*",
         "mpdf/mpdf": "@dev",
+<<<<<<< HEAD
+        "kartik-v/yii2-widget-datepicker": "@dev",
+        "kartik-v/yii2-widget-select2": "@dev"
+=======
         "kartik-v/yii2-widget-fileinput": "@dev"
+>>>>>>> e3ecd6ed2c2ecc041ae95620e1f59abf48e61c05
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

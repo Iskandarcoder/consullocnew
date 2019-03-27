@@ -5,16 +5,16 @@ use yii\widgets\ActiveForm;
 use kartik\date\DatePicker;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
-use backend\models\SpCountry;
+use backend\models\SpCountryyii;
 use kartik\select2\Select2;
-use backend\models\SpRegion;
-use backend\models\SpDistrict;
-use backend\models\SpPlace;
-use backend\models\SpNation;
-use backend\models\SpDoctype;
-use backend\models\SpDivision;
+use backend\models\SpRegionyii;
+use backend\models\SpDistrictyii;
+use backend\models\SpPlaceyii;
+use backend\models\SpNationyii;
+use backend\models\SpDoctypeyii;
+use backend\models\SpDivisionyii;
 use backend\models\VkuKart;
-use backend\models\SpStreet;
+use backend\models\SpStreetyii;
 use backend\models\Education;
 use backend\models\TypeRelative;
 use yii\captcha\Captcha;
@@ -30,28 +30,28 @@ $country = [];
 
 $living_regions = [];
 
-  // $country = SpCountry::find()->all();
+  // $country = SpCountryyii::find()->all();
   // $country = ArrayHelper::map($country, 'sp_id','sp_name_'.Yii::$app->language);
 // vd($country);
   $country = [];
-  $country = SpCountry::find()->orderBy(new \yii\db\Expression('if(id=182, 0, 1)'))->all();
+  $country = SpCountryyii::find()->orderBy(new \yii\db\Expression('if(id=182, 0, 1)'))->all();
   $country = ArrayHelper::map($country, 'sp_id','sp_name_'.Yii::$app->language);
-  $living_regions = SpRegion::find()->all();
+  $living_regions = SpRegionyii::find()->all();
   $living_regions = ArrayHelper::map($living_regions, 'sp_id','sp_name_'.Yii::$app->language);
 
 $spregion = [];
 if ($model->birth_country_id) {
-  $spregion = SpRegion::find()->where(['sp_country_id' => $model->birth_country_id])->asArray()->all();
+  $spregion = SpRegionyii::find()->where(['sp_country_id' => $model->birth_country_id])->asArray()->all();
 }
 
 $spdistrict = [];
 if ($model->birth_region_id) {
-  $spdistrict = SpDistrict::find()->where(['sp_region' => $model->birth_region_id])->asArray()->all();
+  $spdistrict = SpDistrictyii::find()->where(['sp_region' => $model->birth_region_id])->asArray()->all();
 }
 
 $spplace = [];
 if ($model->birth_place_id) {
-  $spplace = SpPlace::find()->where(['sp_district' => $model->birth_place_id])->asArray()->all();
+  $spplace = SpPlaceyii::find()->where(['sp_district' => $model->birth_place_id])->asArray()->all();
 }
 
 $street = [];
@@ -62,12 +62,12 @@ if ($model->living_street_id) {
 
 $spdistrict_living = [];
 if ($model->living_region_id) {
-  $spdistrict_living = SpDistrict::find()->where(['sp_region' => $model->living_region_id])->asArray()->all();
+  $spdistrict_living = SpDistrictyii::find()->where(['sp_region' => $model->living_region_id])->asArray()->all();
 }
 
 $spplace_living = [];
 if ($model->living_place_id) {
-  $spplace_living = SpPlace::find()->where(['sp_district' => $model->living_place_id])->asArray()->all();
+  $spplace_living = SpPlaceyii::find()->where(['sp_district' => $model->living_place_id])->asArray()->all();
 }
 
 $street_living = [];
@@ -125,7 +125,7 @@ if(Yii::$app->language =='ru'){
 
 
 
-
+//Doimiy konsullik ro'yhatiga olish uchun forma
 ?>
 <style type="text/css">
   .fileinput-cancel-button {
@@ -220,7 +220,7 @@ if(Yii::$app->language =='ru'){
         <div class="row">
           <div class="form-group col-sm-6">
                     <?=$form->field($model, 'nationality_id')->widget(Select2::classname(), [
-                          'data' => ArrayHelper::map(SpNation::find()->all(), 'sp_id', 'sp_name_'.Yii::$app->language),
+                          'data' => ArrayHelper::map(SpNationyii::find()->all(), 'sp_id', 'sp_name_'.Yii::$app->language),
                           'language' => 'ru',
                           'options' => ['placeholder' => 'Выберите Вид ...'],
                           'pluginOptions' => [
@@ -303,7 +303,7 @@ if(Yii::$app->language =='ru'){
         <div class="row">
           <div class="form-group col-sm-6">
                     <?=$form->field($model, 'document_type_id')->widget(Select2::classname(), [
-                          'data' => ArrayHelper::map(SpDoctype::find()->all(), 'sp_id', 'sp_name_'.Yii::$app->language),
+                          'data' => ArrayHelper::map(SpDoctypeyii::find()->all(), 'sp_id', 'sp_name_'.Yii::$app->language),
                           'language' => 'ru',
                           'options' => ['placeholder' => 'Выберите Вид ...'],
                           'pluginOptions' => [
@@ -352,7 +352,7 @@ if(Yii::$app->language =='ru'){
         <div class="row">
           <div class="form-group col-sm-6">
                     <?=$form->field($model, 'document_div_id')->widget(Select2::classname(), [
-                          'data' => ArrayHelper::map(SpDivision::find()->all(), 'sp_id', 'sp_name_'.Yii::$app->language),
+                          'data' => ArrayHelper::map(SpDivisionyii::find()->all(), 'sp_id', 'sp_name_'.Yii::$app->language),
                           'language' => 'ru',
                           'options' => ['placeholder' => 'Выберите Вид ...'],
                           'pluginOptions' => [
@@ -458,7 +458,7 @@ if(Yii::$app->language =='ru'){
         <div class="row">
           <div class="form-group col-sm-12">
                    <?= $form->field($model, 'division_id')->widget(Select2::classname(), [
-                          'data' => ArrayHelper::map(SpDivision::find()->where(['sp_idfirst' => 1])->all(), 'sp_id', 'sp_name_'.Yii::$app->language),
+                          'data' => ArrayHelper::map(SpDivisionyii::find()->where(['sp_idfirst' => 1])->all(), 'sp_id', 'sp_name_'.Yii::$app->language),
                           'language' => 'ru',
                           'options' => ['placeholder' => 'Выберите Вид ...'],
                           'pluginOptions' => [

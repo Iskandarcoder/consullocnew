@@ -5,24 +5,28 @@ namespace backend\models;
 use Yii;
 
 /**
- * This is the model class for table "sp_countryyii".
+ * This is the model class for table "sp_country".
  *
- * @property int $id
- * @property int $sp_id
- * @property int $p2
- * @property string $upr
- * @property string $status
- * @property string $sp_name_cryl
- * @property string $sp_name_ru
- * @property string $sp_name_qrc
- * @property string $sp_name_en
- * @property string $sp_name_uz
- * @property string $sp_name_qrl
+ * @property integer $sp_id
+ * @property string $sp_name00
+ * @property string $sp_name01
+ * @property string $sp_name02
+ * @property string $sp_name03
+ * @property string $sp_name04
+ * @property string $sp_name05
+ * @property string $sp_idn
+ * @property integer $sp_active
+ * @property string $sp_dateenter
+ * @property string $sp_scn
+ * @property integer $sp_idold
+ * @property string $sp_idnold
+ * @property integer $sp_idfirst
+ * @property string $sp_idnfirst
  */
 class SpCountryyii extends \yii\db\ActiveRecord
 {
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public static function tableName()
     {
@@ -30,35 +34,40 @@ class SpCountryyii extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['sp_id'], 'required'],
-            [['sp_id', 'p2'], 'integer'],
-            [['upr', 'status'], 'string', 'max' => 1],
-            [['sp_name_cryl', 'sp_name_ru', 'sp_name_qrc', 'sp_name_en', 'sp_name_uz', 'sp_name_qrl'], 'string', 'max' => 100],
+            [['sp_id', 'sp_active', 'sp_dateenter', 'sp_scn'], 'required'],
+            [['sp_id', 'sp_active', 'sp_scn', 'sp_idold', 'sp_idfirst'], 'integer'],
+            [['sp_dateenter'], 'safe'],
+            [['sp_name00', 'sp_name01', 'sp_name02', 'sp_name03', 'sp_name04', 'sp_name05'], 'string', 'max' => 100],
+            [['sp_idn', 'sp_idnold', 'sp_idnfirst'], 'string', 'max' => 3],
         ];
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
             'sp_id' => 'Sp ID',
-            'p2' => 'P2',
-            'upr' => 'Upr',
-            'status' => 'Status',
-            'sp_name_cryl' => 'Sp Name Cryl',
-            'sp_name_ru' => 'Sp Name Ru',
-            'sp_name_qrc' => 'Sp Name Qrc',
-            'sp_name_en' => 'Sp Name En',
-            'sp_name_uz' => 'Sp Name Uz',
-            'sp_name_qrl' => 'Sp Name Qrl',
+            'sp_name00' => 'Sp Name00',
+            'sp_name01' => 'Sp Name01',
+            'sp_name02' => 'Sp Name02',
+            'sp_name03' => 'Sp Name03',
+            'sp_name04' => 'Sp Name04',
+            'sp_name05' => 'Sp Name05',
+            'sp_idn' => 'Sp Idn',
+            'sp_active' => 'Sp Active',
+            'sp_dateenter' => 'Sp Dateenter',
+            'sp_scn' => 'Sp Scn',
+            'sp_idold' => 'Sp Idold',
+            'sp_idnold' => 'Sp Idnold',
+            'sp_idfirst' => 'Sp Idfirst',
+            'sp_idnfirst' => 'Sp Idnfirst',
         ];
     }
 }

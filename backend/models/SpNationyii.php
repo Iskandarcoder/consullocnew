@@ -5,28 +5,28 @@ namespace backend\models;
 use Yii;
 
 /**
- * This is the model class for table "sp_nationyii".
+ * This is the model class for table "sp_nation".
  *
- * @property int $sp_id
+ * @property integer $sp_id
  * @property string $sp_name_cryl
  * @property string $sp_name_ru
  * @property string $sp_name_qrc
  * @property string $sp_name_en
  * @property string $sp_name_uz
  * @property string $sp_name_qrl
- * @property int $sp_active
+ * @property integer $sp_active
  * @property string $sp_dateenter
  * @property string $sp_scn
  * @property string $sp_idn
- * @property int $sp_idold
+ * @property integer $sp_idold
  * @property string $sp_idnold
- * @property int $sp_idfirst
+ * @property integer $sp_idfirst
  * @property string $sp_idnfirst
  */
 class SpNationyii extends \yii\db\ActiveRecord
 {
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public static function tableName()
     {
@@ -34,7 +34,7 @@ class SpNationyii extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function rules()
     {
@@ -44,12 +44,11 @@ class SpNationyii extends \yii\db\ActiveRecord
             [['sp_dateenter'], 'safe'],
             [['sp_name_cryl', 'sp_name_ru', 'sp_name_qrc', 'sp_name_en', 'sp_name_uz', 'sp_name_qrl'], 'string', 'max' => 100],
             [['sp_idn', 'sp_idnold', 'sp_idnfirst'], 'string', 'max' => 3],
-            [['sp_id'], 'unique'],
         ];
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function attributeLabels()
     {

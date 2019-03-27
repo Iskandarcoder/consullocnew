@@ -129,6 +129,10 @@ return [
 	'Apostil</br>qo`yish' => 'Проставление<br/>Апостиля',
 	'Apostil qo`yish va<br/>hujjatlarni legallashtirish' => 'Проставление Апостиля<br/>и легализация<br/>документов',
 	'lang' => 'Русский',
+<<<<<<< HEAD
+=======
+
+>>>>>>> ec186c78575d8dd3de5b3bbaeb0f15eab374ad67
 	'Oldingi familiyasi' => 'Прежняя фамилия',
     'Oldingi ismi' => 'Прежняя имя',
     'Otasining oldingi ismi' => 'Прежняя отчество',
@@ -247,11 +251,20 @@ return [
 	'Apostil</br>qo`yish' => 'Проставление<br/>Апостиля',
 	'Apostil qo`yish va<br/>hujjatlarni legallashtirish' => 'Проставление Апостиля<br/>и легализация<br/>документов',
 	'lang' => 'Русский',
+<<<<<<< HEAD
+=======
+
+>>>>>>> ec186c78575d8dd3de5b3bbaeb0f15eab374ad67
 	'O`zbekistonnig xorijdagi vakolatxonalari' => 'Загранучреждения Республики Узбекистан',     
 	'Ko`p beriladigan savollar'=> 'Ответы на часто задаваемые вопросы',
 	'Umumiy savollar' => 'Общие вопросы',
 	'FHDYo bo`yicha savollar'=> 'Вопросы по ЗАГС',
 	'Pasport almashtirish va rasmiylashtirish tartibi bo`yicha savollar'=> 'Вопросы о порядке изменения и регистрации паспортов',
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ec186c78575d8dd3de5b3bbaeb0f15eab374ad67
 	// HUJJATLARNI OLISH
 	'Familiyasi' => 'Фамилия',
 	'Sharifi' => 'Отчество',
@@ -332,5 +345,9 @@ return [
     'Fuqarolikdan chiqishiga turmush o`rtog`ining roziligi nusxasi' =>'Копия письменного согласия супруга/супруги на выход из гражданства',
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ec186c78575d8dd3de5b3bbaeb0f15eab374ad67
 ];
 ?>
