@@ -333,8 +333,14 @@ use yii\captcha\Captcha;
                               echo Html::activeHiddenInput($modelem, "[{$i}]id");
                             }
                           ?>
-                          <?= $form->field($modelem, "[{$i}]start_date")->textInput(['maxlength' => true]) ?>
-                          <?= $form->field($modelem, "[{$i}]end_date")->textInput(['maxlength' => true]) ?>
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <?= $form->field($modelem, "[{$i}]start_date")->textInput(['maxlength' => true]) ?>
+                            </div>
+                            <div class="col-sm-6">
+                              <?= $form->field($modelem, "[{$i}]end_date")->textInput(['maxlength' => true]) ?>
+                            </div>
+                          </div>
                           <?= $form->field($modelem, "[{$i}]position")->textInput(['maxlength' => true])
                           ?>
                           <?= $form->field($modelem, "[{$i}]place")->textInput(['maxlength' => true])

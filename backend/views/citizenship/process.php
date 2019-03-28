@@ -10,61 +10,66 @@ use yii\grid\GridView;
 $this->title = 'Citizenships';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="citizenship-index">
+<div class="well well-lg" style="background-color: white;border-radius: 8px!important; color: #18b19c;">
+    <h3><b><?= Yii::t('app', 'O`zbekiston Respublikasi fuqaroligidan chiqish uchun to`ldirilgan anketalar jarayoni'); ?></b></h3></br>
+    <div class="citizenship-index">
+       
+        <?php // echo $this->render('_search', ['model' => $searchModel]); ?> 
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+        <?= GridView::widget([
+            'dataProvider' => $dataProvider,
+            'filterModel' => $searchModel,
+            'columns' => [
+                ['class' => 'yii\grid\SerialColumn'],
 
-    <p>
-        <?= Html::a('Create Citizenship', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+                //'id',
+                //'guide',
+                //'photo:ntext',
+                'surname',
+                'name',
+                'mname',
+                //'pre_surname',
+                //'pre_name',
+                //'pre_mname',
+                //'social_status',
+                //'birth_date',
+                [
+                        'attribute' => 'nationality_id',
+                        'value' => 'spNation.sp_name_ru',
+                    ],
+                //'study_id',
+                //'profession',
+                //'marital_id',
+                //'marital_name',
+                //'marital_bdate',
+                //'marital_nation',
+                //'marital_place',
+                //'court',
+                //'army',
+                //'army_now',
+                //'medal',
+                //'pmj',
+                //'last_place',
+                //'visit_uzb',
+                //'business',
+                //'citizenship_id',
+                //'cause',
+                //'living_place',
+                //'tel',
+                //'file1:ntext',
+                //'file2:ntext',
+                //'file3:ntext',
+                //'file4:ntext',
+                 [
+                        'attribute' => 'status_id',
+                        'value' => 'status.name_ru',
+                    ],
+                //'comment',
+                //'division_id',
 
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'guide',
-            'photo:ntext',
-            'surname',
-            'name',
-            //'mname',
-            //'pre_surname',
-            //'pre_name',
-            //'pre_mname',
-            //'social_status',
-            //'birth_date',
-            //'nationality_id',
-            //'study_id',
-            //'profession',
-            //'marital_id',
-            //'marital_name',
-            //'marital_bdate',
-            //'marital_nation',
-            //'marital_place',
-            //'court',
-            //'army',
-            //'army_now',
-            //'medal',
-            //'pmj',
-            //'last_place',
-            //'visit_uzb',
-            //'business',
-            //'citizenship_id',
-            //'cause',
-            //'living_place',
-            //'tel',
-            //'file1:ntext',
-            //'file2:ntext',
-            //'file3:ntext',
-            //'file4:ntext',
-            //'status_id',
-            //'comment',
-            //'division_id',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
+                ['class' => 'yii\grid\ActionColumn'],
+            ],
+        ]); ?>
+    </div>
 </div>
+

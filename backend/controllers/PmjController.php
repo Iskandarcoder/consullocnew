@@ -12,6 +12,8 @@ use yii\filters\VerbFilter;
 use backend\models\Employment;
 use backend\models\Relative;
 use backend\models\Teenager;
+use yii\filters\AccessControl;
+
 
 $lang = Yii::$app->language;
 
@@ -24,9 +26,19 @@ class PmjController extends BaseController
     /**
      * @inheritdoc
      */
+    
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -35,6 +47,7 @@ class PmjController extends BaseController
             ],
         ];
     }
+
 
     /**
      * Lists all Pmj models.
@@ -50,7 +63,7 @@ class PmjController extends BaseController
         $division = Yii::$app->user->identity->dvision_id;
 
         $params['PmjSearch']['division_id'] = $division;
-        $params['PmjSearch']['status_id'] = 0;
+        $params['PmjSearch']['status_id'] = '0';
 
         $dataProvider = $searchModel->search($params);
         }
@@ -208,17 +221,16 @@ class PmjController extends BaseController
         return $this->redirect(['index']);
     }
 
-     public function actionProcess()
+     public function actionProcess($status)
     {
         $searchModel = new PmjSearch();
-
         if(Yii::$app->user->identity->role_id != '1'){
 
             $params = Yii::$app->request->queryParams;
             $division = Yii::$app->user->identity->dvision_id;
 
-            $params['PmjSearch']['division_id'] = $division; 
-            $params['PmjSearch']['status_id'] = 1&2;           
+            $params['PmjSearch']['division_id'] = $division;           
+            $params['PmjSearch']['status'] = $status;           
 
             $dataProvider = $searchModel->search($params);
         }
@@ -250,6 +262,26 @@ class PmjController extends BaseController
             'dataProvider' => $dataProvider,
         ]);
     }
+
+     public function actionDeny()
+    {
+        $searchModel = new PmjSearch();
+
+        if(Yii::$app->user->identity->role_id != '1'){
+            $params = Yii::$app->request->queryParams;
+            $division = Yii::$app->user->identity->dvision_id;
+            $params['PmjSearch']['division_id'] = $division;
+            $params['PmjSearch']['status_id'] = 4;
+            $dataProvider = $searchModel->search($params);
+        }
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('deny', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
 
     /**
      * Finds the Pmj model based on its primary key value.

@@ -10,9 +10,12 @@ use backend\models\CitizenshipSearch;
 use backend\components\BaseController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use backend\models\Inrelative;
-use backend\models\Outrelative;
+use backend\models\InrelativePmj;
+use backend\models\OutrelativePmj;
 use backend\models\Children;
+use yii\filters\AccessControl;
+
+
 
 /**
  * CitizenshipController implements the CRUD actions for Citizenship model.
@@ -25,6 +28,15 @@ class CitizenshipController extends BaseController
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -33,6 +45,7 @@ class CitizenshipController extends BaseController
             ],
         ];
     }
+    
 
     /**
      * Lists all Citizenship models.
@@ -172,21 +185,21 @@ class CitizenshipController extends BaseController
         return $this->redirect(['index']);
     }
 
-      public function actionProcess()
+      public function actionProcess($statuss)
     {
         $searchModel = new CitizenshipSearch();
-
         if(Yii::$app->user->identity->role_id != '1'){
 
             $params = Yii::$app->request->queryParams;
             $division = Yii::$app->user->identity->dvision_id;
 
-            $params['CitizenshipSearch']['division_id'] = $division; 
-            $params['CitizenshipSearch']['status_id'] > 0;           
+            $params['CitizenshipSearch']['division_id'] = $division;           
+            $params['CitizenshipSearch']['statuss'] = $statuss;           
 
             $dataProvider = $searchModel->search($params);
         }
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
 
         return $this->render('process', [
             'searchModel' => $searchModel,
@@ -210,6 +223,25 @@ class CitizenshipController extends BaseController
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('registered', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+     public function actionDeny()
+    {
+        $searchModel = new CitizenshipSearch();
+
+        if(Yii::$app->user->identity->role_id != '1'){
+            $params = Yii::$app->request->queryParams;
+            $division = Yii::$app->user->identity->dvision_id;
+            $params['CitizenshipSearch']['division_id'] = $division;
+            $params['CitizenshipSearch']['status_id'] = 4;
+            $dataProvider = $searchModel->search($params);
+        }
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('deny', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);

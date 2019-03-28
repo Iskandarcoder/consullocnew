@@ -148,12 +148,12 @@ class Citizenship extends \yii\db\ActiveRecord
 
      public function getInrelative()
     {
-        return $this->hasMany(Inrelative::className(), ['citizenship_id' => 'id']);
+        return $this->hasMany(InrelativePmj::className(), ['citizenship_id' => 'id']);
     }
 
     public function getOutrelative()
     {
-        return $this->hasMany(Outrelative::className(), ['citizenship_id' => 'id']);
+        return $this->hasMany(OutrelativePmj::className(), ['citizenship_id' => 'id']);
     }
 
     public function getChildren()
@@ -168,12 +168,12 @@ class Citizenship extends \yii\db\ActiveRecord
 
      public function getSpCountry()
     {
-        return $this->hasOne(SpCountry::className(), ['sp_id' => 'citizenship_id']);
+        return $this->hasOne(SpCountryyii::className(), ['sp_id' => 'citizenship_id']);
     }
 
      public function getSpCountry2()
     {
-        return $this->hasOne(SpCountry::className(), ['sp_id' => 'second_cityzenship_id']);
+        return $this->hasOne(SpCountryyii::className(), ['sp_id' => 'second_cityzenship_id']);
     }
 
      public function getStatus()

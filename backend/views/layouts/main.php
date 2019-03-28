@@ -26,6 +26,7 @@ AppAsset::register($this);
 </head>
 <body class="page-md page-header-fixed page-quick-sidebar-over-content page-full-width">
 <?php $this->beginBody() ?>
+<?php if(!Yii::$app->user->isGuest):?>
 <!-- BEGIN HEADER -->
 <div class="page-header md-shadow-z-1-i navbar navbar-fixed-top">
     <!-- BEGIN HEADER INNER -->
@@ -133,10 +134,11 @@ AppAsset::register($this);
     </div>
     <!-- END HEADER INNER -->
 </div>
+<?php endif;?>
 <br><br><br>
 <!-- END HEADER -->
         <?= $content ?>
-    
+<?php if(!Yii::$app->user->isGuest):?>
 <div class="page-footer">
     <div class="page-footer-inner">
          <span style="color: black;">2019 &copy; URIKT Iskandar Ikromov</span>
@@ -145,6 +147,8 @@ AppAsset::register($this);
         <i class="icon-arrow-up"></i>
     </div>
 </div>
+<?php endif;?>
+
 <?php $this->endBody() ?>
 </body>
 </html>

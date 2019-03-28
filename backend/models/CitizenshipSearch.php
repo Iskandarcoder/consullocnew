@@ -1,7 +1,7 @@
 <?php
 
 namespace backend\models;
-
+use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use backend\models\Citizenship;
@@ -9,6 +9,7 @@ use backend\models\Citizenship;
 /**
  * CitizenshipSearch represents the model behind the search form of `backend\models\Citizenship`.
  */
+
 class CitizenshipSearch extends Citizenship
 {
     /**
@@ -40,15 +41,17 @@ class CitizenshipSearch extends Citizenship
      */
     public function search($params)
     {
-        $query = Citizenship::find();
-
-        // add conditions that should always apply here
-
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-        ]);
-
         $this->load($params);
+        $process = $params['statuss'];
+        if ($process == 1) {
+            $query = Citizenship::find()->where(['!=','status_id','6'])->andwhere(['!=','status_id','0'])->andwhere(['!=','status_id','4']);
+        }else{
+            $query = Citizenship::find();
+        }
+
+         $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+            ]);
 
         if (!$this->validate()) {
             // uncomment the following line if you do not want to return any records when validation fails

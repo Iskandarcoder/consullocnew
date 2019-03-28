@@ -7,7 +7,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use kartik\select2\Select2;
-use backend\models\SpDivision;
+use backend\models\SpDivisionyii;
 use backend\models\Role;
 use yii\helpers\ArrayHelper;
 
@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ?>
 
                 <?=$form->field($model, 'dvision_id')->widget(Select2::classname(), [
-                          'data' => ArrayHelper::map(SpDivision::find()->where(['sp_idfirst' => 1])->all(), 'sp_id', 'sp_name_uz'),
+                          'data' => ArrayHelper::map(SpDivisionyii::find()->where(['sp_idfirst' => 1])->all(), 'sp_id', 'sp_name_uz'),
                           'language' => 'ru',
                           'options' => ['placeholder' => 'Diplomatik vakolatxonani tanlang ...'],
                           'pluginOptions' => [

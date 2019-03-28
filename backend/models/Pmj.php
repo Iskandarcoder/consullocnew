@@ -138,17 +138,17 @@ class Pmj extends \yii\db\ActiveRecord
 
      public function getSpNation()
     {
-        return $this->hasOne(SpNation::className(), ['sp_id' => 'nationality_id']);
+        return $this->hasOne(SpNationyii::className(), ['sp_id' => 'nationality_id']);
     }
 
      public function getSpCountry()
     {
-        return $this->hasOne(SpCountry::className(), ['sp_id' => 'citizenship_id']);
+        return $this->hasOne(SpCountryyii::className(), ['sp_id' => 'citizenship_id']);
     }
 
      public function getSpCountry2()
     {
-        return $this->hasOne(SpCountry::className(), ['sp_id' => 'second_cityzenship_id']);
+        return $this->hasOne(SpCountryyii::className(), ['sp_id' => 'second_cityzenship_id']);
     }
 
      public function getStatus()
@@ -158,6 +158,6 @@ class Pmj extends \yii\db\ActiveRecord
 
      public function getSpDivision()
     {
-        return $this->hasOne(SpDivision::className(), ['sp_id' => 'division_id']);
+        return $this->hasOne(SpDivisionyii::className(), ['sp_id' => 'division_id']);
     }
 }
