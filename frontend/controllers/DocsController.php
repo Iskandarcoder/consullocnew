@@ -125,7 +125,9 @@ class DocsController extends BaseController
      */
     public function actionCreate()
     {
-        $model = new Docs();       
+        $model = new Docs(); 
+        $model->setRandomString();
+              
 
         if ($model->load(Yii::$app->request->post())) {
              $model->file = UploadedFile::getInstance($model,'file');
@@ -142,6 +144,7 @@ class DocsController extends BaseController
                 'model' => $model,
             ]);        
     }
+
 
     /**
      * Updates an existing Docs model.

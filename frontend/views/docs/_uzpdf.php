@@ -99,7 +99,7 @@
 		<tr>
 			<td style="border: 1px solid black; padding:5px; text-align: center;">1</td>
 			<td style="border: 1px solid black; padding:5px; padding: 5px;">Hujjat talab qilinayotgan shaxsning familiyasi, ismi va sharifi<br>(shaxsga hozirda tegishli yoki avval tegishli bo`lgan<br> familiyalarni qayd etish lozim)</td>
-			<td style="border: 1px solid black; padding:5px;padding: 5px;"><?=$model->surname;?> <?=$model->name;?> <?=$model->mname;?></br> <?=$model->pre_surname;?> <?=$model->pre_name;?> <?=$model->pre_mname;?>
+			<td style="border: 1px solid black; padding:5px;padding: 5px;"><?=$model->surname;?> <?=$model->name;?> <?=$model->mname;?><br> <?=$model->pre_surname;?> <?=$model->pre_name;?> <?=$model->pre_mname;?>
 			</td>
 		</tr>
 		<tr>
@@ -110,7 +110,7 @@
 		<tr>
 			<td style="border: 1px solid black; padding:5px; text-align: center;">3</td>
 			<td style="border: 1px solid black; padding:5px;">Shaxsning fuqaroligi<br>(agar fuqarolik o`zgartirilgan bo`lsa, qayd eting)</td>
-			<td style="border: 1px solid black; padding:5px;"><?=$model->citizenship_id;?></br><?=$model->pre_citizenship_id;?></td>
+			<td style="border: 1px solid black; padding:5px;"><?=$model->citizenship->sp_name_uz;?> <br> <?=$model->citizenship2->sp_name_uz;?></td>
 		</tr>
 		<tr>
 			<td style="border: 1px solid black; padding:5px; text-align: center;">4</td>
@@ -165,7 +165,7 @@
 		<tr>
 			<td style="border: 1px solid black; padding:5px; text-align: center;">10</td>
 			<td style="border: 1px solid black; padding:5px;">Fuqaroligingiz</td>
-			<td style="border: 1px solid black; padding:5px;"><?=$model->sec_citizenship_id;?></td>
+			<td style="border: 1px solid black; padding:5px;"><?=$model->citizenship3->sp_name_uz;?></td>
 		</tr>
 		<tr>
 			<td style="border: 1px solid black; padding:5px; text-align: center;">11</td>

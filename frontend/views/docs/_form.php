@@ -7,9 +7,11 @@ use kartik\date\DatePicker;
 use kartik\select2\Select2;
 use yii\helpers\ArrayHelper;
 use backend\models\SpNationyii;
-use backend\models\SpCountry;
+use backend\models\SpCountryyii;
 use backend\models\SpDoc_type;
-use backend\models\SpDivisionyii;  
+use backend\models\SpDivisionyii; 
+use yii\captcha\Captcha;
+ 
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Docs */
@@ -169,10 +171,26 @@ use backend\models\SpDivisionyii;
                         
                     <div class="row">
                          <div class="form-group col-sm-6">
-                            <?= $form->field($model, 'citizenship_id')->textInput() ?>
+                            <?= $form->field($model, 'citizenship_id')->widget(Select2::classname(), [
+                         'data' => ArrayHelper::map(SpCountryyii::find()->all(), 'sp_id', 'sp_name_'.Yii::$app->language),
+                         'language' => 'ru',
+                        'options' => ['placeholder' => Yii::t('app', 'Fuqarolikni tanlang...')],
+                         'pluginOptions' => [
+                              'allowClear' => true,
+                            'multiple' => false,
+                          ],
+                      ]); ?>
                          </div>
                         <div class="form-group col-sm-6">
-                            <?= $form->field($model, 'pre_citizenship_id')->textInput() ?>
+                            <?= $form->field($model, 'pre_citizenship_id')->widget(Select2::classname(), [
+                         'data' => ArrayHelper::map(SpCountryyii::find()->all(), 'sp_id', 'sp_name_'.Yii::$app->language),
+                         'language' => 'ru',
+                        'options' => ['placeholder' => Yii::t('app', 'Fuqarolikni tanlang...')],
+                         'pluginOptions' => [
+                              'allowClear' => true,
+                            'multiple' => false,
+                          ],
+                      ]); ?>
                         </div>
                     </div>
 
@@ -415,7 +433,15 @@ use backend\models\SpDivisionyii;
                       ?>
                          </div>
                          <div class="form-group col-sm-6">
-                        <?= $form->field($model, 'sec_citizenship_id')->textInput() ?>
+                        <?= $form->field($model, 'sec_citizenship_id')->widget(Select2::classname(), [
+                         'data' => ArrayHelper::map(SpCountryyii::find()->all(), 'sp_id', 'sp_name_'.Yii::$app->language),
+                         'language' => 'ru',
+                        'options' => ['placeholder' => Yii::t('app', 'Fuqarolikni tanlang...')],
+                         'pluginOptions' => [
+                              'allowClear' => true,
+                            'multiple' => false,
+                          ],
+                      ]); ?>
                          </div>  
                     </div>
        
@@ -435,6 +461,13 @@ use backend\models\SpDivisionyii;
                          <div class="form-group col-sm-6">
                         <?= $form->field($model, 'sec_fax')->textInput() ?>
                          </div>  
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-sm-6">
+                                 <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
+                              'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
+                            ]) ?>
+                      </div>
                     </div>
                 </div>
                 <div class="row">
