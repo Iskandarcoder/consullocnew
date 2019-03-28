@@ -7,7 +7,7 @@ use backend\models\Docs;
 
 
 // yangi arizalar soni
-$division = Yii::$app->user->identity->dvision_id;
+    $division = Yii::$app->user->identity->dvision_id;
     $new = Docs::find()
     // ->Where(['status_id'=>'2'])
     ->Where(['division_id' => $division])

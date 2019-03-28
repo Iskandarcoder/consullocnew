@@ -8,6 +8,7 @@ use Yii;
  * This is the model class for table "docs".
  *
  * @property integer $id
+ * @property string $guide
  * @property string $surname
  * @property string $name
  * @property string $mname
@@ -93,6 +94,7 @@ class Docs extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
+            'guide' => 'Guide',
             'surname' => Yii::t('app', 'Familiyasi'),
             'name' => Yii::t('app', 'Ismi'),
             'mname' => Yii::t('app', 'Sharifi'),
@@ -141,16 +143,26 @@ class Docs extends \yii\db\ActiveRecord
     }
 
 
-     public function setRandomString($length = 32)
+    public function setRandomString($length = 32)
+
     {
-        $characters = '123456789ABCDEFGHJKLMNPQRSTUVWXYZ';
+
+        $characters = 'ABCDEFGHJKLMNPQRSTUVWXYZ123456789';
+
         $charactersLength = strlen($characters);
+
         $randomString = '';
+
         for ($i = 0; $i < $length; $i++) {
+
             $randomString .= $characters[rand(0, $charactersLength - 1)];
+
         }
+
         $this->guide = $randomString;
+
     }
+
 
     //  public function getCountry()
     // {
