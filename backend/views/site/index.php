@@ -7,7 +7,7 @@ use backend\models\Docs;
 
 
 // yangi arizalar soni
-$division = Yii::$app->user->identity->dvision_id;
+    $division = Yii::$app->user->identity->dvision_id;
     $new = Docs::find()
     // ->Where(['status_id'=>'2'])
     ->Where(['division_id' => $division])
@@ -34,7 +34,7 @@ $division = Yii::$app->user->identity->dvision_id;
 
 
 //Yangi tushgan arizalar soni
-    $new = Pmj::find()
+    $new_pmj = Pmj::find()
     ->Where(['status_id'=>'0'])
     ->andWhere(['division_id' => $division])
     ->all();
@@ -212,7 +212,7 @@ $division = Yii::$app->user->identity->dvision_id;
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="sparkline-chart">
-                                        <div class="number" style="font-size: 20px;"><?php echo count($new);?></div>
+                                        <div class="number" style="font-size: 20px;"><?php echo count($new_pmj);?></div>
                                         <a class="title" href="<?= Url::to(['pmj/index']) ?>" style="font-size: 15px;">
                                         Arizalar <i class="icon-arrow-right"></i>
                                         </a>
