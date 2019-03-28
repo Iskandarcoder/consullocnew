@@ -74,6 +74,6 @@ class InrelativePmj extends \yii\db\ActiveRecord
 
      public function getSpCountry()
     {
-        return $this->hasOne(SpCountry::className(), ['sp_id' => 'citizenship']);
+        return $this->hasOne(SpCountryyii::className(), ['sp_id' => 'citizenship']);
     }
 }
