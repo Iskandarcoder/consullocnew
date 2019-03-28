@@ -10,8 +10,8 @@ use backend\models\CitizenshipSearch;
 use backend\components\BaseController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use backend\models\Inrelative;
-use backend\models\Outrelative;
+use backend\models\InrelativePmj;
+use backend\models\OutrelativePmj;
 use backend\models\Children;
 use yii\filters\AccessControl;
 
@@ -45,6 +45,7 @@ class CitizenshipController extends BaseController
             ],
         ];
     }
+    
 
     /**
      * Lists all Citizenship models.

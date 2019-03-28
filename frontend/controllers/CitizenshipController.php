@@ -12,8 +12,8 @@ use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 use backend\models\Model;
 use common\models\CaptchaCode;
-use backend\models\Inrelative;
-use backend\models\Outrelative;
+use backend\models\InrelativePmj;
+use backend\models\OutrelativePmj;
 use backend\models\Children;
 
 
@@ -152,16 +152,16 @@ class CitizenshipController extends BaseController
         $model = new Citizenship();
 
         $model->setRandomString();
-        $modelInrelative = [new Inrelative];
-        $modelOutrelative = [new Outrelative];
+        $modelInrelative = [new InrelativePmj];
+        $modelOutrelative = [new OutrelativePmj];
         $modelChildren = [new Children];
 
         if ($model->load(Yii::$app->request->post())) {
 
-            $modelInrelative = Model::createMultiple(Inrelative::classname());
+            $modelInrelative = Model::createMultiple(InrelativePmj::classname());
             Model::loadMultiple($modelInrelative, Yii::$app->request->post());
 
-            $modelOutrelative = Model::createMultiple(Outrelative::classname());
+            $modelOutrelative = Model::createMultiple(OutrelativePmj::classname());
             Model::loadMultiple($modelOutrelative, Yii::$app->request->post());
 
             $modelChildren = Model::createMultiple(Children::classname());
