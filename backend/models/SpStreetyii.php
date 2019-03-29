@@ -23,7 +23,7 @@ use Yii;
  * @property integer $sp_idold
  * @property integer $sp_idfirst
  */
-class SpStreet extends \yii\db\ActiveRecord
+class SpStreetyii extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc

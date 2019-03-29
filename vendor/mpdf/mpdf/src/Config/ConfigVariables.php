@@ -506,7 +506,6 @@ class ConfigVariables
 			// cURL options
 			'curlFollowLocation' => false,
 			'curlAllowUnsafeSslRequests' => false,
-			'curlCaCertificate' => '',
 			'curlTimeout' => 5,
 		];
 	}

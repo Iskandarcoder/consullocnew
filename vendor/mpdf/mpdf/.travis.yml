@@ -1,6 +1,6 @@
 language: php
 
-dist: xenial
+dist: trusty
 
 group: edge
 
@@ -26,9 +26,10 @@ matrix:
 
 install:
   - composer self-update
-  - echo "${TRAVIS_PHP_VERSION:0:3}"
   - |
-    if [[ "${TRAVIS_PHP_VERSION:0:7}" == "nightly" ]]; then
+    if [[ ${TRAVIS_PHP_VERSION:0:3} == "7.3" ]]; then
+      composer install --ignore-platform-reqs
+    elif [[ ${TRAVIS_PHP_VERSION:0:3} == "7.4" ]]; then
       composer install --ignore-platform-reqs
     else
       composer install
@@ -45,6 +46,5 @@ script:
     fi
 
 notifications:
-  email:
-    on_success: change
-    on_failure: always
+
+  email: change

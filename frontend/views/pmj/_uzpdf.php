@@ -77,7 +77,7 @@
 <table  width="800" border="0" cellpadding="0" cellspacing="0" class="anketa-pdf" style="font-size: 15px;">
 	<tr>
 		<td style=" padding: 5px;" class="text-center">
-			<p style="font-size: 20px"><?= $model->spDivision->name_uz; ?></p>
+			<p style="font-size: 20px"><?= $model->spDivision->sp_name_uz; ?></p>
 		</td>
 		<td style="text-align: right;padding:5px; position: relative;">
 			<img style="width:125; height:170px; overflow:hidden" src="/uploads/<?= $model->photo;?>">			

@@ -98,6 +98,7 @@ class Kus extends \yii\db\ActiveRecord
             [['status'], 'string', 'max' => 1],
             // [['adinfo'], 'string', 'max' => 1024],
             [['which_school'], 'string', 'max' => 255],
+            ['verifyCode', 'captcha'],
         ];
     }
 
@@ -165,6 +166,7 @@ class Kus extends \yii\db\ActiveRecord
             'education' => Yii::t('app', 'Mutaxassisligi'),
             'education_date' => Yii::t('app', 'Bitirgan sanasi'),
             'which_school' => Yii::t('app', 'Qaysi o\'quv yurtini bitirgan'),
+            'verifyCode' => 'Verification Code',
                    ];
     }
 
@@ -190,7 +192,7 @@ class Kus extends \yii\db\ActiveRecord
 
     public function getCountry()
     {
-        return $this->hasOne(SpCountry::className(), ['sp_id' => 'birth_country_id']);
+        return $this->hasOne(SpCountryyii::className(), ['sp_id' => 'birth_country_id']);
     }
 
     /**
@@ -198,7 +200,7 @@ class Kus extends \yii\db\ActiveRecord
      */
     public function getRegion()
     {
-        return $this->hasOne(SpRegion::className(), ['sp_id' => 'birth_region_id']);
+        return $this->hasOne(SpRegionyii::className(), ['sp_id' => 'birth_region_id']);
     }
 
     /**
@@ -206,17 +208,17 @@ class Kus extends \yii\db\ActiveRecord
      */
     public function getDistrict()
     {
-        return $this->hasOne(SpDistrict::className(), ['sp_id' => 'birth_district_id']);
+        return $this->hasOne(SpDistrictyii::className(), ['sp_id' => 'birth_district_id']);
     }
 
     public function getPlace()
     {
-        return $this->hasOne(SpPlase::className(), ['sp_id' => 'birth_place_id']);
+        return $this->hasOne(SpPlaseyii::className(), ['sp_id' => 'birth_place_id']);
     }
 
     public function getAdstreet()
     {
-        return $this->hasOne(SpStreet::className(), ['sp_id' => 'living_street_id']);
+        return $this->hasOne(SpStreetyii::className(), ['sp_id' => 'living_street_id']);
     }
 
     public function getInRelative()
@@ -231,7 +233,7 @@ class Kus extends \yii\db\ActiveRecord
 
     public function getNation()
     {
-        return $this->hasOne(SpNation::className(), ['sp_id' => 'nationality_id']);
+        return $this->hasOne(SpNationyii::className(), ['sp_id' => 'nationality_id']);
     }
 
      public function getTeducation()
@@ -240,7 +242,7 @@ class Kus extends \yii\db\ActiveRecord
     }
     public function getAdregion()
     {
-        return $this->hasOne(SpRegion::className(), ['sp_id' => 'living_region_id']);
+        return $this->hasOne(SpRegionyii::className(), ['sp_id' => 'living_region_id']);
     }
 
     /**
@@ -248,27 +250,27 @@ class Kus extends \yii\db\ActiveRecord
      */
     public function getAddistrict()
     {
-        return $this->hasOne(SpDistrict::className(), ['sp_id' => 'living_district_id']);
+        return $this->hasOne(SpDistrictyii::className(), ['sp_id' => 'living_district_id']);
     }
 
     public function getAdplace()
     {
-        return $this->hasOne(SpPlace::className(), ['sp_id' => 'living_place_id']);
+        return $this->hasOne(SpPlaceyii::className(), ['sp_id' => 'living_place_id']);
     }
 
     public function getDoctype()
     {
-        return $this->hasOne(SpDoctype::className(), ['sp_id' => 'document_type_id']);
+        return $this->hasOne(SpDoctypeyii::className(), ['sp_id' => 'document_type_id']);
     }
     
     public function getDivision()
     {
-        return $this->hasOne(SpDivision::className(), ['sp_id' => 'division_id']);
+        return $this->hasOne(SpDivisionyii::className(), ['sp_id' => 'division_id']);
     }
 
     public function getDivisionDoc()
     {
-        return $this->hasOne(SpDivision::className(), ['sp_id' => 'document_div_id']);
+        return $this->hasOne(SpDivisionyii::className(), ['sp_id' => 'document_div_id']);
     }
 
     

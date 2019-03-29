@@ -54,7 +54,7 @@ class Pmj extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['surname', 'name', 'mname', 'nationality_id', 'birth_date', 'birth_place', 'living_place', 'tel', 'citizenship_id', 'seria_pasp', 'numb_pasp', 'pasp_date', 'pasp_place', 'reason', 'security', 'law_court', 'criminal', 'army','division_id'], 'required'],
+            [['surname', 'name', 'mname', 'nationality_id', 'birth_date', 'birth_place', 'living_place', 'tel', 'citizenship_id', 'seria_pasp', 'numb_pasp', 'pasp_date', 'pasp_place', 'reason', 'security', 'law_court', 'criminal', 'army','division_id','verifyCode'], 'required'],
             [['nationality_id', 'citizenship_id', 'second_cityzenship_id', 'numb_pasp', 'status_id','division_id'], 'integer'],
             [['birth_date', 'pasp_date'], 'safe'],
             [['tel', 'surname', 'name', 'mname', 'pre_surname', 'pre_name', 'pre_mname'], 'string', 'max' => 20],

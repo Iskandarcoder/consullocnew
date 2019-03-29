@@ -545,12 +545,12 @@ if(Yii::$app->language =='ru'){
          
              <?php DynamicFormWidget::begin([
                 'widgetContainer' => 'dynamicform_wrapper', // required: only alphanumeric characters plus "_" [A-Za-z0-9_]
-                'widgetBody' => '.container-items', // required: css class selector
-                'widgetItem' => '.item', // required: css class
+                'widgetBody' => '.container-items1', // required: css class selector
+                'widgetItem' => '.item1', // required: css class
                 'limit' => 4, // the maximum times, an element can be cloned (default 999)
                 'min' => 1, // 0 or 1 (default 1)
-                'insertButton' => '.add-item', // css class
-                'deleteButton' => '.remove-item', // css class
+                'insertButton' => '.add-item1', // css class
+                'deleteButton' => '.remove-item1', // css class
                 'model' => $modelOutrelative[0],
                 'formId' => 'dynamic-form',
                 'formFields' => [
@@ -560,14 +560,14 @@ if(Yii::$app->language =='ru'){
                 ],
             ]); ?>
 
-            <div class="container-items"><!-- widgetContainer -->
+            <div class="container-items1"><!-- widgetContainer -->
             <?php foreach ($modelOutrelative as $i => $modelout): ?>
-                <div class="item panel panel-default"><!-- widgetBody -->
+                <div class="item1 panel panel-default"><!-- widgetBody -->
                     <div class="panel-heading">
                         <h3 class="panel-title pull-left"><i class="fa fa-user"></i></h3>
                         <div class="pull-right">
-                            <button type="button" class="add-item btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
-                            <button type="button" class="remove-item btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
+                            <button type="button" class="add-item1 btn btn-success btn-xs"><i class="glyphicon glyphicon-plus"></i></button>
+                            <button type="button" class="remove-item1 btn btn-danger btn-xs"><i class="glyphicon glyphicon-minus"></i></button>
                         </div>
                         <div class="clearfix"></div>
                     </div>
