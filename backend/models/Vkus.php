@@ -93,6 +93,7 @@ class Vkus extends \yii\db\ActiveRecord
             [['status'], 'string', 'max' => 1],
             // [['adinfo'], 'string', 'max' => 1024],
             [['which_school'], 'string', 'max' => 255],
+            ['verifyCode', 'captcha'],
         ];
     }
 
@@ -161,6 +162,7 @@ class Vkus extends \yii\db\ActiveRecord
             'education' => Yii::t('app', 'Mutaxassisligi'),
             'education_date' => Yii::t('app', 'Bitirgan sanasi'),
             'which_school' => Yii::t('app', 'Qaysi o\'quv yurtini bitirgan'),
+            'verifyCode' => 'Verification Code',
                    ];
     }
 
