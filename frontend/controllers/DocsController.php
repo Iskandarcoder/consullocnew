@@ -10,6 +10,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use frontend\components\BaseController;
 use yii\web\UploadedFile;
+use backend\models\Model;
 
 
 /**
@@ -37,6 +38,13 @@ class DocsController extends BaseController
      * @return mixed
      */
     
+    public function actionBarcode($id)
+    {
+        return $this->render('barcode', [
+            'guide' => $guide,
+        ]);
+    }
+
     public function actionPdf($id)
     {
         $model = $this->findModel($id);
@@ -125,7 +133,9 @@ class DocsController extends BaseController
      */
     public function actionCreate()
     {
-        $model = new Docs();       
+        $model = new Docs(); 
+        $model->setRandomString();
+              
 
         if ($model->load(Yii::$app->request->post())) {
              $model->file = UploadedFile::getInstance($model,'file');
@@ -142,6 +152,7 @@ class DocsController extends BaseController
                 'model' => $model,
             ]);        
     }
+
 
     /**
      * Updates an existing Docs model.

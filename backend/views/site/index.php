@@ -7,7 +7,7 @@ use backend\models\Docs;
 
 
 // yangi arizalar soni
-$division = Yii::$app->user->identity->dvision_id;
+    $division = Yii::$app->user->identity->dvision_id;
     $new = Docs::find()
     // ->Where(['status_id'=>'2'])
     ->Where(['division_id' => $division])
@@ -366,7 +366,7 @@ $division = Yii::$app->user->identity->dvision_id;
                                 <div class="col-md-3">
                                     <div class="sparkline-chart">
                                         <div class="number" style="font-size: 20px;"><?php echo count($new);?></div>
-                                        <a class="title" href="docs/index" style="font-size: 15px;">    
+                                        <a class="title" href="<?= Url::to(['docs/index']) ?>" style="font-size: 15px;">    
                                         Barcha arizalar<i class="icon-arrow-right"></i>
                                         </a>
                                     </div>
@@ -376,7 +376,7 @@ $division = Yii::$app->user->identity->dvision_id;
                                 <div class="col-md-3">
                                     <div class="sparkline-chart">
                                         <div class="number" style="font-size: 20px;"><?php echo count($process);?></div>
-                                        <a class="title" href="docs/process" style="font-size: 15px;">
+                                        <a class="title" href="<?= Url::to(['docs/process']) ?>" style="font-size: 15px;">
                                         Jarayonda <i class="icon-arrow-right"></i>
                                         </a>
                                     </div>
@@ -386,7 +386,7 @@ $division = Yii::$app->user->identity->dvision_id;
                                 <div class="col-md-3">
                                     <div class="sparkline-chart">
                                         <div class="number" style="font-size: 20px; "><?php echo count($rejected);?></div>
-                                        <a class="title" href="docs/rejected" style="font-size: 15px;">
+                                        <a class="title" href="<?= Url::to(['docs/rejected']) ?>" style="font-size: 15px;">
                                         Rad etilganlar <i class="icon-arrow-right"></i>
                                         </a>
                                     </div>
@@ -396,7 +396,7 @@ $division = Yii::$app->user->identity->dvision_id;
                                 <div class="col-md-3">
                                     <div class="sparkline-chart">
                                         <div class="number" style="font-size: 20px;"><?php echo count($registered);?></div>
-                                        <a class="title" href="docs/registered" style="font-size: 15px;">
+                                        <a class="title" href="<?= Url::to(['docs/registered']) ?>" style="font-size: 15px;">
                                         Hujjat berildi <i class="icon-arrow-right"></i>
                                         </a>
                                     </div>

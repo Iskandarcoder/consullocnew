@@ -1,6 +1,7 @@
 Changelog
 =========
 
+<<<<<<< HEAD
 6.2.0 (2019-03-10)
 ------------------
 
@@ -67,6 +68,8 @@ Changelog
  * bumped minimum version to PHP 7.0
  * removed Swift_Validate and replaced by egulias/email-validator
 
+=======
+>>>>>>> 29c1969ce608e0a6b9e6d59b6900292e46cdadfd
 5.4.9 (2018-01-23)
 ------------------
 

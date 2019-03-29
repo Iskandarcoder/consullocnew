@@ -310,19 +310,31 @@ use yii\captcha\Captcha;
                                                         }
                                                     ?>
                                                     <?= $form->field($modelin, "[{$i}]fio")->textInput(['maxlength' => true]) ?>
-                                                    <?= $form->field($modelin, "[{$i}]relative")->dropDownList(ArrayHelper::map(TypeRelative::find()->all(), 'id', Yii::$app->language.'_type_relative'),
-                                                        ['prompt'=>Yii::t('app', 'Qarindoshlik darajasini tanlang')]
-                                                    ) ?>  
-                                                    <?= $form->field($modelin, "[{$i}]birth_date")->textInput(['maxlength' => true]) ?>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <?= $form->field($modelin, "[{$i}]relative")->dropDownList(ArrayHelper::map(TypeRelative::find()->all(), 'id', Yii::$app->language.'_type_relative'),
+                                                                ['prompt'=>Yii::t('app', 'Qarindoshlik darajasini tanlang')]
+                                                            ) ?> 
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <?= $form->field($modelin, "[{$i}]nationality_id")->dropDownList(ArrayHelper::map(SpNationyii::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
+                                                                ['prompt'=>Yii::t('app', 'Millatni tanlang')]
+                                                            ) ?> 
+                                                        </div>
+                                                    </div>
+                                                     <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <?= $form->field($modelin, "[{$i}]citizenship")->dropDownList(
+                                                                ArrayHelper::map(SpCountryyii::find()->all(), 'id','sp_name_'.Yii::$app->language),
+                                                                ['prompt'=>Yii::t('app', 'Fuqaroligini tanlang')]
+                                                            ) ?>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <?= $form->field($modelin, "[{$i}]birth_date")->textInput(['maxlength' => true]) ?>
+                                                        </div>
+                                                    </div>
                                                     <?= $form->field($modelin, "[{$i}]birth_place")->textInput(['maxlength' => true])
                                                     ?>
-                                                    <?= $form->field($modelin, "[{$i}]nationality_id")->dropDownList(ArrayHelper::map(SpNationyii::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
-                                                        ['prompt'=>Yii::t('app', 'Millatni tanlang')]
-                                                    ) ?>
-                                                    <?= $form->field($modelin, "[{$i}]citizenship")->dropDownList(
-                                                        ArrayHelper::map(SpCountryyii::find()->all(), 'id','sp_name_'.Yii::$app->language),
-                                                        ['prompt'=>Yii::t('app', 'Fuqaroligini tanlang')]
-                                                    ) ?>
                                                     <?= $form->field($modelin, "[{$i}]work")->textInput(['maxlength' => true]) ?>
                                                     <?= $form->field($modelin, "[{$i}]living_place")->textInput(['maxlength' => true]) ?>                   
                                                 </div>
@@ -389,19 +401,31 @@ use yii\captcha\Captcha;
                                                     }
                                                 ?>
                                                 <?= $form->field($modelout, "[{$i}]fio")->textInput(['maxlength' => true]) ?>
-                                                <?= $form->field($modelout, "[{$i}]relative")->dropDownList(ArrayHelper::map(TypeRelative::find()->all(), 'id', Yii::$app->language.'_type_relative'),
-                                                        ['prompt'=>Yii::t('app', 'Qarindoshlik darajasini tanlang')]
-                                                    ) ?>
-                                                <?= $form->field($modelout, "[{$i}]birth_date")->textInput(['maxlength' => true]) ?>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <?= $form->field($modelout, "[{$i}]relative")->dropDownList(ArrayHelper::map(TypeRelative::find()->all(), 'id', Yii::$app->language.'_type_relative'),
+                                                            ['prompt'=>Yii::t('app', 'Qarindoshlik darajasini tanlang')]
+                                                        ) ?>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <?= $form->field($modelout, "[{$i}]birth_date")->textInput(['maxlength' => true]) ?>
+                                                    </div>
+                                                </div>
                                                 <?= $form->field($modelout, "[{$i}]birth_place")->textInput(['maxlength' => true])
-                                                        ?>
-                                                <?= $form->field($modelout, "[{$i}]nationality_id")->dropDownList(ArrayHelper::map(SpNationyii::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
-                                                        ['prompt'=>Yii::t('app', 'Millatni tanlang')]
-                                                    ) ?>
-                                                <?= $form->field($modelout, "[{$i}]citizenship")->dropDownList(
-                                                        ArrayHelper::map(SpCountryyii::find()->all(), 'id','sp_name_'.Yii::$app->language),
+                                                ?>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <?= $form->field($modelout, "[{$i}]citizenship")->dropDownList(
+                                                            ArrayHelper::map(SpCountryyii::find()->all(), 'id','sp_name_'.Yii::$app->language),
                                                         ['prompt'=>Yii::t('app', 'Fuqaroligini tanlang')]
                                                     ) ?>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <?= $form->field($modelout, "[{$i}]nationality_id")->dropDownList(ArrayHelper::map(SpNationyii::find()->all(), 'sp_id','sp_name_'.Yii::$app->language),
+                                                            ['prompt'=>Yii::t('app', 'Millatni tanlang')]
+                                                        ) ?>
+                                                    </div>
+                                                </div>                                                
                                                 <?= $form->field($modelout, "[{$i}]work")->textInput(['maxlength' => true]) ?>
                                                 <?= $form->field($modelout, "[{$i}]living_place")->textInput(['maxlength' => true]) ?>
                                             </div>
@@ -466,10 +490,16 @@ use yii\captcha\Captcha;
                                                 }
                                                 ?>
                                                 <?= $form->field($modelch, "[{$i}]fio")->textInput(['maxlength' => true]) ?>
-                                                <?= $form->field($modelch, "[{$i}]birth_date")->textInput(['maxlength' => true]) ?>                                      
-                                                <?= $form->field($modelch, "[{$i}]relative")->dropDownList(ArrayHelper::map(TypeRelative::find()->all(), 'id', Yii::$app->language.'_type_relative'),
-                                                        ['prompt'=>Yii::t('app', 'Qarindoshlik darajasini tanlang')]
-                                                    ) ?>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <?= $form->field($modelch, "[{$i}]birth_date")->textInput(['maxlength' => true]) ?> 
+                                                    </div>
+                                                    <div class="col-sm-6">                                     
+                                                        <?= $form->field($modelch, "[{$i}]relative")->dropDownList(ArrayHelper::map(TypeRelative::find()->all(), 'id', Yii::$app->language.'_type_relative'),
+                                                            ['prompt'=>Yii::t('app', 'Qarindoshlik darajasini tanlang')]
+                                                        ) ?>
+                                                    </div>
+                                                </div>
                                                 <?= $form->field($modelch, "[{$i}]comment")->textInput(['maxlength' => true])
                                                 ?>                                     
                                             </div>

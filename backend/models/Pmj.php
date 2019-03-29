@@ -110,6 +110,7 @@ class Pmj extends \yii\db\ActiveRecord
         ];
     }
 
+
      public function setRandomString($length = 32)
     {
         $characters = '123456789ABCDEFGHJKLMNPQRSTUVWXYZ';
