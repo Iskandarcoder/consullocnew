@@ -92,6 +92,7 @@ class AnketaNew extends \yii\db\ActiveRecord
             [['p_korpus'], 'string', 'max' => 5],
             [['p_address', 'p_addressout', 'p_reasonfull'], 'string', 'max' => 400],
             [['p_work'], 'string', 'max' => 128],
+            ['verifyCode', 'captcha'],
         ];
     }
 
@@ -154,6 +155,7 @@ class AnketaNew extends \yii\db\ActiveRecord
             'p_datesent' => Yii::t('app', 'P Datesent'),
             'p_status' => Yii::t('app', 'P Status'),
             'p_lan' => Yii::t('app', 'P Lan'),
+            'verifyCode' => 'Verification Code',
         ];
     }
 
